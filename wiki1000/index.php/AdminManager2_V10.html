@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>AdminManager2 V10 - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "AdminManager2_V10", "wgTitle": "AdminManager2 V10", "wgCurRevisionId": 14658, "wgArticleId": 6281, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Administration", "Version1000"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-AdminManager2_V10 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">AdminManager2 V10</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="AdminManager2_V10.html#column-one">Navigation</a>, <a href="AdminManager2_V10.html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="AdminManager2_V10.html#Pr.C3.A9sentation"><span class="tocnumber">1</span> <span class="toctext">Présentation</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="AdminManager2_V10.html#Mise_en_oeuvre"><span class="tocnumber">2</span> <span class="toctext">Mise en oeuvre</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="AdminManager2_V10.html#Authentification_au_r.C3.A9f.C3.A9rentiel"><span class="tocnumber">2.1</span> <span class="toctext">Authentification au référentiel</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="AdminManager2_V10.html#Mode_interactif"><span class="tocnumber">2.2</span> <span class="toctext">Mode interactif</span></a>
+<ul>
+<li class="toclevel-3 tocsection-5"><a href="AdminManager2_V10.html#about"><span class="tocnumber">2.2.1</span> <span class="toctext">about</span></a>
+<ul>
+<li class="toclevel-4 tocsection-6"><a href="AdminManager2_V10.html#about:update"><span class="tocnumber">2.2.1.1</span> <span class="toctext">about:update</span></a></li>
+<li class="toclevel-4 tocsection-7"><a href="AdminManager2_V10.html#about:version"><span class="tocnumber">2.2.1.2</span> <span class="toctext">about:version</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-8"><a href="AdminManager2_V10.html#accessProfile"><span class="tocnumber">2.2.2</span> <span class="toctext">accessProfile</span></a>
+<ul>
+<li class="toclevel-4 tocsection-9"><a href="AdminManager2_V10.html#accessProfile:create"><span class="tocnumber">2.2.2.1</span> <span class="toctext">accessProfile:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-10"><a href="AdminManager2_V10.html#accesstoken"><span class="tocnumber">2.2.3</span> <span class="toctext">accesstoken</span></a>
+<ul>
+<li class="toclevel-4 tocsection-11"><a href="AdminManager2_V10.html#accesstoken:create"><span class="tocnumber">2.2.3.1</span> <span class="toctext">accesstoken:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-12"><a href="AdminManager2_V10.html#application"><span class="tocnumber">2.2.4</span> <span class="toctext">application</span></a>
+<ul>
+<li class="toclevel-4 tocsection-13"><a href="AdminManager2_V10.html#application:deploy"><span class="tocnumber">2.2.4.1</span> <span class="toctext">application:deploy</span></a></li>
+<li class="toclevel-4 tocsection-14"><a href="AdminManager2_V10.html#application:list"><span class="tocnumber">2.2.4.2</span> <span class="toctext">application:list</span></a></li>
+<li class="toclevel-4 tocsection-15"><a href="AdminManager2_V10.html#application:update"><span class="tocnumber">2.2.4.3</span> <span class="toctext">application:update</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-16"><a href="AdminManager2_V10.html#authProfile"><span class="tocnumber">2.2.5</span> <span class="toctext">authProfile</span></a>
+<ul>
+<li class="toclevel-4 tocsection-17"><a href="AdminManager2_V10.html#authProfile:create"><span class="tocnumber">2.2.5.1</span> <span class="toctext">authProfile:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-18"><a href="AdminManager2_V10.html#azureKV"><span class="tocnumber">2.2.6</span> <span class="toctext">azureKV</span></a>
+<ul>
+<li class="toclevel-4 tocsection-19"><a href="AdminManager2_V10.html#azureKV:get"><span class="tocnumber">2.2.6.1</span> <span class="toctext">azureKV:get</span></a></li>
+<li class="toclevel-4 tocsection-20"><a href="AdminManager2_V10.html#azureKV:set"><span class="tocnumber">2.2.6.2</span> <span class="toctext">azureKV:set</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-21"><a href="AdminManager2_V10.html#container"><span class="tocnumber">2.2.7</span> <span class="toctext">container</span></a>
+<ul>
+<li class="toclevel-4 tocsection-22"><a href="AdminManager2_V10.html#container:create"><span class="tocnumber">2.2.7.1</span> <span class="toctext">container:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-23"><a href="AdminManager2_V10.html#database"><span class="tocnumber">2.2.8</span> <span class="toctext">database</span></a>
+<ul>
+<li class="toclevel-4 tocsection-24"><a href="AdminManager2_V10.html#database:create"><span class="tocnumber">2.2.8.1</span> <span class="toctext">database:create</span></a></li>
+<li class="toclevel-4 tocsection-25"><a href="AdminManager2_V10.html#database:delete"><span class="tocnumber">2.2.8.2</span> <span class="toctext">database:delete</span></a></li>
+<li class="toclevel-4 tocsection-26"><a href="AdminManager2_V10.html#desktop:install"><span class="tocnumber">2.2.8.3</span> <span class="toctext">desktop:install</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-27"><a href="AdminManager2_V10.html#directory"><span class="tocnumber">2.2.9</span> <span class="toctext">directory</span></a>
+<ul>
+<li class="toclevel-4 tocsection-28"><a href="AdminManager2_V10.html#directory:addEntity"><span class="tocnumber">2.2.9.1</span> <span class="toctext">directory:addEntity</span></a></li>
+<li class="toclevel-4 tocsection-29"><a href="AdminManager2_V10.html#directory:removeEntity"><span class="tocnumber">2.2.9.2</span> <span class="toctext">directory:removeEntity</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-30"><a href="AdminManager2_V10.html#directoryAD"><span class="tocnumber">2.2.10</span> <span class="toctext">directoryAD</span></a>
+<ul>
+<li class="toclevel-4 tocsection-31"><a href="AdminManager2_V10.html#directoryAD:create"><span class="tocnumber">2.2.10.1</span> <span class="toctext">directoryAD:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-32"><a href="AdminManager2_V10.html#directorySageID"><span class="tocnumber">2.2.11</span> <span class="toctext">directorySageID</span></a>
+<ul>
+<li class="toclevel-4 tocsection-33"><a href="AdminManager2_V10.html#directorySageID:create"><span class="tocnumber">2.2.11.1</span> <span class="toctext">directorySageID:create</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-34"><a href="AdminManager2_V10.html#dbmaster"><span class="tocnumber">2.2.12</span> <span class="toctext">dbmaster</span></a>
+<ul>
+<li class="toclevel-4 tocsection-35"><a href="AdminManager2_V10.html#dbmaster:create"><span class="tocnumber">2.2.12.1</span> <span class="toctext">dbmaster:create</span></a></li>
+<li class="toclevel-4 tocsection-36"><a href="AdminManager2_V10.html#dbmaster:update"><span class="tocnumber">2.2.12.2</span> <span class="toctext">dbmaster:update</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-37"><a href="AdminManager2_V10.html#env"><span class="tocnumber">2.2.13</span> <span class="toctext">env</span></a>
+<ul>
+<li class="toclevel-4 tocsection-38"><a href="AdminManager2_V10.html#env:set"><span class="tocnumber">2.2.13.1</span> <span class="toctext">env:set</span></a></li>
+<li class="toclevel-4 tocsection-39"><a href="AdminManager2_V10.html#env:get"><span class="tocnumber">2.2.13.2</span> <span class="toctext">env:get</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-40"><a href="AdminManager2_V10.html#folder"><span class="tocnumber">2.2.14</span> <span class="toctext">folder</span></a>
+<ul>
+<li class="toclevel-4 tocsection-41"><a href="AdminManager2_V10.html#folder:authorize"><span class="tocnumber">2.2.14.1</span> <span class="toctext">folder:authorize</span></a></li>
+<li class="toclevel-4 tocsection-42"><a href="AdminManager2_V10.html#folder:create"><span class="tocnumber">2.2.14.2</span> <span class="toctext">folder:create</span></a></li>
+<li class="toclevel-4 tocsection-43"><a href="AdminManager2_V10.html#folder:delete"><span class="tocnumber">2.2.14.3</span> <span class="toctext">folder:delete</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-44"><a href="AdminManager2_V10.html#group"><span class="tocnumber">2.2.15</span> <span class="toctext">group</span></a>
+<ul>
+<li class="toclevel-4 tocsection-45"><a href="AdminManager2_V10.html#group:add"><span class="tocnumber">2.2.15.1</span> <span class="toctext">group:add</span></a></li>
+<li class="toclevel-4 tocsection-46"><a href="AdminManager2_V10.html#group:create"><span class="tocnumber">2.2.15.2</span> <span class="toctext">group:create</span></a></li>
+<li class="toclevel-4 tocsection-47"><a href="AdminManager2_V10.html#group:remove"><span class="tocnumber">2.2.15.3</span> <span class="toctext">group:remove</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-48"><a href="AdminManager2_V10.html#license"><span class="tocnumber">2.2.16</span> <span class="toctext">license</span></a>
+<ul>
+<li class="toclevel-4 tocsection-49"><a href="AdminManager2_V10.html#license:deploy"><span class="tocnumber">2.2.16.1</span> <span class="toctext">license:deploy</span></a></li>
+<li class="toclevel-4 tocsection-50"><a href="AdminManager2_V10.html#license:validate"><span class="tocnumber">2.2.16.2</span> <span class="toctext">license:validate</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-51"><a href="AdminManager2_V10.html#mail"><span class="tocnumber">2.2.17</span> <span class="toctext">mail</span></a>
+<ul>
+<li class="toclevel-4 tocsection-52"><a href="AdminManager2_V10.html#mail:setup"><span class="tocnumber">2.2.17.1</span> <span class="toctext">mail:setup</span></a></li>
+<li class="toclevel-4 tocsection-53"><a href="AdminManager2_V10.html#mail:send"><span class="tocnumber">2.2.17.2</span> <span class="toctext">mail:send</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-54"><a href="AdminManager2_V10.html#online"><span class="tocnumber">2.2.18</span> <span class="toctext">online</span></a>
+<ul>
+<li class="toclevel-4 tocsection-55"><a href="AdminManager2_V10.html#online:dbrefs"><span class="tocnumber">2.2.18.1</span> <span class="toctext">online:dbrefs</span></a></li>
+<li class="toclevel-4 tocsection-56"><a href="AdminManager2_V10.html#online:demos"><span class="tocnumber">2.2.18.2</span> <span class="toctext">online:demos</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-57"><a href="AdminManager2_V10.html#server"><span class="tocnumber">2.2.19</span> <span class="toctext">server</span></a>
+<ul>
+<li class="toclevel-4 tocsection-58"><a href="AdminManager2_V10.html#server:install"><span class="tocnumber">2.2.19.1</span> <span class="toctext">server:install</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-59"><a href="AdminManager2_V10.html#service"><span class="tocnumber">2.2.20</span> <span class="toctext">service</span></a>
+<ul>
+<li class="toclevel-4 tocsection-60"><a href="AdminManager2_V10.html#service:create"><span class="tocnumber">2.2.20.1</span> <span class="toctext">service:create</span></a></li>
+<li class="toclevel-4 tocsection-61"><a href="AdminManager2_V10.html#service:update"><span class="tocnumber">2.2.20.2</span> <span class="toctext">service:update</span></a></li>
+<li class="toclevel-4 tocsection-62"><a href="AdminManager2_V10.html#service:delete"><span class="tocnumber">2.2.20.3</span> <span class="toctext">service:delete</span></a></li>
+<li class="toclevel-4 tocsection-63"><a href="AdminManager2_V10.html#service:start"><span class="tocnumber">2.2.20.4</span> <span class="toctext">service:start</span></a></li>
+<li class="toclevel-4 tocsection-64"><a href="AdminManager2_V10.html#service:stop"><span class="tocnumber">2.2.20.5</span> <span class="toctext">service:stop</span></a></li>
+<li class="toclevel-4 tocsection-65"><a href="AdminManager2_V10.html#service:list"><span class="tocnumber">2.2.20.6</span> <span class="toctext">service:list</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-66"><a href="AdminManager2_V10.html#tools:init"><span class="tocnumber">2.2.21</span> <span class="toctext">tools:init</span></a>
+<ul>
+<li class="toclevel-4 tocsection-67"><a href="AdminManager2_V10.html#tools:init_2"><span class="tocnumber">2.2.21.1</span> <span class="toctext">tools:init</span></a></li>
+</ul>
+</li>
+<li class="toclevel-3 tocsection-68"><a href="AdminManager2_V10.html#user"><span class="tocnumber">2.2.22</span> <span class="toctext">user</span></a>
+<ul>
+<li class="toclevel-4 tocsection-69"><a href="AdminManager2_V10.html#user:add"><span class="tocnumber">2.2.22.1</span> <span class="toctext">user:add</span></a></li>
+<li class="toclevel-4 tocsection-70"><a href="AdminManager2_V10.html#user:update"><span class="tocnumber">2.2.22.2</span> <span class="toctext">user:update</span></a></li>
+<li class="toclevel-4 tocsection-71"><a href="AdminManager2_V10.html#user:getName"><span class="tocnumber">2.2.22.3</span> <span class="toctext">user:getName</span></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toclevel-2 tocsection-72"><a href="AdminManager2_V10.html#Mode_batch"><span class="tocnumber">2.3</span> <span class="toctext">Mode batch</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-73"><a href="AdminManager2_V10.html#Exemples"><span class="tocnumber">3</span> <span class="toctext">Exemples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-74"><a href="AdminManager2_V10.html#Exemple_1_:_Premi.C3.A8re_utilisation"><span class="tocnumber">3.1</span> <span class="toctext">Exemple 1&#160;: Première utilisation</span></a></li>
+<li class="toclevel-2 tocsection-75"><a href="AdminManager2_V10.html#Exemple_2_:_Cr.C3.A9ation_d.27un_r.C3.A9f.C3.A9rentiel_et_d.27un_dossier"><span class="tocnumber">3.2</span> <span class="toctext">Exemple 2&#160;: Création d'un référentiel et d'un dossier</span></a></li>
+<li class="toclevel-2 tocsection-76"><a href="AdminManager2_V10.html#Exemple_3_:_Cr.C3.A9ation_d.27un_service"><span class="tocnumber">3.3</span> <span class="toctext">Exemple 3&#160;: Création d'un service</span></a></li>
+<li class="toclevel-2 tocsection-77"><a href="AdminManager2_V10.html#Exemple_4_:_utilisation_des_variables_d.27environnement"><span class="tocnumber">3.4</span> <span class="toctext">Exemple 4&#160;: utilisation des variables d'environnement</span></a></li>
+<li class="toclevel-2 tocsection-78"><a href="AdminManager2_V10.html#Exemple_5_:_Cr.C3.A9er_un_jeton_d.27acc.C3.A8s"><span class="tocnumber">3.5</span> <span class="toctext">Exemple 5&#160;: Créer un jeton d'accès</span></a></li>
+<li class="toclevel-2 tocsection-79"><a href="AdminManager2_V10.html#Exemple_:_Fichier_batch"><span class="tocnumber">3.6</span> <span class="toctext">Exemple&#160;: Fichier batch</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h2> <span class="mw-headline" id="Pr.C3.A9sentation">Présentation</span></h2>
+<p>AdminManager2 est un outil permettant d'effectuer des tâches d'administration en ligne de commande.
+</p><p>Il est disponible en version 10 <a rel="nofollow" class="external text" href="https://bumge.sage.com.dl1.ipercast.net/SageFRP1000/1000/adminmanager/adminmanager.zip">ici</a>
+</p><p>Il est disponible en version 11 <a rel="nofollow" class="external text" href="https://bumge.sage.com.dl1.ipercast.net/SageFRP1000/1100/adminmanager/adminmanager.zip">ici</a>
+</p>
+<h2> <span class="mw-headline" id="Mise_en_oeuvre">Mise en oeuvre</span></h2>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#FBE19F;font-size:100%;">
+<table style="background-color:#FBE19F">
+<tr>
+<td><a href="Fichier%253AExclam-20px.png.html" class="image"><img alt="Exclam-20px.png" src="../images/e/e2/Exclam-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Attention&#160;:</b> AdminManager2 doit être lancé en mode administrateur
+</td></tr></table>
+</div>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="Authentification_au_r.C3.A9f.C3.A9rentiel">Authentification au référentiel</span></h3>
+<p>Les informations de connexion aux référentiels sont stockées dans la base de registre, et sont partagées avec le client lourd.
+</p><p>Les commandes authentifiées attendent un paramètre "alias" qui identifie l'entrée de la base de registre par le nom de la clef ou par le libellé de la base.
+</p>
+<h3> <span class="mw-headline" id="Mode_interactif">Mode interactif</span></h3>
+<p>Les commandes disponibles
+</p>
+<h4> <span class="mw-headline" id="about"> about</span></h4>
+<h5> <span class="mw-headline" id="about:update"> about:update</span></h5>
+<pre>about:update
+</pre>
+<p>Télécharge le dernier binaire en ligne et remplace le binaire actuel.
+</p>
+<h5> <span class="mw-headline" id="about:version"> about:version</span></h5>
+<pre>about:version
+</pre>
+<p>Affiche la version courante et la version disponible en ligne
+</p>
+<h4> <span class="mw-headline" id="accessProfile"> accessProfile </span></h4>
+<h5> <span class="mw-headline" id="accessProfile:create"> accessProfile:create</span></h5>
+<pre>accessProfile:create [--accessProfileCaption=xx] [--connectionsTypes=xx] [--isUniqueAccess=xx] [--readOnlyAccess=xx] [--alertOnLoginFail=xx] [--timeToBlock=xx] [--nbLoginFailToLoc=xx] [--failPeriod=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée une politique d'accès. les types de connexions possibles sont ctDesktop,ctWebTop,ctService,ctTask,ctOutlook,ctExcel,ctDashboard,ctMobile,ctSOAP,ctSDATA,ctFTP,ctAdmin.
+</p>
+<h4> <span class="mw-headline" id="accesstoken"> accesstoken </span></h4>
+<h5> <span class="mw-headline" id="accesstoken:create"> accesstoken:create </span></h5>
+<pre>accesstoken:create --caption=xx --folderName=xx [--databaseName=xx] [--societyName=xx] --applicationName=xx --userName=xx [--expireDays=xx] [--varName=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée un jeton d<i>accès et l</i>enregistre dans le répertoire "accesstoken" dans un fichier nommé par le paramètre "caption". Il est de la responsabilité de l'appelant de supprimer ce fichier une fois récupéré.
+Le contenu du jeton peut être copié dans une variable d'environnement "varName"
+</p>
+<h4> <span class="mw-headline" id="application"> application</span></h4>
+<h5> <span class="mw-headline" id="application:deploy"> application:deploy</span></h5>
+<pre>application:deploy --applicationNames=xx [--masterPath=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Déploie une liste d'applications dans le référentiel
+</p><p>Si le master est absent, l'application est téléchargée
+</p><p>Les applications sont Sage1000Entreprise,Tresorerie,AppNotesFrais,cautionsbancaires,comptaGenFin,comptaGenFinGroup,immobilisation,rapprobancaire,banquepaiement
+</p>
+<h5> <span class="mw-headline" id="application:list"> application:list</span></h5>
+<pre>application:list
+</pre>
+<p>affiche la liste des applications disponibles en ligne
+</p>
+<h5> <span class="mw-headline" id="application:update"> application:update</span></h5>
+<pre>application:update [--onlyBySerialNummber=xx] [--verbose=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>télécharge et installe les patchs disponibles puis synchronise les bases métiers si nécessaire
+</p>
+<h4> <span class="mw-headline" id="authProfile"> authProfile</span></h4>
+<h5> <span class="mw-headline" id="authProfile:create"> authProfile:create</span></h5>
+<p>authProfile:create [--authProfileCaption=xx] [--doConfirmContactInf=xx] [--isComplexPassword=xx] [--minLengthPassword=xx] [--maxAgePassword=xx] [--minAgePassword=xx] [--nbHistorPassword=xx] [--trialNbToBlockUser=xx] [--forbiddenWords=xx] [--doubleFactor=xx] [--allowPasswordReInit=xx] [--passwordReInitSms=xx] [--allowRegister=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+Crée une politique d'authentification
+</p>
+<h4> <span class="mw-headline" id="azureKV"> azureKV</span></h4>
+<h5> <span class="mw-headline" id="azureKV:get"> azureKV:get</span></h5>
+<pre>azureKV:get --keyvaultName=xx --secretName=xx [--varName=xx]
+</pre>
+<p>La valeur du secret du coffre fort Azure est copiée dans une variable d'environnement "varName"
+La machine qui exécute l'adminmanager doit être service principal pour accéder au coffre
+</p>
+<h5> <span class="mw-headline" id="azureKV:set"> azureKV:set</span></h5>
+<pre>azureKV:set --keyvaultName=xx --secretName=xx [--varName=xx]
+</pre>
+<p>La valeur de la variable d'environnement "varName" est copiée dans le secret du coffre fort Azure.
+La machine qui exécute l'adminmanager doit être service principal pour accéder au coffre
+</p>
+<h4> <span class="mw-headline" id="container"> container</span></h4>
+<h5> <span class="mw-headline" id="container:create"> container:create</span></h5>
+<pre>container:create --containerName=xx --containerCaption=xx --containerManager=xx [--azureContainerName=xx] [--azureStorageAccount=xx] [--azureStorageAccessKey=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée un conteneur
+</p>
+<h4> <span class="mw-headline" id="database"> database</span></h4>
+<h5> <span class="mw-headline" id="database:create"> database:create</span></h5>
+<pre>database:create [--url=xx] [--masterUserName=xx] [--masterUserPassword=xx] [--osAuthentication=xx] [--compressed=xx] [--unicode=xx] [--textSupport=xx] [--shareSupport=xx] [--driver=xx] [--serverName=xx] [--databaseName=xx] [--databaseSchema=xx] [--databaseUser=xx] [--databasePassword=xx] [--databaseGiven=xx] [--doInitialize=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée une base de données métier
+</p>
+<h5> <span class="mw-headline" id="database:delete"> database:delete</span></h5>
+<pre>database:delete [--databaseName=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx  [--org=xx]
+</pre>
+<p>Supprime une base de données métier
+</p>
+<h5> <span class="mw-headline" id="desktop:install"> desktop:install</span></h5>
+<pre>desktop:install [--path=xx] [--url=xx]
+</pre>
+<p>Installe le client lourd
+</p>
+<h4> <span class="mw-headline" id="directory"> directory</span></h4>
+<h5> <span class="mw-headline" id="directory:addEntity">directory:addEntity</span></h5>
+<pre>directory:addEntity --directoryName=xx [--directoryIdentifier=xx] [--userName=xx] [--groupName=xx] [--authProfile=xx] [--accessProfile=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Ajoute un utilisateur ou un groupe à un annuaire et positionne le cas échéant une politique d'accès ou d'authentification.
+</p>
+<h5> <span class="mw-headline" id="directory:removeEntity">directory:removeEntity</span></h5>
+<pre>directory:removeEntity --directoryName=xx [--userName=xx] [--groupName=xx] [--adminUser=xx] [--adminPassword=xx] [--org=xx] --alias=xx
+</pre>
+<p>Retire un utilisateur ou un groupe d'un annuaire.
+</p>
+<h4> <span class="mw-headline" id="directoryAD"> directoryAD</span></h4>
+<h5> <span class="mw-headline" id="directoryAD:create">directoryAD:create</span></h5>
+<pre>directoryAD:create [--dnBase=xx] --login=xx --password=xx [--isSSO=xx] [--domainName=xx] [--accessProfile=xx] [--name=xx] [--caption=xx] [--adminUser=xx] [--adminPassword=xx] [--org=xx] --alias=xx
+</pre>
+<p>Créé un annuaire Active Directory
+</p>
+<h4> <span class="mw-headline" id="directorySageID"> directorySageID</span></h4>
+<h5> <span class="mw-headline" id="directorySageID:create">directorySageID:create</span></h5>
+<pre>directorySageID:create [--isShadow=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Créé un annuaire Sage Cloud ID
+</p>
+<h4> <span class="mw-headline" id="dbmaster"> dbmaster </span></h4>
+<h5> <span class="mw-headline" id="dbmaster:create"> dbmaster:create </span></h5>
+<pre>dbmaster:create [--url=xx] [--masterUserName=xx] [--masterUserPassword=xx] [--osAuthentication=xx] [--compressed=xx] [--unicode=xx] [--masterPath=xx] --userName=xx --userPassword=xx [--driver=xx] [--serverName=xx] [--databaseName=xx] [--databaseSchema=xx] [--multitenant=xx] [--providerName=xx] --alias=xx
+</pre>
+<p>Crée un référentiel
+</p><p>exemples&#160;: 
+dbmaster:create --url=msodbc://FRPO150757\SQLEXPRESS/dbMaster900_Test?prefix="dbo." --alias="ref test" --userName=test --userPassword=test --masterUserName=sa --masterUserPassword=bunny
+</p><p>dbmaster:create --serverName=FRPO150757\SQLEXPRESS --databaseName=dbMaster900_Test --alias="ref test" --userName=test --userPassword=test --masterUserName=sa --masterUserPassword=bunny
+</p><p>dbmaster:create --serverName=localhost\SQLEXPRESS --databaseName=dbMaster910 --alias="910" --userName=test --userPassword=test --osAuthentication=1
+</p><p><br />
+</p>
+<h5> <span class="mw-headline" id="dbmaster:update"> dbmaster:update </span></h5>
+<pre>dbmaster:update --alias=xx
+</pre>
+<p>synchronise un référentiel
+</p><p><br />
+</p>
+<h4> <span class="mw-headline" id="env"> env</span></h4>
+<h5> <span class="mw-headline" id="env:set"> env:set</span></h5>
+<pre>env:set --name=xx --value=xx
+</pre>
+<p>Positionne une variable d'environnement
+</p>
+<h5> <span class="mw-headline" id="env:get"> env:get</span></h5>
+<pre>env:get --name=xx
+</pre>
+<p>Retourne une variable d'environnement
+</p>
+<h4> <span class="mw-headline" id="folder"> folder</span></h4>
+<h5> <span class="mw-headline" id="folder:authorize"> folder:authorize</span></h5>
+<pre>folder:authorize --folderName=xx [--userName=xx] [--groupName=xx] [--applicationName=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx  [--org=xx]
+</pre>
+<p>Autorise un utilisateur sur un dossier
+</p>
+<h5> <span class="mw-headline" id="folder:create"> folder:create</span></h5>
+<pre>folder:create --folderName=xx --applicationName=xx --databaseName=xx [--dbRefScript=xx] [--initArchive=xx] [--docContainers=xx] [--taskMode=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée un dossier
+dbRefScript est 
+</p>
+<ul><li> soit le chemin complet vers un fichier xml qui décrit le fichier .sql associé
+</li><li> soit le nom d'un script disponible dans le master en ligne, il est alors téléchargé (voir online:dbrefs )
+</li></ul>
+<h5> <span class="mw-headline" id="folder:delete"> folder:delete</span></h5>
+<pre>folder:delete --folderName=xx [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Supprime un dossier
+</p>
+<h4> <span class="mw-headline" id="group"> group</span></h4>
+<h5> <span class="mw-headline" id="group:add"> group:add</span></h5>
+<pre>group:add --groupName=xx --userName=xx [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Ajoute un utilisateur à un groupe
+</p>
+<h5> <span class="mw-headline" id="group:create"> group:create</span></h5>
+<pre>group:create --groupName=xx [--parentName=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée un groupe d'utilisateurs
+</p>
+<h5> <span class="mw-headline" id="group:remove">group:remove </span></h5>
+<pre>group:remove --groupName=xx --userName=xx [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Retire un utilisateur d'un groupe
+</p>
+<h4> <span class="mw-headline" id="license"> license</span></h4>
+<h5> <span class="mw-headline" id="license:deploy"> license:deploy</span></h5>
+<pre>license:deploy [--keys=xx] [--varName=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Déploie une liste de clefs dans le référentiel
+</p>
+<h5> <span class="mw-headline" id="license:validate"> license:validate</span></h5>
+<pre>license:validate --codes=xx [--adminUser=xx] [--adminPassword=xx] --alias=xx  [--org=xx]
+</pre>
+<p>Enregistre un code DUA
+</p>
+<h4> <span class="mw-headline" id="mail">mail</span></h4>
+<h5> <span class="mw-headline" id="mail:setup">mail:setup</span></h5>
+<pre>mail:setup --server=xx --TLSimplicit=xx --TLSexplicit=xx --user=xx [--password=xx] [--exp=xx] [--port=xx] [--adminUser=xx] [--adminPassword=xx] [--org=xx] --alias=xx
+</pre>
+<p>Paramètre le serveur de mail
+</p>
+<h5> <span class="mw-headline" id="mail:send">mail:send</span></h5>
+<pre>mail:send --dest=xx --subject=xx --body=xx [--adminUser=xx] [--adminPassword=xx] [--org=xx] --alias=xx
+</pre>
+<p>Envoie un mail (utile pour tester le paramétrage du serveur de mail)
+</p>
+<h4> <span class="mw-headline" id="online">online</span></h4>
+<h5> <span class="mw-headline" id="online:dbrefs">online:dbrefs</span></h5>
+<pre>online:dbrefs
+</pre>
+<p>Retourne la liste des scripts de références disponibles en ligne
+</p>
+<h5> <span class="mw-headline" id="online:demos">online:demos</span></h5>
+<pre>online:demos
+</pre>
+<p>Retourne la liste des bases de démo disponibles en ligne
+</p>
+<h4> <span class="mw-headline" id="server">server</span></h4>
+<h5> <span class="mw-headline" id="server:install">server:install</span></h5>
+<pre>server:install [--path=xx] [--withLoader=xx] [--url=xx]
+</pre>
+<p>Télécharge et installe le serveur Sage FRP 1000, ajoute une exception au pare feu pour le service.
+Le paramètre "withLoader" permet d'installer le service avec le loader de service
+</p>
+<h4> <span class="mw-headline" id="service">service </span></h4>
+<h5> <span class="mw-headline" id="service:create">service:create </span></h5>
+<pre>service:create --name=xx --applicationName=xx --folderNames=xx --serverUser=xx --serverPassword=xx [--path=xx] [--withLoader=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Crée un service dans le fichier de configuration ainsi que le service windows associé
+Le paramètre "withLoader" permet d'installer le service avec le loader de service
+</p>
+<h5> <span class="mw-headline" id="service:update">service:update</span></h5>
+<pre>service:update --keys=xx --values=xx [--path=xx] [--withLoader=xx] --name=xx 
+</pre>
+<p>Modifie le fichier de configuration du service
+</p>
+<h5> <span class="mw-headline" id="service:delete">service:delete</span></h5>
+<pre>service:delete [--path=xx] [--withLoader=xx] --name=xx
+</pre>
+<p>Supprime un service dans le fichier de configuration ainsi que le service windows associé 
+</p>
+<h5> <span class="mw-headline" id="service:start">service:start</span></h5>
+<pre>service:start --name=xx 
+</pre>
+<p>Démarre le service windows lié 
+</p>
+<h5> <span class="mw-headline" id="service:stop">service:stop </span></h5>
+<pre>service:stop --name=xx
+</pre>
+<p>Arrête le service Windows 
+</p>
+<h5> <span class="mw-headline" id="service:list">service:list</span></h5>
+<pre>service:list [--path=xx] [--withLoader=xx] 
+</pre>
+<p>Liste les services présents dans le fichier de configuration du service
+</p>
+<h4> <span class="mw-headline" id="tools:init">tools:init</span></h4>
+<h5> <span class="mw-headline" id="tools:init_2">tools:init</span></h5>
+<pre>tools:init
+</pre>
+<p>Installe les composants nécessaires: libraisiries SSL, OVPs, sage.common.dll, drivers SQL
+</p>
+<h4> <span class="mw-headline" id="user">user</span></h4>
+<h5> <span class="mw-headline" id="user:add">user:add </span></h5>
+<pre>user:add --userName=xx --userCaption=xx [--userMail=xx] [--newUserPassword=xx] [--expire=xx] [--hasAdminRole=xx] [--hasAdminFolderRole=xx] [--hasDevelopperRole=xx] [--hasPersonalDataRestrictions=xx] [--haveToChangePassword=xx] [--randomPassword=xx] [--adminUser=xx] [--adminPassword=xx] [--org=xx] --alias=xx
+</pre>
+<p>Crée un utilisateur, le paramétre expire indique le nombre de jour avant l'expiration du compte (à partir de la date de création)
+</p>
+<h5> <span class="mw-headline" id="user:update">user:update </span></h5>
+<pre>user:add --userName=xx --userCaption=xx [--userMail=xx] [--newUserPassword=xx] [--expire=xx] [--hasAdminRole=xx] [--hasAdminFolderRole=xx] [--hasDevelopperRole=xx] [--haveToChangePassword=xx] [--randomPassword=xx] [--hasPersonalDataRestrictions=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</pre>
+<p>Modifie un utilisateur
+</p>
+<h5> <span class="mw-headline" id="user:getName">user:getName </span></h5>
+<pre>user:getName --userMail=xx [--varName=xx]
+</pre>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="Mode_batch">Mode batch</span></h3>
+<p>il est possible d'appeler l'exécutable avec en paramètre un fichier contenant une liste de commandes
+</p>
+<pre>frp.exe --file="C:\projets\Desktop\adminl1000_scripts\commands.txt"
+</pre>
+<h2> <span class="mw-headline" id="Exemples">Exemples</span></h2>
+<p>user:update
+user:update --userName=xx [--userCaption=xx] [--userMail=xx] [--newUserPassword=xx] [--expire=xx] [--adminUser=xx] [--adminPassword=xx] --alias=xx
+</p>
+<h3> <span class="mw-headline" id="Exemple_1_:_Premi.C3.A8re_utilisation">Exemple 1&#160;: Première utilisation</span></h3>
+<p>Téléchargement et installation des prérequis
+</p><p><b>tools:init</b>
+</p><p>Téléchargement et installation du server Sage FRP 1000
+</p><p><b>server:install</b>
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="Exemple_2_:_Cr.C3.A9ation_d.27un_r.C3.A9f.C3.A9rentiel_et_d.27un_dossier">Exemple 2&#160;: Création d'un référentiel et d'un dossier</span></h3>
+<p>Créer le référentiel
+</p><p><b>dbmaster:create --url=msodbc://FRPO150757\SQLEXPRESS/dbMaster900_Test?prefix="dbo." --alias="ref test" --userName=test --userPassword=test --masterUserName=sa --masterUserPassword=bunny </b>
+</p><p>Installer l'application suite financière
+</p><p><b>application:deploy --applicationNames=Sage1000Entreprise --alias="ref test" </b>
+</p><p>Installer les clefs d'authenticité
+</p><p><b>license:deploy --alias="ref test" --keys=XXXXXXXXXXXXXXX,XXXXXXXXXXXXXXXXXXX </b>
+</p><p>Créer la base de données métier
+</p><p><b>database:create --alias="ref test" --url=msodbc://FRPO150757\SQLEXPRESS/baseSuiteTest?prefix="dbo." --masterUserName=sa --masterUserPassword=bunny</b>
+</p><p>Créer le dossier
+</p><p><b>folder:create --alias="ref test" --databaseName=baseSuiteTest --applicationName=Sage1000Entreprise --folderName=monDossierSuite --dbRefScript=sql_dbRefGCF1000-euro</b>
+</p><p>Créer un groupe
+</p><p><b>group:create --alias="ref test" --groupName="mon groupe"</b>
+</p><p>Créer un utilisateur
+</p><p><b>user:add --alias="ref test" --userName="mon user" --userCaption="jean dupont" --userMail="<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="3a5e4f4a55544e7a5d575b535614595557">[email&#160;protected]</a>" </b>
+</p><p>Associer l'utilisateur au groupe
+</p><p><b>group:add --alias="ref test" --groupName="mon groupe" --userName="mon user"</b>
+</p><p>Autoriser le groupe sur le dossier
+</p><p><b>folder:authorize --alias="ref test" --folderName=monDossierSuite --groupName="mon groupe"</b>
+</p>
+<h3> <span class="mw-headline" id="Exemple_3_:_Cr.C3.A9ation_d.27un_service">Exemple 3&#160;: Création d'un service</span></h3>
+<p>Ajouter l'utilisateur de service
+</p><p><b>user:add --alias="ref test" --userName="webuser" --userCaption="webuser" --userPassword=P@ss</b>
+</p><p><br />
+Autoriser l'utilisateur
+</p><p><b>folder:authorize --alias="ref test" --folderName=monDossierSuite --userName="webuser" </b>
+</p><p>Créer le service
+</p><p><b>service:create --alias="ref test" --name="900_suitefi" --applicationName=Sage1000Entreprise --folderNames="monDossier" --serverUser=webuser --serverPassword=P@ss</b>
+</p><p>Démarrer le service
+</p><p><b>service:start --name="900_suitefi"</b>
+</p>
+<h3> <span class="mw-headline" id="Exemple_4_:_utilisation_des_variables_d.27environnement">Exemple 4&#160;: utilisation des variables d'environnement</span></h3>
+<p>Les variables peuvent être définies dans le script, dans le programme appelant, ou bien au niveau du système.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Les variables sont substituées sur la ligne de commande, si la variable contient des espaces il faut la référencée entre guillemets "%maVariableAvecEspaces%"
+</td></tr></table>
+</div>
+<pre>
+env:set --name=monAlias --value=&quot;référentiel 910&quot;
+env:set --name=monServeur --value=&quot;FRPO150757\SQLEXPRESS&quot;
+dbmaster:create --url=msodbc://%monServeur%/dbMasterTest4?prefix=&quot;dbo.&quot; --alias=&quot;%monAlias%&quot;   --userName=test --userPassword=test --masterUserName=sa --masterUserPassword=bunny
+</pre>
+<h3> <span class="mw-headline" id="Exemple_5_:_Cr.C3.A9er_un_jeton_d.27acc.C3.A8s">Exemple 5&#160;: Créer un jeton d'accès</span></h3>
+<p><b>accesstoken:create --caption="test1" --folderName="Compta" --societyName="S1" --applicationName="comptaGenFin" --userName="sage" --alias="920 locale" --expireDays=10</b>
+</p><p><br />
+</p>
+<h3> <span class="mw-headline" id="Exemple_:_Fichier_batch">Exemple&#160;: Fichier batch</span></h3>
+<p><b>Création d'une base master, installation de la Suite Financière et création d'une base métier</b>
+</p>
+<pre>
+; Set variables
+;
+env:set --name=masterAlias --value=&quot;master local&quot;
+env:set --name=dbServer --value=&quot;xxxx&quot;
+env:set --name=saPassword --value=&quot;xxxx&quot;
+;
+env:set --name=dbUser --value=&quot;syfre&quot;
+env:set --name=dbUserPassword --value=&quot;xxxx&quot;
+;
+env:set --name=dbName --value=&quot;db1100SuiteFi&quot;
+;
+env:set --name=folder --value=&quot;Test Suite Fi&quot;
+env:set --name=group --value=&quot;users&quot;
+env:set --name=user --value=&quot;syfre&quot;
+
+; Initialization
+;
+tools:init
+
+; Create master database
+;
+dbmaster:create --url=msodbc://%dbServer%/dbMaster1100?prefix=&quot;dbo.&quot; --alias=&quot;%masterAlias%&quot; --userName=%dbUser% --userPassword=%dbUserPassword% --masterUserName=sa --masterUserPassword=%saPassword%
+
+; Install Sage FRP 1000 Suite Fi
+;
+application:deploy --applicationNames=Sage1000Entreprise --alias=&quot;%masterAlias%&quot;
+
+; Create product database
+;
+database:create --alias=&quot;%masterAlias%&quot; --url=msodbc://%dbServer%/%dbName%?prefix=&quot;dbo.&quot; --masterUserName=sa --masterUserPassword=%saPassword%
+folder:create --alias=&quot;%masterAlias%&quot; --databaseName=%dbName% --applicationName=Sage1000Entreprise --folderName=&quot;%folder%&quot; --dbRefScript=sql_dbRefGCF1000-euro
+
+; Create group and user
+;
+group:create --alias=&quot;%masterAlias%&quot; --groupName=%group%
+user:add --alias=&quot;%masterAlias%&quot; --userName=%user% --userCaption=&quot;sylvain frere&quot; --userMail=&quot;<a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="46353f2a30272f2868203423342306352721236825292b">[email&#160;protected]</a>&quot;
+group:add --alias=&quot;%masterAlias%&quot; --groupName=%group% --userName=%user%
+folder:authorize --alias=&quot;%masterAlias%&quot; --folderName=&quot;%folder%&quot; --groupName=%group%
+</pre>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 340/1000000
+Post-expand include size: 702/2097152 bytes
+Template argument size: 215/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:6281-0!*!*!!fr!2!* and timestamp 20240729130142 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 0
+                        &nbsp; <b>Bots & Crawlers</b>  1
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;oldid=14658">https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;oldid=14658</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégories</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration" title="Catégorie:Administration">Administration</a></li><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Version1000" title="Catégorie:Version1000">Version1000</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="AdminManager2_V10.html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:AdminManager2_V10&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=AdminManager2+V10" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/AdminManager2_V10" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/AdminManager2_V10" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=AdminManager2_V10&amp;oldid=14658" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=AdminManager2_V10">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 8 juillet 2024 à 09:10.<br /></li>
+		<li id="viewcount">Cette page a été consultée 3 038 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.144 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad4917cdac9527',t:'MTcyMjI1Nzk1OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

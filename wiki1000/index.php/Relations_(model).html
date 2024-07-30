@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Relations (model) - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Relations_(model)", "wgTitle": "Relations (model)", "wgCurRevisionId": 1910, "wgArticleId": 172, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Modèle"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Relations_model action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Relations (model)</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Relations_(model).html#column-one">Navigation</a>, <a href="Relations_(model).html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Relations_(model).html#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Relations_(model).html#Cardinalit.C3.A9s"><span class="tocnumber">2</span> <span class="toctext">Cardinalités</span></a>
+<ul>
+<li class="toclevel-2 tocsection-3"><a href="Relations_(model).html#Relation_de_type_r.C3.A9f.C3.A9rence"><span class="tocnumber">2.1</span> <span class="toctext">Relation de type référence</span></a></li>
+<li class="toclevel-2 tocsection-4"><a href="Relations_(model).html#Relation_de_type_liste"><span class="tocnumber">2.2</span> <span class="toctext">Relation de type liste</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Relations_(model).html#Relation_de_type_Association"><span class="tocnumber">2.3</span> <span class="toctext">Relation de type Association</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-6"><a href="Relations_(model).html#Propri.C3.A9t.C3.A9s"><span class="tocnumber">3</span> <span class="toctext">Propriétés</span></a>
+<ul>
+<li class="toclevel-2 tocsection-7"><a href="Relations_(model).html#Agr.C3.A9gat"><span class="tocnumber">3.1</span> <span class="toctext">Agrégat</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Relations_(model).html#Composition"><span class="tocnumber">3.2</span> <span class="toctext">Composition</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-9"><a href="Relations_(model).html#Cr.C3.A9ation_d.27une_relation"><span class="tocnumber">4</span> <span class="toctext">Création d'une relation</span></a></li>
+<li class="toclevel-1 tocsection-10"><a href="Relations_(model).html#Propri.C3.A9t.C3.A9s_d.27un_r.C3.B4le"><span class="tocnumber">5</span> <span class="toctext">Propriétés d'un rôle</span></a></li>
+<li class="toclevel-1 tocsection-11"><a href="Relations_(model).html#R.C3.B4les_et_cl.C3.A9s_.C3.A9trang.C3.A8res_de_la_base_de_donn.C3.A9es"><span class="tocnumber">6</span> <span class="toctext">Rôles et clés étrangères de la base de données</span></a></li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id="Introduction">Introduction</span></h3>
+<p>Les classes métiers interagissent entre elles à travers des relations. 
+Une relation est implémentée dans chaque classe métier qui y participe par un attribut particulier appelé rôle.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Les Relations correspondent aux Associations de la norme UML. En Ligne 1000 on préfère appeler Association une relation de multiplicité *-*.
+</td></tr></table>
+</div>
+<h3> <span class="mw-headline" id="Cardinalit.C3.A9s">Cardinalités</span></h3>
+<p>La cardinalité précise le nombre d'objets qui participent à une relation.
+</p><p>On classe les relations en trois types&#160;:
+</p>
+<h4> <span class="mw-headline" id="Relation_de_type_r.C3.A9f.C3.A9rence">Relation de type référence</span></h4>
+<p>Une relation de type référence est une relation entre deux classes A et B, navigable de A vers B, où pour un objet de type A peuvent correspondre 0 ou 1 objet de type B.
+Exemple
+</p><p><img src="../medias/images/dsm/modele/role/image1.png" alt="image1.png" /> 
+</p><p>Dans cet exemple on associe un pays à une banque. La relation se traduit par un attribut oidPays et un attribut Pays dans la classe TBanque.
+</p><p>La cardinalité 0..1 signifie qu'un objet de type TBanque peut être associé à un objet de type TPays sans que cela soit obligatoire.
+Relation de type liste
+</p>
+<h4> <span class="mw-headline" id="Relation_de_type_liste">Relation de type liste</span></h4>
+<p>Une relation de type liste est une relation entre deux classes A et B où pour un objet de type A peuvent correspondre "n" objets de type B et pour un objet de type B peuvent correspondre 0 ou 1 objets de type A. Ce type de relation est de cardinalité 0..1-m.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> L'implémentation d'un rôle liste dans une classe A génère l'implémentation d'un rôle référence dans la classe B.
+</td></tr></table>
+</div>
+<p>Exemple
+</p><p><img src="../medias/images/dsm/modele/role/image2.png" alt="image2.png" /> 
+</p><p>Dans cet exemple on associe des agences bancaires à une banque. La relation se traduit par un attribut oidBanque et un attribut Banque dans la classe TAgenceBancaire et par un rôle liste AgenceBancaireList dans la classe TBanque.
+</p>
+<h4> <span class="mw-headline" id="Relation_de_type_Association">Relation de type Association</span></h4>
+<p>Une relation de type association est une relation entre deux classes A et B où pour un objet de type A peuvent correspondre "n" objets de type B et pour un objet de type B peuvent correspondre "m" objets de type A. Ce type de relation est de cardinalité m-n ou *-*.
+</p><p>L'implémentation de cette relation se fait à travers une classe intermédiaire appelée classe d'association C.
+La classe A contient un rôle liste vers la classe B, roleBList. La classe B contient un rôle liste vers la classe A, roleAList. La classe C contient des références vers la classe A et la classe B.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Le Framework Ligne 1000 ne supporte pas nativement d’association autre que binaire, il est toutefois possible d’implémenter explicitement ces associations en utilisant des classes d’associations.
+</td></tr></table>
+</div>
+<p>Exemple
+</p><p><img src="../medias/images/dsm/modele/role/image3.png" alt="image3.png" /> 
+</p><p>Un tiers peut être associé à plusieurs périmètres groupe. Un périmètre groupe peut être associé à plusieurs tiers. La classe d'association est TPerimetreGroupeTiers. La relation se traduit par un rôle liste PerimetreGroupeList dans la classe TTiers, un rôle liste TiersList dans la classe TPerimetreGroupe, un rôle référence Tiers et un rôle référence PerimetreGroupe dans la classe TPerimetreGroupeTiers.
+</p>
+<h3> <span class="mw-headline" id="Propri.C3.A9t.C3.A9s">Propriétés</span></h3>
+<h4> <span class="mw-headline" id="Agr.C3.A9gat">Agrégat</span></h4>
+<p>L’agrégation est une association non symétrique qui exprime un couplage fort et une relation de subordination.
+Elle représente une relation de type «&#160;ensemble / élément&#160;».
+Une agrégation peut notamment (mais pas nécessairement) exprimer&#160;:
+</p>
+<ul><li>qu’une classe (un «&#160;élément&#160;») fait partie d’une autre («&#160;l’agrégat&#160;»),
+</li><li>qu’un changement d’état d’une classe, entraîne un changement d’état d’une autre,
+</li><li>qu’une action sur une classe, entraîne une action sur une autre.
+</li></ul>
+<p>A un même moment, une instance d’élément agrégé peut être liée à plusieurs instances d’autres classes (l’élément agrégé peut être partagé).
+</p><p>Une instance d’élément agrégé peut exister sans agrégat (et inversement)&#160;: les cycles de vies de l’agrégat et de ses éléments agrégés peuvent être indépendants.
+</p><p><img src="../medias/images/dsm/modele/role/image4.png" alt="image4.png" /> 
+</p><p>Exemple de rôle agrégation
+</p><p><img src="../medias/images/dsm/modele/role/image5.png" alt="image5.png" /> 
+</p>
+<h4> <span class="mw-headline" id="Composition">Composition</span></h4>
+<p>La composition est une agrégation forte.
+Les cycles de vies des éléments, les «&#160;composants&#160;», et de l’agrégat, le «&#160;composé&#160;», coïncident&#160;: si le composés est détruit, ou copié, ses composants le sont aussi.
+A un même moment, une instance de composant ne peut être liée qu’à un seul composé.
+Les «&#160;objets composites&#160;» sont des instances de classes composées.
+</p><p><img src="../medias/images/dsm/modele/role/image6.png" alt="image6.png" /> 
+</p><p>Exemple de rôle composition
+</p><p><img src="../medias/images/dsm/modele/role/image7.png" alt="image7.png" /> 
+</p>
+<h3> <span class="mw-headline" id="Cr.C3.A9ation_d.27une_relation">Création d'une relation</span></h3>
+<p>La création d'un rôle se fait au moyen de l'assistant de création de rôles.
+</p>
+<ol><li>Occupez les deux classes qui font partie de la relation.
+</li><li>Cliquez droit sur la première classe et choisissez la fonction Ajouter un rôle.
+</li></ol>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Il est aussi possible d’utiliser l’éditeur de <a href="https://frp.sage.fr/wiki1000/index.php?title=Diagrammes_de_classe_(tools)&amp;action=edit&amp;redlink=1" class="new" title="Diagrammes de classe (tools) (page inexistante)">Diagramme de Classe</a> pour définir une relation. Dans ce cas, il suffit de «&#160;tirer&#160;» une relation entre les deux classes présentes sur le diagramme.
+</td></tr></table>
+</div>
+<p><img src="../medias/images/dsm/modele/role/image8.png" alt="image8.png" /> 
+</p><p>Vous accédez à l'assistant de création de rôles&#160;:
+</p><p><img src="../medias/images/dsm/modele/role/image9.png" alt="image9.png" /> 
+</p><p>Sélectionnez la classe associée. Les cases à cocher dans la partie basse de la fenêtre vous permettent de filtrer les classes disponibles. Cliquez sur le bouton Suivant.
+</p><p><img src="../medias/images/dsm/modele/role/image10.png" alt="image10.png" /> 
+</p><p>Pour la classe de gauche (pour rappel vous retrouvez le nom de la classe de gauche dans la partie haute de l'assistant), saisissez le nom du rôle et un libellé et ajouter une description. Cliquez sur le bouton Suivant.
+</p><p><img src="../medias/images/dsm/modele/role/image11.png" alt="image11.png" /> 
+</p><p>Pour la classe de droite (pour rappel vous retrouvez le nom de la classe de droite dans la partie haute de l'assistant), saisissez le nom du rôle et un libellé et ajouter une description. Cliquez sur le bouton Suivant.
+</p><p><img src="../medias/images/dsm/modele/role/image12.png" alt="image12.png" /> 
+</p><p>Pour changer la cardinalité double-cliquez sur les cardinalités sur l'image. Les valeurs possibles sont&#160;: 0..1, 1, 0..*, 1..*.
+Pour définir une association binaire, double-cliquez sur le carré en bas de l'image. La classe d'association est représentée et il faut saisir le nom de celle-ci (ex.&#160;: PerimetreGroupeTiers).
+</p><p>Pour définir un agrégat ou une composition, double-cliquez sur la relation du coté de la classe où vous souhaitez l'agrégat ou la composition. Le symbole graphique se change pour passer d'une relation simple à un agrégat et ensuite à une composition.
+Définir un agrégat&#160;:
+</p><p>Définir une composition&#160;:
+</p><p><img src="../medias/images/dsm/modele/role/image13.png" alt="image13.png" /> 
+</p><p>Pour finir la vue dans le concepteur de modèle des éléments de la relation&#160;:
+</p><p><img src="../medias/images/dsm/modele/role/image14.png" alt="image14.png" /> 
+</p>
+<h3> <span class="mw-headline" id="Propri.C3.A9t.C3.A9s_d.27un_r.C3.B4le">Propriétés d'un rôle</span></h3>
+<p>Il est possible de paramétrer des options avancées pour les rôles. Cliquez droite sur le rôle à modifier, ensuite sur la fonction propriétés. Les propriétés d'attribut de rôle se trouvent sur l'onglet Options de rôle.
+</p><p>Les options proposées dépendent de la cardinalité du rôle.
+</p><p><img src="../medias/images/dsm/modele/role/image16.png" alt="image16.png" />
+</p>
+<ul><li>Non généralisable lors de l'application des droits.
+</li></ul>
+<dl><dd>Si l'option est sélectionnée, la généralisation d'un droit ne sera pas appliqué à travers cette référence.
+</dd></dl>
+<ul><li>Propager les modifications de partage sur les objets référencés.
+</li></ul>
+<dl><dd>Si cette option est sélectionnée, lors de la modification du niveau de partage de l'objet tenant le rôle, par exemple de niveau Société à niveau Dossier, les objets référencés par le rôle seront aussi changer de niveau. Ce changement de niveau automatique est toujours appliqué pour une composition.
+</dd></dl>
+<ul><li>Mettre les objets référencés dans la même transaction et les valider
+</li></ul>
+<dl><dd>Si l'option est sélectionnée, tous les objets liés seront mis en transaction si l'objet propriétaire du rôle est mis en transaction. Les objets liés seront validés au moment de la validation de la transaction.
+</dd></dl>
+<ul><li>Mettre les objets référencés dans la même transaction sans les valider
+</li></ul>
+<dl><dd>Si l'option est sélectionnée, tous les objets liés seront mis en transaction si l'objet propriétaire du rôle est mis en transaction. Les objets liés ne seront pas validés au moment de la validation de la transaction.
+</dd></dl>
+<ul><li>Mettre à nul la référence sur suppression de l'objet référencé
+</li></ul>
+<dl><dd>Si l'option est sélectionnée au moment de la suppression de l'objet, il va mettre à nul sa référence dans les objets liés. Sans cette option la suppression ne peut pas se faire pour un objet qui est référencé.
+</dd></dl>
+<ul><li>Supprimer les objets de la liste sur suppression
+</li></ul>
+<dl><dd>Cette option provoque la suppression en cascade des objets liés à la suppression du propriétaire du rôle.
+</dd></dl>
+<ul><li>Ce rôle accepte les objets stockés dans d’autre base de données
+</li></ul>
+<dl><dd>Cette option permet d’accepter que des références vers des objets d’une autre base de données soit acceptées. 
+</dd></dl>
+<ul><li>Attribut étranger de clé primaire
+</li></ul>
+<dl><dd>Permet de définir comme clé de la relation un autre attribut que l'identifiant de l'objet pour un rôle liste. Par exemple si on souhaite une liaison par code et non par des identifiant, il faut renseigner "code" dans l'option Attribut étranger de clé primaire.
+</dd></dl>
+<ul><li>Cette référence ne notifie pas les modifications au rôle réciproque.
+</li></ul>
+<dl><dd>Si cette option est sélectionnée, les modifications de l'objet référencé ne seront pas notifiées à l'objet tenant le rôle.
+</dd></dl>
+<ul><li>Attribut utilisé pour trier
+</li></ul>
+<dl><dd>Permet d'utiliser un tri différent de la clé primaire pour les rôles listes.
+</dd></dl>
+<ul><li>Attribut utilisé pour regrouper
+</li></ul>
+<dl><dd>Permet de définir un regroupement. Les regroupement affecte la manière dont l’ordonnancement est effectué. Voir ci-dessous.
+</dd></dl>
+<ul><li>Ce rôle est ordonnés sur l’attribut de trie
+</li></ul>
+<dl><dd>Les rôles listes et les rôles d'association peuvent être ordonnés à condition qu’il soit trié et que l'attribut de trie soit un entier. 
+</dd></dl>
+<p>Lorsqu’un rôle est ordonné il numérote automatiquement les objets qui y sont insérés en affectant une valeur à l’attribut de trie. De plus si un attribut de regroupement est utilisé cette numérotation est réalisée par groupe de sorte que chaque groupe reste ordonné. 
+Lorsqu’un rôle est ordonné son comportement est le suivant&#160;: 
+</p>
+<ol><li>Si un attribut de groupe est utilisé il est affecté de la valeur du groupe immédiatement précédent. 
+</li><li>L’attribut de trie est affecté de la plus grande valeur du groupe incrémenté du pas du rôle.
+</li><li>L'insertion dans le rôle peut provoquer la renumérotation des autres objets du rôle.
+</li><li>L'attribut de trie reste modifiable par l'utilisateur ce qui lui permet de réordonner la liste. Les doublons sont acceptables.
+</li></ol>
+<h3> <span class="mw-headline" id="R.C3.B4les_et_cl.C3.A9s_.C3.A9trang.C3.A8res_de_la_base_de_donn.C3.A9es">Rôles et clés étrangères de la base de données</span></h3>
+<p>Le framework utilise l’intégrité assurée par les clés étrangères de la base de données relationnelle pour assurer l’intégrité des objets en relation.
+</p><p>La création d'un rôle de type <b>référence</b> détermine la création d'une clé étrangère entre les tables de chaque classe de la base de données.
+</p><p>Exemple
+</p><p>Pour la relation AgenceBancaire – Banque, dans la classe AgenceBancaire on crée la colonne oidBanque qui réfère l'identifiant de la banque dans la table Banque. Une clé étrangère est créée pour la table AgenceBancaire qui met en liaison les colonnes oidBanque de la table AgenceBancaire et oid de la table Banque.
+</p><p>Les conséquences de la création d'une clé étrangère pour une classe A qui référence un objet de classe B sont&#160;:
+</p>
+<ul><li>On ne peut pas introduire dans l’attribut oidB de la classe A des valeurs qui n'existent pas dans l’attribut oid de la classe B.
+</li><li>On ne peut pas supprimer un objet de la classe B tant qu'il est référencé par un objet de la classe A, à moins d’avoir utilisé l’option du rôle Mettre à nulle la référence sur suppression de l’objet référencé.
+</li></ul>
+<p>Dans certain cas le framework ne génère pas de clé étrangère&#160;:
+</p>
+<ul><li>Lorsque la classe référencée est située dans une autre base de données. C’est par exemple le cas lorsqu’une classe de la base de données Master est référencée dans le modèle.
+</li><li>Lorsque le rôle référence une Interface. Dans ce cas des objets appartenant à des classes différentes sont susceptibles d’être placés dans le rôle.
+</li></ul>
+<center>
+<p>&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/Mod%C3%83%C2%A8le" title="Modèle">Modèle</a>
+&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM" title="Développement DSM">Développement DSM</a> &#8212; 
+</p>
+</center>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 144/1000000
+Post-expand include size: 2956/2097152 bytes
+Template argument size: 727/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:172-0!*!0!!fr!2!* and timestamp 20240729130246 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 0
+                        &nbsp; <b>Bots & Crawlers</b>  1
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;oldid=1910">https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;oldid=1910</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégorie</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Mod%C3%83%C2%A8le" title="Catégorie:Modèle">Modèle</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Relations_(model).html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Relations_(model)&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Relations+(model)" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Relations_(model)" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Relations_(model)" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Relations_(model)&amp;oldid=1910" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Relations_(model)">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 19 août 2009 à 09:57.<br /></li>
+		<li id="viewcount">Cette page a été consultée 6 920 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.105 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad4aa95cbd9527',t:'MTcyMjI1ODAyNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

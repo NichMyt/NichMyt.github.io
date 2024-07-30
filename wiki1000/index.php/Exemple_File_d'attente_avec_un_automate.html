@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Exemple File d'attente avec un automate - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Exemple_File_d\'attente_avec_un_automate", "wgTitle": "Exemple File d\'attente avec un automate", "wgCurRevisionId": 9602, "wgArticleId": 3281, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["File d\'attente"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-delphi {line-height: normal;}
+.source-delphi li, .source-delphi pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for delphi
+ * CSS class: source-delphi, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.delphi.source-delphi .de1, .delphi.source-delphi .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.delphi.source-delphi  {font-family:monospace;}
+.delphi.source-delphi .imp {font-weight: bold; color: red;}
+.delphi.source-delphi li, .delphi.source-delphi .li1 {font-weight: normal; vertical-align:top;}
+.delphi.source-delphi .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.delphi.source-delphi .li2 {font-weight: bold; vertical-align:top;}
+.delphi.source-delphi .kw1 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw2 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw3 {color: #000066;}
+.delphi.source-delphi .kw4 {color: #000066; font-weight: bold;}
+.delphi.source-delphi .co1 {color: #808080; font-style: italic;}
+.delphi.source-delphi .co2 {color: #008000; font-style: italic;}
+.delphi.source-delphi .coMULTI {color: #808080; font-style: italic;}
+.delphi.source-delphi .es0 {color: #ff0000; font-weight: bold;}
+.delphi.source-delphi .br0 {color: #000066;}
+.delphi.source-delphi .sy0 {color: #000066;}
+.delphi.source-delphi .sy1 {color: #000066;}
+.delphi.source-delphi .sy2 {color: #000066;}
+.delphi.source-delphi .sy3 {color: #000066;}
+.delphi.source-delphi .st0 {color: #ff0000;}
+.delphi.source-delphi .nu0 {color: #0000ff;}
+.delphi.source-delphi .me1 {color: #006600;}
+.delphi.source-delphi .re0 {color: #9ac;}
+.delphi.source-delphi .re1 {color: #ff0000;}
+.delphi.source-delphi .ln-xtra, .delphi.source-delphi li.ln-xtra, .delphi.source-delphi div.ln-xtra {background-color: #ffc;}
+.delphi.source-delphi span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "https://frp.sage.fr/wiki1000/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Exemple_File_d_attente_avec_un_automate action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Exemple File d'attente avec un automate</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Exemple_File_d'attente_avec_un_automate.html#column-one">Navigation</a>, <a href="Exemple_File_d'attente_avec_un_automate.html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Exemple_File_d'attente_avec_un_automate.html#Configuration_de_la_file_d.27attente"><span class="tocnumber">1</span> <span class="toctext">Configuration de la file d'attente</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Exemple_File_d'attente_avec_un_automate.html#Code_snippet_du_producteur"><span class="tocnumber">2</span> <span class="toctext">Code snippet du producteur</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Exemple_File_d'attente_avec_un_automate.html#Code_snippet_du_processus_de_traitement"><span class="tocnumber">3</span> <span class="toctext">Code snippet du processus de traitement</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Exemple_File_d'attente_avec_un_automate.html#Configuration_de_la_t.C3.A2che_d.27automate"><span class="tocnumber">4</span> <span class="toctext">Configuration de la tâche d'automate</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="Exemple_File_d'attente_avec_un_automate.html#Ex.C3.A9cution"><span class="tocnumber">5</span> <span class="toctext">Exécution</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Exemple_File_d'attente_avec_un_automate.html#Production_de_plusieurs_messages"><span class="tocnumber">5.1</span> <span class="toctext">Production de plusieurs messages</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Exemple_File_d'attente_avec_un_automate.html#Utilisation_de_plusieurs_consommateurs"><span class="tocnumber">5.2</span> <span class="toctext">Utilisation de plusieurs consommateurs</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<p>Dans cet exemple nous allons mettre en oeuvre le design pattern file d'attente en utilisant&#160;:
+</p>
+<ul><li> Une file d'attente stockée dans la base de données
+</li><li> Un code script pour générer les messages (producteur)
+</li><li> Un automate pour consommer les messages de cette file d'attente (consommateur)
+</li><li> Un processus de traitement pour traiter les messages 
+</li></ul>
+<h3> <span class="mw-headline" id="Configuration_de_la_file_d.27attente">Configuration de la file d'attente</span></h3>
+<p>La file d'attente est configurée par un objet <a href="TdbmQueue.html" title="TdbmQueue" class="mw-redirect">TdbmQueue</a> du référentiel:
+</p><p><img src="../medias/images/msgqueue/example1/image1.png" alt="image1.png" />
+</p>
+<ul><li> Le nom de paramétrage de la file est DBQUEUE
+</li><li> Le type de la file est DatabaseMQ ce qui indique qu'il s'agit d'une file gérée en base de données
+</li><li> L'attribut QueueConnextionInfos indique le nom de la classe dans laquelle seront stockés les messages, il s'agit de la classe générique permettant de stocker n'importe quel message.
+</li></ul>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Le topic associé à la queue permet de filtrer les objets de classe. Seul les objets ayant ce topic seront pris en compte, la classe peut donc être partagée par plusieurs files.
+</td></tr></table>
+</div>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Cet exemple fonctionnerait identiquement avec une file d'attente WebSphereMQ ou ActiveMQ en changeant uniquement cet objet de configuration.
+</td></tr></table>
+</div>
+<h3> <span class="mw-headline" id="Code_snippet_du_producteur">Code snippet du producteur </span></h3>
+<p>Le code générant un message dans la file est le suivant&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="co1">//Procedure TestQueueMessage;</span>
+<span class="kw1">var</span> msg<span class="sy1">:</span>TdbmQueueMessage<span class="sy1">;</span> idx<span class="sy1">:</span><span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="kw1">for</span> idx<span class="sy1">:</span><span class="sy3">=</span>1 <span class="kw1">to</span> 1 <span class="kw1">do</span>
+   <span class="kw1">begin</span>
+     msg <span class="sy1">:</span><span class="sy3">=</span> TdbmQueueMessage<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">QueueName</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="st0">'DBQUEUE'</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">AddParameter</span><span class="br0">&#40;</span><span class="st0">'uneChaine'</span><span class="sy1">,</span><span class="st0">'some text'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">AddParameter</span><span class="br0">&#40;</span><span class="st0">'unEntier'</span><span class="sy1">,</span>1999<span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">BinaryContent</span><span class="sy1">.</span><span class="me1">LoadFromFile</span><span class="br0">&#40;</span><span class="st0">'c:\image.jpg'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">Post</span><span class="sy1">;</span>
+   <span class="kw1">end</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></div>
+<p>Il peut être directement exécuté à partir du concepteur de modèle.
+</p><p>Notez que&#160;:
+</p>
+<ul><li> Ce code ne connait pas la configuration de la file, il peut fonctionner avec n'importe quel type de file.
+</li><li> Il ne fait pas référence à TdbmStoredQueueMessage (ce qui serait propre à la configuration de la file) mais à TdbmQueueMessage qui est un type non  persistant générique représentant un message.
+</li><li> Il écrit le message en base par un Post sur le message, c'est une action générique indépendante du type de la file.
+</li><li> Le message contient deux paramètres et un contenu binaire
+</li><li> Il n y a pas besoin de déclarer une transaction.
+</li></ul>
+<h3> <span class="mw-headline" id="Code_snippet_du_processus_de_traitement">Code snippet du processus de traitement</span></h3>
+<p>La classe traitant les messages est la suivante&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">unit</span> TestSYFREWF<span class="sy1">;</span>
+<span class="kw1">interface</span>
+&#160;
+<span class="kw1">Type</span>
+  MyProcessus <span class="sy3">=</span> <span class="kw1">Class</span><span class="br0">&#40;</span>TitObject<span class="br0">&#41;</span>
+  <span class="kw1">public</span>
+    uneChaine<span class="sy1">:</span> <span class="kw4">string</span><span class="sy1">;</span>
+    unEntier<span class="sy1">:</span> <span class="kw4">integer</span><span class="sy1">;</span>
+    <span class="kw1">Procedure</span> Execute<span class="sy1">;</span>
+  <span class="kw1">end</span><span class="sy1">;</span>
+&#160;
+<span class="kw1">Implementation</span>
+&#160;
+<span class="coMULTI">{MyProcessus}</span>
+&#160;
+<span class="kw1">Procedure</span> MyProcessus<span class="sy1">.</span><span class="me1">Execute</span><span class="sy1">;</span>
+<span class="co1">//Procedure Execute;</span>
+<span class="kw1">var</span> aMsg<span class="sy1">:</span>TdbmQueueMessage<span class="sy1">;</span> idx<span class="sy1">:</span><span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="kw1">if</span> <span class="kw3">Assigned</span><span class="br0">&#40;</span>UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="br0">&#41;</span> <span class="kw1">then</span>
+   <span class="kw1">begin</span>
+     UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">AddMessage</span><span class="br0">&#40;</span><span class="st0">'MyProcessus.Execute'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+     <span class="kw1">if</span> <span class="kw3">Assigned</span><span class="br0">&#40;</span>UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">EventContext</span><span class="sy1">.</span><span class="me1">receivedMsg</span><span class="br0">&#41;</span> <span class="kw1">then</span>
+       <span class="kw1">begin</span>
+         aMsg <span class="sy1">:</span><span class="sy3">=</span> UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">EventContext</span><span class="sy1">.</span><span class="me1">receivedMsg</span><span class="sy1">;</span>
+         UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">AddMessage</span><span class="br0">&#40;</span><span class="st0">'Has a message'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+         <span class="kw1">for</span> idx<span class="sy1">:</span><span class="sy3">=</span>0 <span class="kw1">to</span> aMsg<span class="sy1">.</span><span class="me1">Count</span><span class="sy3">-</span>1 <span class="kw1">do</span>
+          <span class="kw1">begin</span>
+            UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">AddMessage</span><span class="br0">&#40;</span>aMsg<span class="sy1">.</span><span class="me1">DisplayStrings</span><span class="br0">&#91;</span>idx<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+          <span class="kw1">end</span><span class="sy1">;</span>
+         <span class="co1">// simulate job</span>
+         <span class="kw3">sleep</span><span class="br0">&#40;</span>5000<span class="br0">&#41;</span><span class="sy1">;</span>
+       <span class="kw1">end</span>
+       <span class="kw1">else</span> UserContext<span class="sy1">.</span><span class="me1">TaskContext</span><span class="sy1">.</span><span class="me1">AddMessage</span><span class="br0">&#40;</span><span class="st0">'No message'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+   <span class="kw1">end</span>
+   <span class="kw1">else</span> showMessage<span class="br0">&#40;</span><span class="st0">'not in a task'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;;</span>
+<span class="kw1">end</span><span class="sy1">.</span></pre></div></div>
+<p>Ce processus réalise&#160;:
+</p>
+<ul><li> Vérifie qu'il s'exécute bien dans le contexte du tâche
+</li><li> Trace dans les messages du contexte son exécution
+</li><li> Récupère le message consommé (aMsg)
+</li><li> Trace tous les paramètres du message dans messages du contexte
+</li><li> Simule l'exécution d'un traitement.
+</li></ul>
+<p>Le processus sera exécuté par la tâche d'automate consommant les messages.
+</p>
+<h3> <span class="mw-headline" id="Configuration_de_la_t.C3.A2che_d.27automate">Configuration de la tâche d'automate</span></h3>
+<p><b>Evènement&#160;:</b>
+</p><p><img src="../medias/images/msgqueue/example1/image3.png" alt="image3.png" />
+</p>
+<ul><li> L'évènement référence la file d'attente par son nom de paramétrage (DBQUEUE)
+</li><li> L'intervalle de test est zéro ce qui indique qu'il ni a pas de délai entre les différents tests de cet évènement.
+</li></ul>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Le délai entre chaque test sera conditionné par le délai de boucle configuré sur le serveur d'automate.
+</td></tr></table>
+</div>
+<p><b>Tâche&#160;:</b>
+</p><p><img src="../medias/images/msgqueue/example1/image2.png" alt="image2.png" />
+</p><p>Cet automate est configuré ainsi&#160;:
+</p>
+<ul><li> L'évènement est de type File d'attente
+</li><li> La tâche est de type traitement
+</li><li> Les paramètres de la tâche référence le processus MyProcessus
+</li><li> L'état suivant est -1
+</li></ul>
+<h3> <span class="mw-headline" id="Ex.C3.A9cution">Exécution</span></h3>
+<p><b>Exécution du code producteur&#160;:</b>
+</p><p><img src="../medias/images/msgqueue/example1/image4.png" alt="image4.png" />
+</p>
+<ul><li> On constate que ce code a créé un objet dans la classe TdbmStoredQueueMessage.
+</li><li> Les paramètres du message sont stockés dans l'attribut Data
+</li><li> Le contenu binaire est stocké dans l'attribut BinaryContent
+</li></ul>
+<p><b>Démarrage de l'automate&#160;:</b>
+</p><p>On utilise une console SNMTP pour superviser l'exécution&#160;:
+</p><p><img src="../medias/images/msgqueue/example1/image5.png" alt="image5.png" />
+</p><p>On constate que 
+</p>
+<ul><li> l'évènement DBQUEUE est déclenché.
+</li><li> L'exécution de la tâche de traitement est réalisé.
+</li></ul>
+<p>La tâche de traitement génère une entrée dans le journal&#160;:
+</p>
+<pre>
+Tâche&#160;: Tâche de traitement Traiter un msg de DBQUEUE
+Société&#160;: Test SYFRE Workflow
+Utilisateur: syfre
+Base(s)&#160;: TestWorkFlowdup_7
+Mode Soc.&#160;: Enchainer sur ces sociétés
+Société(s)&#160;: 
+Début&#160;: 11/04/2013 09:39:19
+Fin&#160;: 11/04/2013 09:39:24
+Durée&#160;: 5 s
+Fichiers&#160;: 0
+Statut&#160;: 0 OK
+
+MyProcessus.Execute
+Has a message
+MessageClassName=&quot;TStaticRegClass&quot;
+MessageDatetime=&quot;11/04/2013&quot;
+MessageUser=&quot;syfre&quot;
+MessageOID=&quot;000000000000000000E30001A0FF0008&quot;
+MessageID=&quot;166&quot;
+Topic=&quot;WSMQCOPY&quot;
+State=&quot;1&quot;
+OriginalUniqueID=&quot;&quot;
+idOTP=&quot;227&quot;
+ObjectClassLabel=&quot;Classe message stocké d'une file d'attente&quot;
+ObjectClassName=&quot;TDBMSTOREDQUEUEMESSAGE&quot;
+oid=&quot;000000000000000000E30001A0FF0008&quot;
+oiddbmQueue=&quot;&quot;
+oidShare=&quot;&quot;
+QueueName=&quot;WSMQCOPY&quot;
+queueTopic=&quot;WSMQCOPY&quot;
+ShareInfo=&quot;&quot;
+ShareInstanceInfo=&quot;&quot;
+ShareInstanceLevel=&quot;2&quot;
+ShareInstanceRequestedLevel=&quot;-1&quot;
+ShareLevel=&quot;0&quot;
+UniqueID=&quot;166&quot;
+UpdDate=&quot;11/04/2013&quot;
+UpdStamp=&quot;00017D6100000022&quot;
+UpdUser=&quot;syfre&quot;
+uneChaine=&quot;some text&quot;
+unEntier=&quot;1999&quot;
+</pre>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Après exécution le message a été supprimé de la table TdbmStoredQueueMessage
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="Production_de_plusieurs_messages">Production de plusieurs messages</span></h4>
+<p>On peut modifier le code du producteur pour générer plusieurs messages&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="co1">//Procedure TestQueueMessage;</span>
+<span class="kw1">var</span> msg<span class="sy1">:</span>TdbmQueueMessage<span class="sy1">;</span> idx<span class="sy1">:</span><span class="kw4">Integer</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="kw1">for</span> idx<span class="sy1">:</span><span class="sy3">=</span>1 <span class="kw1">to</span> 5 <span class="kw1">do</span>
+   <span class="kw1">begin</span>
+     msg <span class="sy1">:</span><span class="sy3">=</span> TdbmQueueMessage<span class="sy1">.</span><span class="me1">Create</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">QueueName</span> <span class="sy1">:</span><span class="sy3">=</span> <span class="st0">'DBQUEUE'</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">AddParameter</span><span class="br0">&#40;</span><span class="st0">'uneChaine'</span><span class="sy1">,</span><span class="st0">'some text'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">AddParameter</span><span class="br0">&#40;</span><span class="st0">'unEntier'</span><span class="sy1">,</span>1999<span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">BinaryContent</span><span class="sy1">.</span><span class="me1">LoadFromFile</span><span class="br0">&#40;</span><span class="st0">'c:\image.jpg'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+     msg<span class="sy1">.</span><span class="me1">Post</span><span class="sy1">;</span>
+   <span class="kw1">end</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></div>
+<p>On constate les déclenchements de l'automate&#160;:
+</p><p><img src="../medias/images/msgqueue/example1/image6.png" alt="image6.png" />
+</p><p>Chaque déclenchement est espacé d'environ 5 secondes qui correspondes au temps de traitement du processus.
+</p>
+<h4> <span class="mw-headline" id="Utilisation_de_plusieurs_consommateurs">Utilisation de plusieurs consommateurs</span></h4>
+<p>Il est possible de démarrer plusieurs services sur le même automate pour mettre en oeuvre plusieurs consommateurs&#160;:
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE1]
+ipcMode=ipcTCP
+tcpPort=8091
+section=SYFRE
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE2]
+ipcMode=ipcTCP
+tcpPort=8092
+section=SYFRE
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\Servers\SYFRE]
+Master Profil=dbMasterTahoe
+Server Societies=Test SYFRE Workflow
+Server Application=Test-SYFRE-WorkFlow
+Server User=syfre
+Server Password=
+Public Folder=C:\Mes documents\Server\
+IPC Started=0
+BP Started=0
+Automate Name=SYFRE
+Automate Started=1
+DEBUGGER Started=0
+DEBUGGER Users=syfre,toto,titi
+SESSIONS profil=CONFIG_SESSION_1
+SOAP Profil=CONFIG_SOAP_1
+SNMP Profil=CONFIG_SNMP_1
+SMTP Profil=CONFIG_SMTP_1
+PROCESS Profil=CONFIG_PROCESS_1
+--HTTP Profil=CONFIG_HTTP_INTERNAL
+</pre>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Les services ne démarre pas de serveur HTTP
+</td></tr></table>
+</div>
+<p>Une fois démarré chaque service exécute le même automate&#160;:
+</p><p><img src="../medias/images/msgqueue/example1/image7.png" alt="image7.png" />
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Notez le nodeID propre à chaque instance du service
+</td></tr></table>
+</div>
+<p>Lorsque l'on crée plusieurs messages dans la file d'attente&#160;:
+</p><p><img src="../medias/images/msgqueue/example1/image8.png" alt="image8.png" />
+</p><p>On constate que les messages ont été consommés par les deux services.
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 132/1000000
+Post-expand include size: 2612/2097152 bytes
+Template argument size: 604/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:3281-0!*!0!!fr!2!* and timestamp 20240729131013 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 1
+                        &nbsp; <b>Bots & Crawlers</b>  0
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d%27attente_avec_un_automate&amp;oldid=9602">https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d%27attente_avec_un_automate&amp;oldid=9602</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégorie</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:File_d'attente" title="Catégorie:File d'attente">File d'attente</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Exemple_File_d'attente_avec_un_automate.html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Exemple_File_d'attente_avec_un_automate&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d'attente_avec_un_automate&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d'attente_avec_un_automate&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Exemple+File+d'attente+avec+un+automate" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Exemple_File_d'attente_avec_un_automate" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Exemple_File_d'attente_avec_un_automate" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d'attente_avec_un_automate&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Exemple_File_d'attente_avec_un_automate&amp;oldid=9602" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Exemple_File_d'attente_avec_un_automate">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 5 juin 2014 à 15:44.<br /></li>
+		<li id="viewcount">Cette page a été consultée 11 317 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.176 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad5590a99d6556',t:'MTcyMjI1ODQ3MC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

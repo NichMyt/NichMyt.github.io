@@ -1,0 +1,2738 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Fichier de configuration (server) - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Fichier_de_configuration_(server)", "wgTitle": "Fichier de configuration (server)", "wgCurRevisionId": 14552, "wgArticleId": 1024, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Serveur"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-javascript {line-height: normal;}
+.source-javascript li, .source-javascript pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for javascript
+ * CSS class: source-javascript, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.javascript.source-javascript .de1, .javascript.source-javascript .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.javascript.source-javascript  {font-family:monospace;}
+.javascript.source-javascript .imp {font-weight: bold; color: red;}
+.javascript.source-javascript li, .javascript.source-javascript .li1 {font-weight: normal; vertical-align:top;}
+.javascript.source-javascript .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.javascript.source-javascript .li2 {font-weight: bold; vertical-align:top;}
+.javascript.source-javascript .kw1 {color: #000066; font-weight: bold;}
+.javascript.source-javascript .kw2 {color: #003366; font-weight: bold;}
+.javascript.source-javascript .kw3 {color: #000066;}
+.javascript.source-javascript .co1 {color: #006600; font-style: italic;}
+.javascript.source-javascript .co2 {color: #009966; font-style: italic;}
+.javascript.source-javascript .coMULTI {color: #006600; font-style: italic;}
+.javascript.source-javascript .es0 {color: #000099; font-weight: bold;}
+.javascript.source-javascript .br0 {color: #009900;}
+.javascript.source-javascript .sy0 {color: #339933;}
+.javascript.source-javascript .st0 {color: #3366CC;}
+.javascript.source-javascript .nu0 {color: #CC0000;}
+.javascript.source-javascript .me1 {color: #660066;}
+.javascript.source-javascript .ln-xtra, .javascript.source-javascript li.ln-xtra, .javascript.source-javascript div.ln-xtra {background-color: #ffc;}
+.javascript.source-javascript span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "https://frp.sage.fr/wiki1000/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Fichier_de_configuration_server action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Fichier de configuration (server)</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Fichier_de_configuration_(server).html#column-one">Navigation</a>, <a href="Fichier_de_configuration_(server).html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Fichier_de_configuration_(server).html#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Fichier_de_configuration_(server).html#Structure"><span class="tocnumber">2</span> <span class="toctext">Structure</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Fichier_de_configuration_(server).html#Section_IPC"><span class="tocnumber">3</span> <span class="toctext">Section IPC</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Fichier_de_configuration_(server).html#Section_Servers"><span class="tocnumber">4</span> <span class="toctext">Section Servers</span></a>
+<ul>
+<li class="toclevel-2 tocsection-5"><a href="Fichier_de_configuration_(server).html#IPC"><span class="tocnumber">4.1</span> <span class="toctext">IPC</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="Fichier_de_configuration_(server).html#Sessions"><span class="tocnumber">4.2</span> <span class="toctext">Sessions</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Fichier_de_configuration_(server).html#Base_master"><span class="tocnumber">4.3</span> <span class="toctext">Base master</span></a></li>
+<li class="toclevel-2 tocsection-8"><a href="Fichier_de_configuration_(server).html#Application_et_Soci.C3.A9t.C3.A9s"><span class="tocnumber">4.4</span> <span class="toctext">Application et Sociétés</span></a></li>
+<li class="toclevel-2 tocsection-9"><a href="Fichier_de_configuration_(server).html#Service"><span class="tocnumber">4.5</span> <span class="toctext">Service</span></a></li>
+<li class="toclevel-2 tocsection-10"><a href="Fichier_de_configuration_(server).html#Automates"><span class="tocnumber">4.6</span> <span class="toctext">Automates</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Fichier_de_configuration_(server).html#Processus_m.C3.A9tiers"><span class="tocnumber">4.7</span> <span class="toctext">Processus métiers</span></a></li>
+<li class="toclevel-2 tocsection-12"><a href="Fichier_de_configuration_(server).html#Syst.C3.A8me"><span class="tocnumber">4.8</span> <span class="toctext">Système</span></a></li>
+<li class="toclevel-2 tocsection-13"><a href="Fichier_de_configuration_(server).html#Files_d.27attente"><span class="tocnumber">4.9</span> <span class="toctext">Files d'attente</span></a></li>
+<li class="toclevel-2 tocsection-14"><a href="Fichier_de_configuration_(server).html#Compteurs_de_performance"><span class="tocnumber">4.10</span> <span class="toctext">Compteurs de performance</span></a></li>
+<li class="toclevel-2 tocsection-15"><a href="Fichier_de_configuration_(server).html#HTTP"><span class="tocnumber">4.11</span> <span class="toctext">HTTP</span></a></li>
+<li class="toclevel-2 tocsection-16"><a href="Fichier_de_configuration_(server).html#HTTP_ACLs"><span class="tocnumber">4.12</span> <span class="toctext">HTTP ACLs</span></a></li>
+<li class="toclevel-2 tocsection-17"><a href="Fichier_de_configuration_(server).html#HTTP_Web_Worker"><span class="tocnumber">4.13</span> <span class="toctext">HTTP Web Worker</span></a></li>
+<li class="toclevel-2 tocsection-18"><a href="Fichier_de_configuration_(server).html#HTTP_Web_Socket"><span class="tocnumber">4.14</span> <span class="toctext">HTTP Web Socket</span></a></li>
+<li class="toclevel-2 tocsection-19"><a href="Fichier_de_configuration_(server).html#HTTP_CSP"><span class="tocnumber">4.15</span> <span class="toctext">HTTP CSP</span></a></li>
+<li class="toclevel-2 tocsection-20"><a href="Fichier_de_configuration_(server).html#HTTP_CORS"><span class="tocnumber">4.16</span> <span class="toctext">HTTP CORS</span></a></li>
+<li class="toclevel-2 tocsection-21"><a href="Fichier_de_configuration_(server).html#FTPs"><span class="tocnumber">4.17</span> <span class="toctext">FTPs</span></a></li>
+<li class="toclevel-2 tocsection-22"><a href="Fichier_de_configuration_(server).html#WEB"><span class="tocnumber">4.18</span> <span class="toctext">WEB</span></a></li>
+<li class="toclevel-2 tocsection-23"><a href="Fichier_de_configuration_(server).html#Mise_au_point.2C_debugger"><span class="tocnumber">4.19</span> <span class="toctext">Mise au point, debugger</span></a></li>
+<li class="toclevel-2 tocsection-24"><a href="Fichier_de_configuration_(server).html#LDAP"><span class="tocnumber">4.20</span> <span class="toctext">LDAP</span></a></li>
+<li class="toclevel-2 tocsection-25"><a href="Fichier_de_configuration_(server).html#SOAP"><span class="tocnumber">4.21</span> <span class="toctext">SOAP</span></a></li>
+<li class="toclevel-2 tocsection-26"><a href="Fichier_de_configuration_(server).html#SMTP"><span class="tocnumber">4.22</span> <span class="toctext">SMTP</span></a></li>
+<li class="toclevel-2 tocsection-27"><a href="Fichier_de_configuration_(server).html#SNMP"><span class="tocnumber">4.23</span> <span class="toctext">SNMP</span></a></li>
+<li class="toclevel-2 tocsection-28"><a href="Fichier_de_configuration_(server).html#PROXY"><span class="tocnumber">4.24</span> <span class="toctext">PROXY</span></a></li>
+<li class="toclevel-2 tocsection-29"><a href="Fichier_de_configuration_(server).html#Exceptions"><span class="tocnumber">4.25</span> <span class="toctext">Exceptions</span></a></li>
+<li class="toclevel-2 tocsection-30"><a href="Fichier_de_configuration_(server).html#Captcha"><span class="tocnumber">4.26</span> <span class="toctext">Captcha</span></a></li>
+<li class="toclevel-2 tocsection-31"><a href="Fichier_de_configuration_(server).html#Quotas"><span class="tocnumber">4.27</span> <span class="toctext">Quotas</span></a></li>
+<li class="toclevel-2 tocsection-32"><a href="Fichier_de_configuration_(server).html#Clefs"><span class="tocnumber">4.28</span> <span class="toctext">Clefs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-33"><a href="Fichier_de_configuration_(server).html#Sections_SDATA"><span class="tocnumber">5</span> <span class="toctext">Sections SDATA</span></a></li>
+<li class="toclevel-1 tocsection-34"><a href="Fichier_de_configuration_(server).html#Section_Export"><span class="tocnumber">6</span> <span class="toctext">Section Export</span></a></li>
+<li class="toclevel-1 tocsection-35"><a href="Fichier_de_configuration_(server).html#Section_ConfigServer"><span class="tocnumber">7</span> <span class="toctext">Section ConfigServer</span></a></li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id="Introduction">Introduction</span></h3>
+<p>Le Serveur d'application Sage 1000 utilise un fichier de configuration situé dans le répertoire du serveur.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Le nom du fichier est serverl1000.ini
+</td></tr></table>
+</div>
+<p>Ce fichier peut être soit modifié à l'aide de la console d'administration des services, soit manuellement par un éditeur de texte.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Le fichier est chargé au démarrage du service.
+</td></tr></table>
+</div>
+<h3> <span class="mw-headline" id="Structure">Structure</span></h3>
+<p>Le fichier peut configurer plusieurs services exécutés sur le même serveur, chaque service comporte au moins deux sections&#160;:
+</p>
+<ul><li> [\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SERVICE_NAME]
+</li></ul>
+<dl><dd> Cette entrée détermine la configuration réseau du service.
+</dd></dl>
+<ul><li> [\SOFTWARE\Sage\Ligne 1000\Administration\Servers\SERVICE]
+</li></ul>
+<dl><dd> Cette entrée détermine la configuration logicielle du service.
+</dd></dl>
+<ul><li> [\SOFTWARE\Sage\Ligne 1000\Administration\Servers\SERVICE\Export]
+</li></ul>
+<dl><dd> Cette entrée configure la fonction d'exportation du service.
+</dd></dl>
+<p><br />
+Exemple&#160;: 
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\MYSERVICE]
+ipcMode=ipcSHM
+tcpPort=8090
+shmAddress=SYFRE
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\Servers\MYSERVICE]
+Master base=orasql://myhost/DBMASTER_ORA?prefix=&quot;DBMASTERT_ORA.&quot;
+Master driver=orasql
+Master OS Authentication=0
+Master user=DBMASTER_ORA
+Master password=DBMASTER_ORA
+Server Societies=Société de démonstration GCF 1000
+Server Application=Sage 1000 Suite Financière
+...
+</pre>
+<p>Chaque section est composée d'une liste de variables (NomVariable=ValeurVariable), les types de données des variables sont&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th></tr>
+<tr>
+<td>String
+</td>
+<td>Chaîne de caractère
+</td></tr>
+<tr>
+<td>Boolean
+</td>
+<td>Valeur logique 0:Non 1:Oui
+</td></tr>
+<tr>
+<td>Integer
+</td>
+<td>Valeur entière
+</td></tr>
+<tr>
+<td>Liste de chaîne
+</td>
+<td>Liste de chaîne de caractère séparée par des virgules.
+</td></tr></table>
+<h3> <span class="mw-headline" id="Section_IPC">Section IPC</span></h3>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Contexte
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>ipcMode
+</td>
+<td>enumération
+</td>
+<td>Client/Serveur
+</td>
+<td>
+<ul><li>ipcTCP
+</li></ul>
+<dl><dd>Mode de communication par TCP/IP
+</dd></dl>
+<ul><li>ipcSHM
+</li></ul>
+<dl><dd>Mode de communication par mémoire partagée (dépréciée)
+</dd></dl>
+</td></tr>
+<tr>
+<td>tcpPort
+</td>
+<td>Integer
+</td>
+<td>Client/Serveur
+</td>
+<td>Port de communication TCP
+</td></tr>
+<tr>
+<td>tcpAddress
+</td>
+<td>string
+</td>
+<td>Client/Serveur
+</td>
+<td>Adresse de communication TCP
+</td></tr>
+<tr>
+<td>shmAddress
+</td>
+<td>string
+</td>
+<td>Client/Serveur
+</td>
+<td>Nom du segment de mémoire partagé
+</td></tr>
+<tr>
+<td>serverList
+</td>
+<td>Serveur
+</td>
+<td>String list
+</td>
+<td>Configuration de Cluster<br />
+<p>Liste des services associés à cet identifiant de service. 
+</p>
+</td></tr></table>
+<p>Exemple&#160;:
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\TRESO]
+ipcMode=ipcTCP
+tcpPort=8090
+tcpAddress=localhost
+</pre>
+<p>Exemple de configuration Cluster&#160;:
+</p><p><b>fichier du configuration des services&#160;:</b>
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE]
+serverList=SYFRE1,SYFRE2
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE1]
+ipcMode=ipcTCP
+tcpPort=8091
+tcpAddress=syfre
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE2]
+ipcMode=ipcTCP
+tcpPort=8092
+tcpAddress=syfre
+</pre>
+<p><b>fichier du configuration du client HTTP&#160;:</b>
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE]
+serverList=SYFRE1,SYFRE2
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE1]
+ipcMode=ipcTCP
+tcpPort=8091
+tcpAddress=syfre
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\SYFRE2]
+ipcMode=ipcTCP
+tcpPort=8092
+tcpAddress=syfre
+</pre>
+<h3> <span class="mw-headline" id="Section_Servers">Section Servers</span></h3>
+<h4> <span class="mw-headline" id="IPC">IPC</span></h4>
+<p>Ces variables configurent la gestion des services IPC.
+</p><p>La configuration des services IPC peut être renseignée dans une section IPC
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\IPC\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "IPC Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>IPC Profil
+</td>
+<td>String
+</td>
+<td>Référence un nom de section IPC contenant la configuration
+</td></tr>
+<tr>
+<td>IPC Started
+</td>
+<td>boolean
+</td>
+<td>Démarre les services IPC (défaut true)
+</td></tr></table>
+<p>Les services IPC sont les services permettant de communiquer via RPC.
+</p><p>Vous avez besoins des services IPC si&#160;:
+</p>
+<ul><li> Vous utilisez un serveur HTTP externe (IIS ou Apache).
+</li><li> Vous utilisez la Console des Processus Métiers pour dialoguer avec ce Service.
+</li><li> Vous utilisez le Contrôleur des services.
+</li><li> Ce Service exécute des tâches de traitement déléguées par un autre Service.
+</li></ul>
+<p>Si vous n'utilisez pas les services IPC il est conseillé de ne pas les démarrer.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Ce paramètre n'est pas modifiable depuis la console des services car si vous désactivez les services IPC le contrôleur n'est plus opérationnel
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="Sessions">Sessions</span></h4>
+<p>Ces variables configurent la gestion des sessions.
+</p><p>La configuration des sessions peut être renseignée dans une section SESSIONS
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\SESSIONS\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "SESSIONS Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Défaut
+</th>
+<th>Min
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>SESSIONS Profil
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>
+</td>
+<td>Référence un nom de section SESSIONS contenant la configuration
+</td></tr>
+<tr>
+<td>CheckInterval
+</td>
+<td>Entier
+</td>
+<td>1 minute
+</td>
+<td>1 minute
+</td>
+<td>Délai entre chaque test d'expiration en seconde.
+</td></tr>
+<tr>
+<td>ExpireInterval
+</td>
+<td>Entier
+</td>
+<td>15 minutes
+</td>
+<td>
+</td>
+<td>Délai d'expiration des sessions en seconde.
+</td></tr></table>
+<h4> <span class="mw-headline" id="Base_master">Base master</span></h4>
+<p>Ces variables configurent la base Master utilisée par le service.
+</p><p>La configuration de la base master peut être renseignée dans une section MASTER 
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\MASTER\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "Master Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Master Profil
+</td>
+<td>String
+</td>
+<td>Référence un nom de section MASTER contenant la configuration
+</td></tr>
+<tr>
+<td>Master base
+</td>
+<td>String
+</td>
+<td>Nom de la base de données Master
+</td></tr>
+<tr>
+<td>Master driver
+</td>
+<td>String
+</td>
+<td>Nom du driver de la base de données Master
+</td></tr>
+<tr>
+<td>Master OS Authentication
+</td>
+<td>Boolean
+</td>
+<td>Utiliser l'authentification du système d'exploitation.
+</td></tr>
+<tr>
+<td>Master user
+</td>
+<td>String
+</td>
+<td>Nom d'utilisateur utilisé pour la connexion à la base Master
+</td></tr>
+<tr>
+<td>Master password
+</td>
+<td>String
+</td>
+<td>Mot de passe utilisé pour la connexion à la base Master
+</td></tr></table>
+<h4> <span class="mw-headline" id="Application_et_Soci.C3.A9t.C3.A9s">Application et Sociétés</span></h4>
+<p>Ces variables configurent l'application et les sociétés servies par le service.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Version
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Server Societies
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Liste des sociétés/dossiers servies par le service.
+</td></tr>
+<tr>
+<td>Server Application
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom de l'application servie par le service.
+</td></tr>
+<tr>
+<td>Server User
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom de l'utilisateur du service.
+</td></tr>
+<tr>
+<td>Server Password
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Mot de passe de l'utilisateur du service.
+</td></tr>
+<tr>
+<td>Server User Group
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom du groupe de l'utilisateur du service.
+</td></tr>
+<tr>
+<td>Server Authentication
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Annuaire utilisé pour l'authentification.
+</td></tr>
+<tr>
+<td>Authentication Directories
+</td>
+<td>liste de chaîne
+</td>
+<td>8.00
+</td>
+<td>Annuaires disponibles pour ce service.(code des annuaires séparés par ";")
+</td></tr></table>
+<h4> <span class="mw-headline" id="Service">Service</span></h4>
+<p>Ces variables configurent le service.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Version
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Server Name
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom du service.
+</td></tr>
+<tr>
+<td>Cache Folder
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Répertoire où stocker les fichiers temporaires et les fichiers en cache.
+</td></tr>
+<tr>
+<td><a href="Zone_publique_(server).html" title="Zone publique (server)">Public Folder</a>
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td><a href="Zone_publique_(server).html" title="Zone publique (server)">Racine des répertoires partagés du service</a>.
+</td></tr>
+<tr>
+<td><a href="Public_links_(server).html" title="Public links (server)">Public Links</a>
+</td>
+<td>Liste de chaîne
+</td>
+<td>
+</td>
+<td>Liste de répertoires réseaux (séparés par un&#160;;) pour lesquels des <a href="Stockage_des_documents.html" title="Stockage des documents">documents peuvent être associés</a>.
+</td></tr>
+<tr>
+<td>Send Alert To
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Liste d'adresses emails (séparées par un&#160;;) auxquelles seront envoyés les messages d'alertes.
+</td></tr>
+<tr>
+<td>Scripts
+</td>
+<td>Liste de chaîne
+</td>
+<td>
+</td>
+<td>Liste de références CSS ajouté aux pages HTML
+</td></tr>
+<tr>
+<td>MaxDatagridRowCount
+</td>
+<td>Integer
+</td>
+<td>
+</td>
+<td>Limite le nombre de lignes affichées dans les grilles (par défaut à 5000).
+</td></tr>
+<tr>
+<td><a href="Security_mode_(server).html" title="Security mode (server)">Security Mode</a>
+</td>
+<td>String
+</td>
+<td>7.00
+</td>
+<td>Valeurs possibles&#160;: Intranet (valeur par défaut) / Internet <a href="https://frp.sage.fr/wiki1000/index.php/Service_expos%C3%83%C2%A9_sur_internet" title="Service exposé sur internet">Voir Service exposé sur internet</a>
+</td></tr>
+<tr>
+<td>Enable Remember User
+</td>
+<td>boolean
+</td>
+<td>7.10
+</td>
+<td>Permet à l'utilisateur d'avoir son nom pré-renseigné dans la page d'authentification (par défaut à vrai)
+</td></tr>
+<tr>
+<td>MaxPreviewPageCount
+</td>
+<td>Integer
+</td>
+<td>
+</td>
+<td>Limite le nombre de pages affichées dans les aperçus des éditions (par défaut à 50).
+</td></tr>
+<tr>
+<td>Preview max page
+</td>
+<td>Integer
+</td>
+<td>10.00
+</td>
+<td>Limite le nombre de pages affichées dans les aperçus des éditions (par défaut à 50).
+</td></tr>
+<tr>
+<td>Preview blocking
+</td>
+<td>Boolean
+</td>
+<td>10.00
+</td>
+<td>1:Les aperçus sont affichés directement en onglet 0:les aperçus sont envoyés dans la bam.
+</td></tr>
+<tr>
+<td>Preview timeout
+</td>
+<td>Integer
+</td>
+<td>10.00
+</td>
+<td>Délai d'attente de fin d'aperçu si Preview blocking=1.
+</td></tr>
+<tr>
+<td>Printer Filter
+</td>
+<td>chaine
+</td>
+<td>
+</td>
+<td>Noms des imprimantes ne pas proposer, séparées par des points virgules (9.20)
+</td></tr></table>
+<h4> <span class="mw-headline" id="Automates">Automates</span></h4>
+<p>Ces variables configurent le serveur d'automate inclus dans le serveur.
+</p><p>Ces variables peuvent être renseignées dans une section AUTOMATE 
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\AUTOMATE\nom_de_profil] 
+</pre>
+<p>puis référencées par la variable "Automate Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Version
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Automate Profil
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Référence une section AUTOMATE.
+</td></tr>
+<tr>
+<td>Automate Started<br />
+<p>Process Server Started
+</p>
+</td>
+<td>Boolean
+</td>
+<td>
+</td>
+<td>Démarre le serveur d'automate. (défaut) (*)<br />
+</td></tr>
+<tr>
+<td>Automate Name<br />
+<p>Process Server Name
+</p>
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom du serveur d'automate à démarrer. (*)
+</td></tr>
+<tr>
+<td>Automate Message Box<br />
+<p>Process Server Message Box
+</p>
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Boite à messages utilisé par le serveur d'automate.
+</td></tr>
+<tr>
+<td>Automate Task Service<br />
+<p>Process Task Service
+</p>
+</td>
+<td>String
+</td>
+<td>
+</td>
+<td>Nom du Service 1000 exécutant les tâches du serveur d'automate.(hostname.servicename)
+</td></tr>
+<tr>
+<td>Automate Task Count<br />
+</td>
+<td>Integer
+</td>
+<td>6.50
+</td>
+<td>Nombre maximal de tâches automates simultanées (défaut 1).
+</td></tr>
+<tr>
+<td>Automate Debug<br />
+</td>
+<td>Boolean
+</td>
+<td>7.00 Patch
+</td>
+<td>Active le mode debug verbose (**).
+</td></tr></table>
+<p><img src="../medias/images/stock/version700-32x32.png" alt="version700-32x32.png" /> (*) Ces valeurs peuvent être modifiées sur la ligne de commande
+</p><p><img src="../medias/images/stock/version700-32x32.png" alt="version700-32x32.png" /> (**) A utiliser conjointement avec la console de trap snmp
+</p>
+<h4> <span class="mw-headline" id="Processus_m.C3.A9tiers">Processus métiers</span></h4>
+<p>Ces variables configurent le service de Processus Métiers inclus dans le serveur.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>BP Started
+</td>
+<td>Boolean
+</td>
+<td>Démarre le service de Processus Métiers (défault).
+</td></tr></table>
+<p><img src="../medias/images/stock/version700-32x32.png" alt="version700-32x32.png" /> Cette valeur peut être modifiée sur la ligne de commande
+</p>
+<h4> <span class="mw-headline" id="Syst.C3.A8me">Système</span></h4>
+<p>Ces variables configurent le Processus du serveur.
+</p><p>Ces variables peuvent être renseignées dans une section PROCESS
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\PROCESS\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "Process Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Process Profil
+</td>
+<td>string
+</td>
+<td>Référence une section PROCESS
+</td></tr>
+<tr>
+<td>ProcessAffinity
+</td>
+<td>String
+</td>
+<td>Détermine les coeurs utilisés par le processus sur une machine multi-coeurs<br />
+<p>ex&#160;: 1,3 pour utiliser les coeurs 1 et 3 d'une machine multi-coeurs.
+</p>
+</td></tr>
+<tr>
+<td>ThreadPoolSize
+</td>
+<td>Integer
+</td>
+<td>Taille du pool de thread (20)
+</td></tr>
+<tr>
+<td>FormCacheSize
+</td>
+<td>Integer
+</td>
+<td>Taille du cache pour un écran (défaut:20, 0:désactive l'utilisation du cache)
+</td></tr>
+<tr>
+<td>FormCacheLimit
+</td>
+<td>Integer
+</td>
+<td>Taille du cache pour l'ensemble des écrans (256)
+</td></tr>
+<tr>
+<td>FormCacheReuse
+</td>
+<td>Integer
+</td>
+<td>Nombre de fois qu'un écran peut être réutilisé (-1&#160;: pas de limite)
+</td></tr></table>
+<ul><li>ProcessAffinity
+</li></ul>
+<dl><dd>Le Processus du serveur est un processus multi-threadé, sur une machine multi-coeurs il utilise tous les coeurs disponibles sur le système d'exploitation. Dans certain cas il est souhaitable de restreindre l'exécution à certains coeurs.
+</dd></dl>
+<ul><li>ThreadPoolsize
+</li></ul>
+<dl><dd>Chaque requête sur le service est exécutée par une thread allouée d'un pool&#160;; lorsque le pool est plein la requête est suspendue jusqu'à ce qu'une thread se libère dans le pool. Cette variable limite la taille du pool de thread et par conséquence limite les contentions et les "context switches" provoqués par le processus.
+</dd></dl>
+<ul><li>FormCacheSize
+</li></ul>
+<dl><dd>L'opération d'ouverture d'un écran est une opération coûteuse, pour cette raison les écrans fermés sont placés dans un cache pour être réutilisés. Cette variable limite le nombre d'instance d'un écran dans le cache.
+</dd></dl>
+<ul><li>FormCacheLimit
+</li></ul>
+<dl><dd>L'opération d'ouverture d'un écran est une opération coûteuse, pour cette raison les écrans fermés sont placés dans un cache pour être réutilisés. Cette variable limite le nombre maximal d'écran dans le cache et par conséquent la mémoire utilisée par le cache d'écran.
+</dd></dl>
+<ul><li>FormCacheReuse
+</li></ul>
+<dl><dd>Indique le nombre de fois qu'un écran en cache peut être réutilisé. 
+</dd></dl>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Pour pouvoir utiliser WMI la dll serviceL1000perf.dll doit être présente dans le répertoire du serveur.
+</td></tr></table>
+</div>
+<p>{{info|Pour désactiver le cache, définir la valeur de FormCacheSize à 0}
+</p>
+<h4> <span class="mw-headline" id="Files_d.27attente">Files d'attente</span></h4>
+<p>Ces variables configurent le service de consommation de file d'attente.
+</p><p>Ces variables peuvent être renseignées dans une section PERF.
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\QUEUELISTENER\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "Queue listener Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Queue listener Started
+</td>
+<td>Boolean
+</td>
+<td>Démarre le service de consommation de file d'attente.
+</td></tr>
+<tr>
+<td>Queue listener queues
+</td>
+<td>Liste de chaînes séparées par des ,
+</td>
+<td>Liste des files d'attente à consommer.
+</td></tr>
+<tr>
+<td>Queue listener Task count
+</td>
+<td>Entier
+</td>
+<td>Nombre maximal de tâches simultanées par service.
+</td></tr></table>
+<p>Les paramètres de scrutation d'une file d'attente peuvent être configurés à la suite du nom de la file d'attente en séparant les paramètres par un caractère ":" 
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Valeur par défaut (ms)
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Initial
+</td>
+<td>1000
+</td>
+<td>Délai initial de scrutation (ms)
+</td></tr>
+<tr>
+<td>Max
+</td>
+<td>10000
+</td>
+<td>Délai maximal de scrutation (ms)
+</td></tr>
+<tr>
+<td>Increment
+</td>
+<td>1000
+</td>
+<td>Incrément du délai jusqu'au délai maximal si aucun message n'est disponible (ms)
+</td></tr></table>
+<p>Exemple&#160;:
+</p>
+<pre>
+Queue listener queues=MyQueue1:2000:10:20000,MyQueue2,MyQueue3:100:10:1000
+</pre>
+<p>Avec les valeurs par défaut, une file d'attente est lue initialement toutes les secondes, puis si aucun message n'est reçu, ce délai monte jusqu'à 10 secondes. Lorsque un message est reçu le délai est réinitialisé à 1 seconde et ainsi de suite.
+</p>
+<h4> <span class="mw-headline" id="Compteurs_de_performance">Compteurs de performance</span></h4>
+<p>Ces variables configurent le Processus du serveur.
+</p><p>Ces variables peuvent être renseignées dans une section PERF
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\PERF\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "Performance Counters Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Start Performance Counters
+</td>
+<td>Boolean
+</td>
+<td>Démarre les compteurs de performance
+</td></tr>
+<tr>
+<td>Start Performance Clock
+</td>
+<td>Boolean
+</td>
+<td>Démarre l'horloge de performance
+</td></tr>
+<tr>
+<td>Performance Clock Delay
+</td>
+<td>Cardinal
+</td>
+<td>Période de l'horloge de performance (ms)
+</td></tr>
+<tr>
+<td>HTTP PerfServer Start
+</td>
+<td>Boolean
+</td>
+<td>Démarre le serveur HTTP de performance
+</td></tr>
+<tr>
+<td>HTTP PerfServer Port
+</td>
+<td>Integer
+</td>
+<td>Port du serveur HTTP de performance
+</td></tr>
+<tr>
+<td>HTTP PerfServer Protocol
+</td>
+<td>String
+</td>
+<td>Protocole du serveur HTTP de performance
+</td></tr></table>
+<ul><li>Start Performance Counters
+</li></ul>
+<dl><dd>Le serveur inclus un certain nombre de <a href="Compteurs_de_performance_(monitoring).html" title="Compteurs de performance (monitoring)">compteurs de performance</a> interrogeables par le <a href="Serveur_de_performance_(monitoring).html" title="Serveur de performance (monitoring)">serveur de performance</a>.
+</dd></dl>
+<ul><li>Start Performance Clock
+</li></ul>
+<dl><dd> Démarre une horloge permettant de générer un évènement de monitoring.
+</dd></dl>
+<ul><li>Performance Clock Delay
+</li></ul>
+<dl><dd> Période de l'horloge de performance. (défaut 1000)
+</dd></dl>
+<ul><li>HTTP PerfServer Start
+</li></ul>
+<dl><dd> Démarre le server HTTP de performance.
+</dd></dl>
+<ul><li>HTTP PerfServer Port
+</li></ul>
+<dl><dd> Port du serveur HTTP de performance. (défaut 9999)
+</dd></dl>
+<ul><li>HTTP PerfServer Protocol
+</li></ul>
+<dl><dd>Protocole du serveur HTTP de performance (défaut http)
+</dd></dl>
+<p>Voir la catégorie <a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Monitoring" title="Catégorie:Monitoring">Category:Monitoring</a>
+</p>
+<h4> <span class="mw-headline" id="HTTP">HTTP</span></h4>
+<p>Ces variables peuvent être renseignées dans une section HTTP
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\HTTP\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "HTTP Profil"
+</p><p>Les variables suivantes configurent le protocole HTTP utilisé par le service, elles sont utilisées pour construire des URL pointant sur le service.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Version
+</th>
+<th>Par défaut
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>HTTP Protocol
+</td>
+<td>String
+</td>
+<td>Toute
+</td>
+<td>http:
+</td>
+<td>Protocole HTTP publique du Service (http: ou https:)
+</td></tr>
+<tr>
+<td>HTTP Port
+</td>
+<td>Integer
+</td>
+<td>Toute
+</td>
+<td>80
+</td>
+<td>Port HTTP publique du Service
+</td></tr>
+<tr>
+<td>HTTP HostName
+</td>
+<td>String
+</td>
+<td>Toute
+</td>
+<td>Nom local de la machine
+</td>
+<td>Domaine publique du serveur HTTP frontal
+</td></tr>
+<tr>
+<td>HTTP ServiceName
+</td>
+<td>String
+</td>
+<td>6.51
+</td>
+<td>Nom du service
+</td>
+<td>
+<p>Nom du service load-balancé utilisé par le service<br />
+Ce nom peut différer du nom du service dans une configuration load balancée.<br />
+C'est ce nom qui est enregistrée dans les URLs de la registry SDATA<br />
+Implémenté pour SOAP à partir de la version 7 <br />
+</p>
+</td></tr></table>
+<p>Les variables suivantes configurent <a href="Serveur_HTTP_(server).html" title="Serveur HTTP (server)">le service HTTP interne</a> inclus dans le serveur.
+</p><p><img src="../medias/images/stock/version700-32x32.png" alt="version700-32x32.png" />
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>HTTP Started
+</td>
+<td>boolean
+</td>
+<td>Démarre le serveur HTTP
+</td></tr>
+<tr>
+<td>HTTP Listen Protocol
+</td>
+<td>String
+</td>
+<td>Protocole HTTP écouté par le serveur HTTP embarqué<br />
+<p>Si cette variable n'est pas défini le protocole est défini par HTTP Protocol
+</p>
+</td></tr>
+<tr>
+<td>HTTP Listen Port
+</td>
+<td>Integer
+</td>
+<td>Port HTTP écouté par le serveur HTTP embarqué<br />
+<p>Si cette variable n'est pas défini le port est défini par HTTP Port
+</p>
+</td></tr>
+<tr>
+<td>HTTP Site
+</td>
+<td>String
+</td>
+<td>Répertoire du site utilisé par le serveur HTTP
+</td></tr>
+<tr>
+<td>HTTP Alias
+</td>
+<td>String
+</td>
+<td>Nom de section des alias de répertoire du serveur HTTP
+</td></tr>
+<tr>
+<td>HTTP CertFile
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente le fichier certificat (.pem)
+</td></tr>
+<tr>
+<td>HTTP RootCertFile
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente le fichier certificat de l'autorité intermédiaire qui a signé le certificat "CertFile" (.pem).<br />
+<p>Ce paramètre est optionnel, il est utile si l'autorité intermédiaire n'est pas directement reconnue par le navigateur. 
+</p>
+</td></tr>
+<tr>
+<td>HTTP KeyFile
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente le fichier clef privée (.pem ou .key) qui est liée au certificat
+</td></tr>
+<tr>
+<td>HTTP KeyPassword
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente le mot de passe qui permet de décoder la clef privée
+</td></tr>
+<tr>
+<td>HTTP CertIssuer
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente l'émetteur du certificat du site permettant de l'identifier dans le magasin Windows
+</td></tr>
+<tr>
+<td>HTTP CertSerial
+</td>
+<td>String
+</td>
+<td>Si le protocole est https, représente le numéro de série du certificat du site permettant de l'identifier dans le magasin Windows
+</td></tr>
+<tr>
+<td>HTTP SSLVersion
+</td>
+<td>String
+</td>
+<td>Version du protocole SSL à utiliser: sslvTLSv1_1, sslvTLSv1_2, sslvTLSv1_3 (par défaut&#160;:sslvTLSv1_2)
+</td></tr>
+<tr>
+<td>HTTP SSLCipherList
+</td>
+<td>String
+</td>
+<td>Sceaux proposés par le serveur (par défaut "HIGH:!aNULL:!MD5:!RC4") <a rel="nofollow" class="external text" href="https://www.openssl.org/docs/manmaster/apps/ciphers.html">en savoir plus</a> Version 7.10
+</td></tr>
+<tr>
+<td>HTTP KeepAlive
+</td>
+<td>Boolean
+</td>
+<td>Détermine la valeur du paramètre KeepAlive des réponses du serveur HTTP.<br />
+<p>La valeur est True (1) par défaut et le serveur renvoi KeepAlive dans ses réponses.<br />
+Cette valeur doit être false (0) pour une configuration load balancée.
+</p>
+</td></tr>
+<tr>
+<td>HTTP Private Started
+</td>
+<td>Boolean
+</td>
+<td>Permet de démarrer un service http "privé", utile dans le cadre d'une configuration load balancée.<br />
+<p>Ce service n'est adressé que par les autres services, et permet d'économiser la partie SSL des échanges.<br />
+Le port de ce service ne doit pas être exposé au clients web.
+</p>
+</td></tr>
+<tr>
+<td>HTTP Private Port
+</td>
+<td>Integer
+</td>
+<td>Détermine la valeur du port http privé.
+</td></tr>
+<tr>
+<td>HTTP Log
+</td>
+<td>Booléen
+</td>
+<td>Active la journalisation des flux http (Version 10)
+</td></tr></table>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> TLS 1.3 supporté à partir de la version 10 en utilisant OpenSSL 3.0
+</td></tr></table>
+</div>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Le protocole/port publique peuvent être différent du protocole/port d'écoute si un load balancer est utilisé.
+</td></tr></table>
+</div>
+<p>Voir aussi&#160;:
+</p>
+<ul><li> <a href="Serveur_HTTP_(server).html" title="Serveur HTTP (server)">Serveur HTTP interne</a>
+</li><li> <a href="Configuration_du_Serveur_HTTPS.html" title="Configuration du Serveur HTTPS">Configuration du serveur en HTTPs</a>
+</li><li> <a href="https://frp.sage.fr/wiki1000/index.php/Configuration_du_Serveur_HTTP_derri%C3%83%C2%A8re_un_r%C3%83%C2%A9partiteur_de_charge" title="Configuration du Serveur HTTP derrière un répartiteur de charge">Configuration derrière un répartiteur de charge</a>
+</li></ul>
+<p><br />
+Certains de ces paramètres peuvent être remplacés par <a href="Service_1000_(server).html" title="Service 1000 (server)">les paramètres de la ligne de commande</a>&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Paramètre de la ligne de commande
+</th></tr>
+<tr>
+<td>HTTP Listen Port
+</td>
+<td>HTTPPORT
+</td></tr>
+<tr>
+<td>HTTP KeepAlive
+</td>
+<td>HTTPKEEPALIVE
+</td></tr></table>
+<h4> <span class="mw-headline" id="HTTP_ACLs">HTTP ACLs</span></h4>
+<p><img src="../medias/images/stock/version710-32x32.png" alt="version710-32x32.png" />
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>HTTP ACL
+</td>
+<td>string
+</td>
+<td>Liste de règles séparées par une virgule, par ordre de priorité
+</td></tr></table>
+<p>La syntaxe d'une règle ACL&#160;:
+</p>
+<pre>
+ action-IP/Nob
+</pre>
+<ul><li>action
+</li></ul>
+<dl><dd> Type de règle, doit être accept ou deny
+</dd></dl>
+<ul><li>IP
+</li></ul>
+<dl><dd> Addresse IP en notation pointé
+</dd></dl>
+<ul><li>Nob (facultatif)
+</li></ul>
+<dl><dd>Nombre de bits du masque de sous réseau, par exemple 29 correspond au masque 255.255.255.248 et défini un sous réseau de 8 adresses. 
+</dd></dl>
+<p><a rel="nofollow" class="external text" href="http://jodies.de/ipcalc">Calculateur de masque</a>
+</p><p>Exemple 1&#160;:
+</p><p>Autorise les adresses 192.168.1.0 ... 192.168.1.7 à l’exception de 192.168.1.5
+</p>
+<pre>
+deny-192.168.1.5
+accept-192.168.1.0/29
+</pre>
+<p>Exemple 2&#160;:
+</p><p>Autorise seulement l'adresse 192.168.1.1 
+</p>
+<pre>
+accept-192.168.1.1
+deny-0.0.0.0/0
+</pre>
+<h4> <span class="mw-headline" id="HTTP_Web_Worker">HTTP Web Worker</span></h4>
+<p><img src="../medias/images/stock/version800-32x32.png" alt="version800-32x32.png" />
+</p><p>Le Web Worker est un mécanisme de notification asynchrone permettant au client Web d'être notifié des événements survenant coté serveur.
+</p><p>Il permet de gérer les notifications de boîte à message ainsi que les notifications de traitement. 
+</p><p>L'utilisation du web worker améliore l'expérience utilisateur.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Web worker started
+</td>
+<td>Integer
+</td>
+<td>Active (1) ou désactive (0) l'utilisation du web worker
+</td></tr></table>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Lorsque le web worker est activé, le client génère des requêtes msg.pending périodiques.
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="HTTP_Web_Socket">HTTP Web Socket</span></h4>
+<p><img src="../medias/images/stock/version800-32x32.png" alt="version800-32x32.png" />
+</p><p>Les WebSockets utilisent un protocole permettant de créé des canaux de communication full-duplex à l'intérieur d'une connexion TCP. 
+</p><p>L'utilisation des WebSockets améliore l'expérience utilisateur par une meilleur fluidité des échanges.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Web socket started
+</td>
+<td>Integer
+</td>
+<td>Active (1) ou désactive (0) l'utilisation de WebSocket
+</td></tr></table>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b>
+<ol><li>Les WebSocket ne sont prises en charge que par le serveur HTTP embarqué et en mode <b>HTTPs uniquement</b>.
+</li><li>Les WebSockets sont activées par défaut.
+</li><li>Les WebSocket peuvent ne pas fonctionner ou provoquer des problèmes dans le cas d'utilisation du serveur Sage 1000 derrière un load balancer qui ne supporterait pas le protocole WebSocket.
+</li><li>L'url utilisée doit correspondre au domaine du certificat SSL. Par exemple, en entreprise, si votre serveur est myhost sur le domaine interne xxx.yyy.zzz le nom de domaine du certificat auto-généré sera myhost.xxx.yyy.zzz. Vous devez utiliser <a rel="nofollow" class="external free" href="https://myhost.xxx.yyy.zzz">https://myhost.xxx.yyy.zzz</a> comme url d'accès même si <a rel="nofollow" class="external free" href="https://myhost">https://myhost</a> est valide sur votre réseau. A défaut l'établissement des connexions websockets échoueront.
+</li></ol>
+</td></tr></table>
+</div>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Lorsque les websockets sont actives, le dialogue d'attente n'est pas affiché.
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="HTTP_CSP">HTTP CSP</span></h4>
+<p>La <a rel="nofollow" class="external text" href="https://developer.mozilla.org/fr/docs/Web/HTTP/CSP">stratégie de sécurité du contenu</a> permet d'améliorer la sécurité des sites web.
+</p><p><a href="Fichier%253AVersion1000-32x32.png.html" class="image"><img alt="Version1000-32x32.png" src="../images/4/4e/Version1000-32x32.png" width="32" height="32" /></a>
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>HTTP CSP
+</td>
+<td>Liste de chaines
+</td>
+<td>Liste des règles séparées par ";"
+</td></tr></table>
+<p>Exemple 
+</p><p>HTTP CSP = default-src 'self'; script-src <a rel="nofollow" class="external free" href="https://example.com">https://example.com</a>
+</p><p>La valeur par défaut est <i>default-src 'self'</i>
+</p>
+<h4> <span class="mw-headline" id="HTTP_CORS">HTTP CORS</span></h4>
+<p>Le <a rel="nofollow" class="external text" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">CORS</a> permet d'autoriser des requêtes provenant d'autre domaine.
+</p><p><img src="../medias/images/stock/version800-32x32.png" alt="version800-32x32.png" />
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>HTTP CORS Allow origin
+</td>
+<td>Liste de chaines
+</td>
+<td>Liste des domaines autorisés
+</td></tr></table>
+<p>La liste des domaines doit être séparée par des virgules, utilisez * pour autoriser tous les domaines.
+</p><p>Les domaines doivent être qualifié par le protocole, par exemple <a rel="nofollow" class="external free" href="http://origin.com">http://origin.com</a>
+</p><p>Les domaines indiqués ici seront comparés à la valeur du champ d'entête Origin
+</p><p>Lorsque le domain est autorisé, le service retourne dans la réponse&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Champ
+</th>
+<th>Valeur
+</th></tr>
+<tr>
+<td>Access-Control-Allow-Origin
+</td>
+<td>Valeur du chanmp Origin de la requête
+</td></tr>
+<tr>
+<td>Vary
+</td>
+<td>Origin
+</td></tr>
+<tr>
+<td>Access-Control-Allow-Credentials
+</td>
+<td>true
+</td></tr>
+<tr>
+<td>Access-Control-Allow-Methods
+</td>
+<td>POST,PUT,DELETE,GET,OPTION
+</td></tr>
+<tr>
+<td>Access-Control-Allow-Headers
+</td>
+<td>Valeur de Access-Control-Request-Headers de la requête
+</td></tr>
+<tr>
+<td>Access-Control-Max-Age
+</td>
+<td>86400
+</td></tr></table>
+<h4> <span class="mw-headline" id="FTPs">FTPs</span></h4>
+<p>Ces variables configurent le serveur FTPs inclu dans le servcice.
+Le serveur FTP peut être utilisé sur les containeurs.
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\FTP\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "FTP Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>FTP Profil
+</td>
+<td>string
+</td>
+<td>Référence une section FTP
+</td></tr>
+<tr>
+<td>FTP Start
+</td>
+<td>1 ou 0
+</td>
+<td>Démarre le service FTP
+</td></tr>
+<tr>
+<td>FTP ACL
+</td>
+<td>Chaîne
+</td>
+<td>Définit une liste d'ACL optionnelle
+</td></tr></table>
+<h4> <span class="mw-headline" id="WEB">WEB</span></h4>
+<p>Ces variables configurent le service WEB inclu dans le service.
+</p><p>Ces variables peuvent être renseignées dans une section WEB
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\WEB\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "WEB Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>WEB Profil
+</td>
+<td>string
+</td>
+<td>Référence une section WEB
+</td></tr>
+<tr>
+<td>MaxDatagridRowCount
+</td>
+<td>Entier
+</td>
+<td>Détermine le nombre maximal de lignes chargées dans une grille (défaut 5000)
+</td></tr>
+<tr>
+<td>GridWindowSize
+</td>
+<td>Entier
+</td>
+<td>Détermine le nombre maximal de lignes affichées dans une page de grille. (Défaut 25)
+</td></tr>
+<tr>
+<td>MDIForms
+</td>
+<td>1 ou 0
+</td>
+<td>Défaut 0
+</td></tr>
+<tr>
+<td>MDIAssistants
+</td>
+<td>1 ou 0
+</td>
+<td>Défaut 1
+</td></tr>
+<tr>
+<td>UseTreeBookClassic
+</td>
+<td>1 ou 0
+</td>
+<td>Défaut 0
+</td></tr>
+<tr>
+<td>SavePortalTabForms
+</td>
+<td>1 ou 0
+</td>
+<td>Défaut 1
+</td></tr>
+<tr>
+<td>DebugJS
+</td>
+<td>1 ou 0
+</td>
+<td>Utilise les javascript en mode debug (Défaut 0)
+</td></tr>
+<tr>
+<td>RecordMode
+</td>
+<td>1 ou 0
+</td>
+<td>Active le mode enregistrement pour JMeter (Défaut 0)
+</td></tr>
+<tr>
+<td>FormRedirect
+</td>
+<td>1 ou 0
+</td>
+<td>Active la redirection des urls d'écran, pour IIS cette redirection doit être désactivée. (défaut 1, ativé)
+</td></tr></table>
+<h4> <span class="mw-headline" id="Mise_au_point.2C_debugger">Mise au point, debugger <img src="../medias/images/stock/version700-32x32.png" alt="version700-32x32.png" /></span></h4>
+<p>Ces variables configurent le remote debugger inclus dans le service.
+</p><p>Le remote debugger permet à un poste client desktop de visualiser, modifier et poser des points d'arrêt dans le code métier exécuté par le service. 
+</p><p>Ces variables peuvent être renseignées dans une section DEBUGGER
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\DEBUGGER\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "DEBUGGER Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>DEBUGGER Profil
+</td>
+<td>string
+</td>
+<td>Référence une section DEBUGGER
+</td></tr>
+<tr>
+<td>DEBUGGER Started
+</td>
+<td>Boolean
+</td>
+<td>Démarre le service de Remote debugging
+</td></tr>
+<tr>
+<td>DEBUGGER Users
+</td>
+<td>Strings
+</td>
+<td>Liste des utilisateurs autorisés à utiliser le service de remote debugging
+</td></tr>
+<tr>
+<td>DEBUGGER Handlers
+</td>
+<td>Strings
+</td>
+<td>Liste des handlers des évènements de trace qui seront interceptés et redirigés vers le journal d'évènement, ceci vous permet de visualiser en temps réel ces traces dans la console SNMP. Les handlers possibles sont:
+<ul><li> script
+</li></ul>
+<dl><dd> Evènements générés par la fonction dbgMsg() du code métier
+</dd></dl>
+<ul><li> queries
+</li></ul>
+<dl><dd> Evènements de trace des requêtes SQL
+</dd></dl>
+</td></tr></table>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#FBE19F;font-size:100%;">
+<table style="background-color:#FBE19F">
+<tr>
+<td><a href="Fichier%253AExclam-20px.png.html" class="image"><img alt="Exclam-20px.png" src="../images/e/e2/Exclam-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Attention&#160;:</b> L'utilisation de DEBUGGER Handlers peut provoquer une forte consommation de mémoire
+</td></tr></table>
+</div>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#FBE19F;font-size:100%;">
+<table style="background-color:#FBE19F">
+<tr>
+<td><a href="Fichier%253AExclam-20px.png.html" class="image"><img alt="Exclam-20px.png" src="../images/e/e2/Exclam-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Attention&#160;:</b> Ces fonctionnalités ne doivent pas être activés sur un serveur de production
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="LDAP">LDAP</span></h4>
+<p>Ces variables configurent le serveur LDAP inclus dans le service.
+</p><p>Ces variables peuvent être renseignées dans une section LDAP
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\LDAP\nom_de_profil] 
+</pre>
+<p>puis référencée par la variable "LDAP Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>LDAP Profil
+</td>
+<td>string
+</td>
+<td>Référence une section LDAP
+</td></tr>
+<tr>
+<td>LDAP Started
+</td>
+<td>Boolean
+</td>
+<td>Démarre le service LDAP (défaut false).
+</td></tr>
+<tr>
+<td>LDAP Port
+</td>
+<td>Integer
+</td>
+<td>Port d'écoute du service LDAP
+</td></tr>
+<tr>
+<td>LDAP Password
+</td>
+<td>String
+</td>
+<td>Mot de passe administrateur du compte system du serveur LDAP ('uid=admin,ou=system')
+</td></tr></table>
+<h4> <span class="mw-headline" id="SOAP">SOAP</span></h4>
+<p>Ces variables configurent le service SOAP inclus dans le serveur.
+</p><p>Ces variables peuvent être renseignées dans une section SOAP
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\SOAP\nom_de_profil] 
+</pre>
+<p>puis référencées par la variable "SOAP Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>SOAP Profil
+</td>
+<td>string
+</td>
+<td>Référence une section SOAP
+</td></tr>
+<tr>
+<td>SOAP Log Documents
+</td>
+<td>Boolean
+</td>
+<td>Active la journalisation des documents SOAP
+</td></tr>
+<tr>
+<td>SOAP Log Messages
+</td>
+<td>Boolean
+</td>
+<td>Active la journalisation des messages SOAP
+</td></tr>
+<tr>
+<td>SOAP 5.5x
+</td>
+<td>Boolean
+</td>
+<td>Utilise l'implémentation SOAP des versions 5.5x
+</td></tr></table>
+<ul><li>SOAP 5.5x
+</li></ul>
+<dl><dd>L'implémentation de SOAP a été récrite en version 5.6x, en cas de problème de compatibilité avec des développements existant il est possible d'utiliser l'ancienne implémentation.
+</dd></dl>
+<h4> <span class="mw-headline" id="SMTP">SMTP</span></h4>
+<p>Ces variables configurent le client SMTP utilisé par le service pour envoyer des EMails.
+</p><p>Ces variables peuvent être renseignées dans une section SMTP
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\SMTP\nom_de_profil] 
+</pre>
+<p>puis référencés par la variable "SMTP Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>SMTP Profil
+</td>
+<td>string
+</td>
+<td>Référence une section SMTP
+</td></tr>
+<tr>
+<td>SMTP Host
+</td>
+<td>String
+</td>
+<td>Adresse du serveur SMTP.
+</td></tr>
+<tr>
+<td>SMTP Port
+</td>
+<td>Integer
+</td>
+<td>Port du serveur SMTP.
+</td></tr>
+<tr>
+<td>SMTP Login
+</td>
+<td>String
+</td>
+<td>Utilisateur de connexion du serveur SMTP.
+</td></tr>
+<tr>
+<td>SMTP Password
+</td>
+<td>String
+</td>
+<td>Mot de passe de connexion du serveur SMTP.
+</td></tr>
+<tr>
+<td>SMTP From
+</td>
+<td>String
+</td>
+<td>Adresse EMail de l'expéditeur.
+</td></tr>
+<tr>
+<td>SMTP UseTLS
+</td>
+<td>Boolean
+</td>
+<td>Utilise une sécurisation TLS
+</td></tr></table>
+<h4> <span class="mw-headline" id="SNMP">SNMP</span></h4>
+<p>Ces variables peuvent être renseignées dans une section SNMP
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\SNMP\nom_de_profil] 
+</pre>
+<p>puis référencés par la variable "SNMP Profil"
+</p><p>Ces variables configurent l'agent SNMP inclus dans le serveur. 
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>SNMP Profil
+</td>
+<td>string
+</td>
+<td>Référence une section SNMP
+</td></tr>
+<tr>
+<td>SNMP Started
+</td>
+<td>Boolean
+</td>
+<td>Démarre l'agent SNMP
+</td></tr>
+<tr>
+<td>SNMP Port
+</td>
+<td>Integer
+</td>
+<td>Port UDP de l'agent SNMP (161)
+</td></tr>
+<tr>
+<td>SNMP sysName
+</td>
+<td>String
+</td>
+<td>Valeur de la variable sysName pour la MIB2
+</td></tr>
+<tr>
+<td>SNMP sysContact
+</td>
+<td>String
+</td>
+<td>Valeur de la variable sysContact pour la MIB2
+</td></tr>
+<tr>
+<td>SNMP sysLocation
+</td>
+<td>String
+</td>
+<td>Valeur de la variable sysLocation pour la MIB2
+</td></tr>
+<tr>
+<td>SNMP Traps
+</td>
+<td>liste de chaîne
+</td>
+<td>Référence des sections SNMPTRAP
+</td></tr></table>
+<p>Les sections SNMPTRAP permettent de définir des points d'écoute SNMP auquels seront envoyés les messages de traps.
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\SNMPTRAP\nom_de_profil] 
+</pre>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>SNMP Trap Host
+</td>
+<td>string
+</td>
+<td>Nom réseau du point d'écoute
+</td></tr>
+<tr>
+<td>SNMP Trap Port
+</td>
+<td>Integer
+</td>
+<td>Numéro du port du point d'écoute
+</td></tr>
+<tr>
+<td>SNMP Trap Categories
+</td>
+<td>Liste de chaîne
+</td>
+<td>Catégories des traps à envoyer à ce point d'écoute<br />
+</td></tr></table>
+<p>La liste des catégories de trap est la suivante&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de catégorie
+</th>
+<th>Type de message
+</th></tr>
+<tr>
+<td>Service
+</td>
+<td>Messages relatifs au processus du service.
+</td></tr>
+<tr>
+<td>Automate
+</td>
+<td>Messages relatifs aux exécutions de l'automate.
+</td></tr>
+<tr>
+<td>BP
+</td>
+<td>Messages relatifs aux exécutions des Processus métiers.
+</td></tr>
+<tr>
+<td>Authenticate
+</td>
+<td>Messages relatifs aux erreurs d'authentification.
+</td></tr></table>
+<p>Exemple de configuration SNMP&#160;: 
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\SNMP\CONFIG_SNMP_1]
+SNMP Started=1
+SNMP Start=1
+SNMP Port=161
+SNMP sysContact = <a href="../../cdn-cgi/l/email-protection.html" class="__cf_email__" data-cfemail="f1859e859eb182909694df929e9c">[email&#160;protected]</a>
+SNMP sysName = toto
+SNMP sysLocation = Paris,France
+SNMP Traps=Service,Automate
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\SNMPTRAP\Service]
+SNMP Trap Host=localhost
+SNMP Trap Port=162
+SNMP Trap Categories=Service,Authenticate
+
+[\SOFTWARE\Sage\Ligne 1000\Administration\SNMPTRAP\Automate]
+SNMP Trap Host=localhost
+SNMP Trap Port=162
+SNMP Trap Categories=Automate,BP
+</pre>
+<h4> <span class="mw-headline" id="PROXY">PROXY</span></h4>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Déprécié, utiliser le paramétrage dans la console d'administration.
+</td></tr></table>
+</div>
+<p>Ces variables configurent le PROXY utilisé par le client HTTP.
+</p><p>Ces variables peuvent être renseignées dans une section PROXY
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\PROXY\nom_de_profil]
+</pre>
+<p>puis référencée par la variable "PROXY Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>PROXY Profil
+</td>
+<td>string
+</td>
+<td>Référence une section PROXY
+</td></tr>
+<tr>
+<td>PROXY Host
+</td>
+<td>String
+</td>
+<td>Adresse du serveur PROXY.
+</td></tr>
+<tr>
+<td>PROXY Port
+</td>
+<td>Integer
+</td>
+<td>Port du serveur PROXY (défaut 8080).
+</td></tr>
+<tr>
+<td>PROXY Login
+</td>
+<td>String
+</td>
+<td>Utilisateur de connexion du serveur PROXY.
+</td></tr>
+<tr>
+<td>PROXY Password
+</td>
+<td>String
+</td>
+<td>Mot de passe de connexion du serveur PROXY.
+</td></tr>
+<tr>
+<td>PROXY Timeout
+</td>
+<td>Integer
+</td>
+<td>Délai d'expiration du PROXY. (défaut 60 secondes)
+</td></tr></table>
+<h4> <span class="mw-headline" id="Exceptions">Exceptions</span></h4>
+<p>Ces variables configurent l'enregistrement des exceptions du service.
+</p><p>Ces variables peuvent être renseignées dans une section EXCEPTIONS
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\EXCEPTIONS\nom_de_profil]
+</pre>
+<p>puis référencées par la variable "Exceptions logs Profil"
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Exceptions logs Profil
+</td>
+<td>string
+</td>
+<td>Référence une section EXCEPTIONS
+</td></tr>
+<tr>
+<td>Exceptions logs Started
+</td>
+<td>boolean
+</td>
+<td>Enregistrer les exceptions. Vrai par défaut.
+</td></tr>
+<tr>
+<td>Exceptions logs path
+</td>
+<td>String
+</td>
+<td>Répertoire dans lequel seront créés les fichiers d'exception.
+</td></tr>
+<tr>
+<td>Exceptions logs ignore
+</td>
+<td>Liste de chaîne
+</td>
+<td>Liste d'exception à ignorer.
+</td></tr>
+<tr>
+<td>Exceptions logs write file
+</td>
+<td>booléen
+</td>
+<td>Un fichier d'exception est écrit. Vrai par défaut. Il peut être inutile d'écrire un fichier d'exception si les exceptions sont transmises à un gestionnaire de log (voir LOG MANAGER) et permet dans ce cas ne ne pas encombrer le disque.(V8)
+</td></tr></table>
+<h4> <span class="mw-headline" id="Captcha">Captcha</span></h4>
+<p>Dans le cadre d'un service public, les utilisateurs souhaitant s'enregistrer peuvent être soumis à un captcha.
+</p><p>Si l'utilisateur commet trois erreurs lors de l'authentification, il devra saisir un captcha.
+</p><p>voir <a rel="nofollow" class="external free" href="http://www.google.com/recaptcha">http://www.google.com/recaptcha</a>
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Recaptcha Public Key
+</td>
+<td>string
+</td>
+<td>Clef publique Recaptcha
+</td></tr>
+<tr>
+<td>Recaptcha Private Key
+</td>
+<td>String
+</td>
+<td>Clef privée Recaptcha
+</td></tr></table>
+<h4> <span class="mw-headline" id="Quotas">Quotas</span></h4>
+<p>Dans le cadre d'un service public, les utilisateurs téléversent des fichiers dans un répertoire propres à la session.
+</p><p>Ces fichiers doivent avoir une extension prévue pour des questions de sécurité.
+</p><p>La taille totale du répertoire est définie pour éviter un manque de place sur le disque.
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Upload Document Size
+</td>
+<td>integer
+</td>
+<td>Taille maximale en Mb d'un fichier uploadé; valeur par défaut&#160;: 0 (non limité)
+</td></tr>
+<tr>
+<td>Upload User Quota
+</td>
+<td>integer
+</td>
+<td>Taille maximale en Mb du répertoire upload de l'utilisateur par session; valeur par défaut&#160;: 50
+</td></tr>
+<tr>
+<td>Upload Ext Allowed
+</td>
+<td>String
+</td>
+<td>Extensions autorisées; valeur par défaut&#160;: vide (tout est autorisé)
+</td></tr>
+<tr>
+<td>Auto delete messages
+</td>
+<td>Entier
+</td>
+<td>Durée de conservation en jours des messages
+</td></tr></table>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> La liste des extensions suivantes n'est jamais filtrée car le service est susceptible de créer des fichiers de ce type (xlsx,ods,xml,pdf,,csv,sxc,xls,,jpg,jpeg,png,asice)
+</td></tr></table>
+</div>
+<h4> <span class="mw-headline" id="Clefs">Clefs</span></h4>
+<p>Le stockage de certaines clefs peut être externalié
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Key Cookie
+</td>
+<td>chaine
+</td>
+<td><a href="Keyvault_url.html" title="Keyvault url">url d'un stockage sécurisé externe</a>, si la clef est non trouvée, elle y sera créée
+</td></tr></table>
+<p><br />
+</p>
+<h3> <span class="mw-headline" id="Sections_SDATA">Sections SDATA</span></h3>
+<p>Ces sections permettent de configurer les points d'accès SDATA qui seront exposés par le service.
+</p><p>Les noms de ces sections sont
+</p>
+<pre>[\SOFTWARE\Sage\Ligne 1000\Administration\Servers\&lt;&lt;nom du service&gt;&gt;\SData\&lt;&lt;incrément 1...&gt;&gt;]
+</pre>
+<table class="wikitable">
+
+<tr>
+<th>Variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>DataSetName
+</td>
+<td>string
+</td>
+<td>Nom du dataset dans l'URL SDATA
+</td></tr>
+<tr>
+<td>Title
+</td>
+<td>string
+</td>
+<td>Libellé informatif sur l'usage du point d'accès
+</td></tr>
+<tr>
+<td>Contract
+</td>
+<td>string
+</td>
+<td>Nom du paquet de service SDATA
+</td></tr>
+<tr>
+<td>Version
+</td>
+<td>string
+</td>
+<td>Numéro de version, peut être utilisé pour supporté plusieurs version du même contrat
+</td></tr>
+<tr>
+<td>Folder
+</td>
+<td>string
+</td>
+<td>Nom du dossier utilisé par ce point d'accès
+</td></tr>
+<tr>
+<td>Database
+</td>
+<td>string
+</td>
+<td>Nom de la base de donnée utilisé pour ce point d'accès (multi-bases)
+</td></tr>
+<tr>
+<td>Society
+</td>
+<td>string
+</td>
+<td>Nom de la société pour ce point d'accès (multi-société)
+</td></tr>
+<tr>
+<td>Restitution
+</td>
+<td>string
+</td>
+<td>Nom de la famille de restitution pour ce point d'accès (multi-société)
+</td></tr></table>
+<p>Exemple&#160;: 
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\Servers\SYFRE\SData\1]
+DataSetName=iphone
+Title=syfre iphone
+Contract=ndfContract
+Version=1
+Folder=Test Syfre iPhone
+Database=dbTestIPhone
+Society=
+Restitution=
+</pre>
+<h3> <span class="mw-headline" id="Section_Export">Section Export</span></h3>
+<p>Cette section permet de configurer la fonction d'exportation des vignettes de portail des Services. 
+</p><p>Deux mode d'exportation sont possibles&#160;:
+</p>
+<ul><li>ftp
+</li></ul>
+<dl><dd> Dans ce mode les vignettes sont générées et copiées dans un répertoire public accessible par ftp.
+</dd></dl>
+<ul><li>file
+</li></ul>
+<dl><dd> Dans ce mode les vignettes sont générées et copiées dans un répertoire local du serveur. Ce mode n'est utile que si le répertoire est un répertoire du Site et que celui-ci est public.
+</dd></dl>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Protocol
+</td>
+<td>String
+</td>
+<td>ftp ou file
+</td></tr>
+<tr>
+<td>Export URL
+</td>
+<td>String
+</td>
+<td>Cette URL référence le répertoire où la vignette a été générée.
+</td></tr></table>
+<p>Si le protocole est 'ftp' les variables suivantes sont utilisées&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>FTP host
+</td>
+<td>String
+</td>
+<td>Addresse du serveur FTP
+</td></tr>
+<tr>
+<td>FTP Port
+</td>
+<td>Integer
+</td>
+<td>Numéro du port du serveur FTP
+</td></tr>
+<tr>
+<td>FTP Login
+</td>
+<td>String
+</td>
+<td>Utilisateur de connexion du serveur FTP
+</td></tr>
+<tr>
+<td>FTP Password
+</td>
+<td>String
+</td>
+<td>Mot de passe de connexion du serveur FTP
+</td></tr>
+<tr>
+<td>FTP Directory
+</td>
+<td>String
+</td>
+<td>Répertoire d'exportation sur le serveur FTP
+</td></tr></table>
+<p>Si le protocole est 'file' les variables suivantes sont utilisées&#160;: 
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>Directory
+</td>
+<td>String
+</td>
+<td>Répertoire d'exportation sur le serveur.
+</td></tr></table>
+<p>Exemple de configuration ftp utilisant une zone publique Free&#160;: 
+</p>
+<pre>
+[\SOFTWARE\Sage\Ligne 1000\Administration\Servers\SYFRE\Export]
+Protocol=ftp
+Export URL=http://syfre.free.fr/sage/
+FTP Host=ftpperso.free.fr
+FTP Port=21
+FTP Login=syfre
+FTP Password=XXXXXXXXXX
+FTP Directory=sage
+</pre>
+<h3> <span class="mw-headline" id="Section_ConfigServer">Section ConfigServer</span></h3>
+<p>Cette section permet d'utiliser un fichier de configuration disponible sur une url.
+</p><p><br />
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Nom de variable
+</th>
+<th>Type
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>url
+</td>
+<td>String
+</td>
+<td>Cette URL permet de récupérer le fichier de configuration.
+</td></tr></table>
+<p><br />
+Un POST HTTP est effectué sur cette url avec les données suivantes&#160;: 
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="javascript source-javascript" style="font-family:monospace;"><pre class="de1"><span class="br0">&#123;</span><span class="st0">&quot;deploymentId&quot;</span><span class="sy0">:</span><span class="st0">&quot;nom_système_de_la_machine&quot;</span><span class="br0">&#125;</span></pre></div></div>
+<p>Le résultat attendu est 
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="javascript source-javascript" style="font-family:monospace;"><pre class="de1"><span class="br0">&#123;</span><span class="st0">&quot;config&quot;</span><span class="sy0">:</span><span class="st0">&quot;contenu_du_fichier_de_configuration&quot;</span><span class="br0">&#125;</span><span class="sy0">,</span>
+<span class="br0">&#123;</span><span class="st0">&quot;certificate&quot;</span><span class="sy0">:</span><span class="st0">&quot;certificat_au_format_pfx&quot;</span><span class="br0">&#125;</span></pre></div></div>
+<p><br />
+</p>
+<ul><li><a href="Exemple_de_configuration_(server).html" title="Exemple de configuration (server)">Exemple de configuration</a>
+</li><li><a href="Service_1000_(server).html" title="Service 1000 (server)">Ligne de commande</a>
+</li></ul>
+<center>
+<p>&#8212; <a href="Serveur.html" title="Serveur">Serveur</a>
+&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM" title="Développement DSM">Développement DSM</a> &#8212; 
+</p>
+</center>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 386/1000000
+Post-expand include size: 6110/2097152 bytes
+Template argument size: 1885/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:1024-0!*!0!!fr!2!* and timestamp 20240729130006 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 1
+                        &nbsp; <b>Bots & Crawlers</b>  0
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;oldid=14552">https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;oldid=14552</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégorie</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Serveur" title="Catégorie:Serveur">Serveur</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Fichier_de_configuration_(server).html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Fichier_de_configuration_(server)&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Fichier+de+configuration+(server)" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script data-cfasync="false" src="../../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Fichier_de_configuration_(server)" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Fichier_de_configuration_(server)" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Fichier_de_configuration_(server)&amp;oldid=14552" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Fichier_de_configuration_(server)">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 7 novembre 2023 à 12:01.<br /></li>
+		<li id="viewcount">Cette page a été consultée 97 140 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.244 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad46bf4aaa6554',t:'MTcyMjI1Nzg2My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

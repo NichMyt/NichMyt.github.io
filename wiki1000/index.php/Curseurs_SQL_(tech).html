@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Curseurs SQL (tech) - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Curseurs_SQL_(tech)", "wgTitle": "Curseurs SQL (tech)", "wgCurRevisionId": 998, "wgArticleId": 264, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Objets techniques"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-delphi {line-height: normal;}
+.source-delphi li, .source-delphi pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for delphi
+ * CSS class: source-delphi, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.delphi.source-delphi .de1, .delphi.source-delphi .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.delphi.source-delphi  {font-family:monospace;}
+.delphi.source-delphi .imp {font-weight: bold; color: red;}
+.delphi.source-delphi li, .delphi.source-delphi .li1 {font-weight: normal; vertical-align:top;}
+.delphi.source-delphi .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.delphi.source-delphi .li2 {font-weight: bold; vertical-align:top;}
+.delphi.source-delphi .kw1 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw2 {color: #000000; font-weight: bold;}
+.delphi.source-delphi .kw3 {color: #000066;}
+.delphi.source-delphi .kw4 {color: #000066; font-weight: bold;}
+.delphi.source-delphi .co1 {color: #808080; font-style: italic;}
+.delphi.source-delphi .co2 {color: #008000; font-style: italic;}
+.delphi.source-delphi .coMULTI {color: #808080; font-style: italic;}
+.delphi.source-delphi .es0 {color: #ff0000; font-weight: bold;}
+.delphi.source-delphi .br0 {color: #000066;}
+.delphi.source-delphi .sy0 {color: #000066;}
+.delphi.source-delphi .sy1 {color: #000066;}
+.delphi.source-delphi .sy2 {color: #000066;}
+.delphi.source-delphi .sy3 {color: #000066;}
+.delphi.source-delphi .st0 {color: #ff0000;}
+.delphi.source-delphi .nu0 {color: #0000ff;}
+.delphi.source-delphi .me1 {color: #006600;}
+.delphi.source-delphi .re0 {color: #9ac;}
+.delphi.source-delphi .re1 {color: #ff0000;}
+.delphi.source-delphi .ln-xtra, .delphi.source-delphi li.ln-xtra, .delphi.source-delphi div.ln-xtra {background-color: #ffc;}
+.delphi.source-delphi span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "https://frp.sage.fr/wiki1000/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Curseurs_SQL_tech action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Curseurs SQL (tech)</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Curseurs_SQL_(tech).html#column-one">Navigation</a>, <a href="Curseurs_SQL_(tech).html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Curseurs_SQL_(tech).html#Introduction"><span class="tocnumber">1</span> <span class="toctext">Introduction</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Curseurs_SQL_(tech).html#D.C3.A9claration_d.27une_variable_requ.C3.AAte_SQL"><span class="tocnumber">2</span> <span class="toctext">Déclaration d'une variable requête SQL</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Curseurs_SQL_(tech).html#Cr.C3.A9ation_d.27une_requ.C3.AAte_SQL"><span class="tocnumber">3</span> <span class="toctext">Création d'une requête SQL</span></a></li>
+<li class="toclevel-1 tocsection-4"><a href="Curseurs_SQL_(tech).html#Cr.C3.A9ation_d.27une_requ.C3.AAte_SQL_ODBC"><span class="tocnumber">4</span> <span class="toctext">Création d'une requête SQL ODBC</span></a></li>
+<li class="toclevel-1 tocsection-5"><a href="Curseurs_SQL_(tech).html#Propri.C3.A9t.C3.A9s"><span class="tocnumber">5</span> <span class="toctext">Propriétés</span></a>
+<ul>
+<li class="toclevel-2 tocsection-6"><a href="Curseurs_SQL_(tech).html#Propri.C3.A9t.C3.A9s_de_param.C3.A9trage_de_la_requ.C3.AAte"><span class="tocnumber">5.1</span> <span class="toctext">Propriétés de paramétrage de la requête</span></a></li>
+<li class="toclevel-2 tocsection-7"><a href="Curseurs_SQL_(tech).html#Propri.C3.A9t.C3.A9s_.C3.A0_l.27ex.C3.A9cution"><span class="tocnumber">5.2</span> <span class="toctext">Propriétés à l'exécution</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-8"><a href="Curseurs_SQL_(tech).html#M.C3.A9thodes"><span class="tocnumber">6</span> <span class="toctext">Méthodes</span></a></li>
+<li class="toclevel-1 tocsection-9"><a href="Curseurs_SQL_(tech).html#Exemples"><span class="tocnumber">7</span> <span class="toctext">Exemples</span></a>
+<ul>
+<li class="toclevel-2 tocsection-10"><a href="Curseurs_SQL_(tech).html#Utilisation_de_requ.C3.AAte_pour_r.C3.A9aliser_des_mises_.C3.A0_jour"><span class="tocnumber">7.1</span> <span class="toctext">Utilisation de requête pour réaliser des mises à jour</span></a></li>
+<li class="toclevel-2 tocsection-11"><a href="Curseurs_SQL_(tech).html#Utilisation_de_requ.C3.AAte_pour_retrouver_la_valeur_d.27un_attribut"><span class="tocnumber">7.2</span> <span class="toctext">Utilisation de requête pour retrouver la valeur d'un attribut</span></a></li>
+</ul>
+</li>
+</ul>
+</td></tr></table>
+<h3> <span class="mw-headline" id="Introduction">Introduction</span></h3>
+<p>Les requêtes SQL (TQuery) permettent d'accéder à une ou plusieurs tables d'une base de données en utilisant des instructions SQL.
+</p><p>A la différence des curseurs, les requêtes SQL ne s’appuient pas sur le modèle objet mais sur le modèle relationnel sous-jacent.
+</p><p>Elles ne doivent donc être utilisées que dans les cas où les fonctionnalités orientées objets disponibles s’avèrent insuffisantes.
+</p><p>Généralement l’utilisation d’une requête SQL suit le schéma suivant&#160;:
+</p>
+<ol><li>L’objet requête est créé avec la fonction QueryBroker.
+</li><li>Le code SQL est défini.
+</li><li>La requête est ouverte.
+</li><li>Tant qu’il existe des données dans le résultat la requête est «&#160;fetchée&#160;»&#160;; les données sont retournées ligne par ligne dans cette boucle.
+</li><li>La requête est fermée.
+</li></ol>
+<p>Bien que l’écriture du code SQL soit libre, le développeur doit respecter un certain nombre de règles pour garantir que ce code soit portable d’un serveur à l’autre.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> L'utilisation des requêtes SQL doit être évitée.
+</td></tr></table>
+</div>
+<h3> <span class="mw-headline" id="D.C3.A9claration_d.27une_variable_requ.C3.AAte_SQL">Déclaration d'une variable requête SQL</span></h3>
+<p>Les requêtes SQL doivent être déclarées&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">var</span> q<span class="sy1">:</span>TQuery<span class="sy1">;</span></pre></div></div>
+<h3> <span class="mw-headline" id="Cr.C3.A9ation_d.27une_requ.C3.AAte_SQL">Création d'une requête SQL</span></h3>
+<p>Une requête est créée avec la fonction globale QueryBroker.
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">function</span> QueryBroker<span class="br0">&#40;</span><span class="kw1">const</span> iDatabaseURL<span class="sy1">,</span>iTraceName<span class="sy1">,</span>iClasseName<span class="sy1">:</span><span class="kw4">string</span><span class="br0">&#41;</span><span class="sy1">:</span>TQuery<span class="sy1">;</span></pre></div></div>
+<table class="wikitable">
+
+<tr>
+<td>iDatabaseURL
+</td>
+<td>string
+</td>
+<td>URL de la base de données. Si ce paramètre est vide la base de données par défaut est utilisée.
+</td></tr>
+<tr>
+<td>iTraceName
+</td>
+<td>string
+</td>
+<td>Identifiant de la requête dans la trace.
+</td></tr>
+<tr>
+<td>iClasseName
+</td>
+<td>string
+</td>
+<td>Nom de la classe métier concernée.
+<p>Si cette classe est fournie le résultat de la requête peut être mappé sur un objet métier de la classe indiquée, la propriété Instance est alors utilisable. La requête peut alors être utilisée comme un curseur.
+</p>
+</td></tr></table>
+<h3> <span class="mw-headline" id="Cr.C3.A9ation_d.27une_requ.C3.AAte_SQL_ODBC">Création d'une requête SQL ODBC</span></h3>
+<p>Une requête SQL ODBC utilise le pilote ODBC inclu dans le framework 1000 et peut être exécutée sur une source ODBC quelconque.
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">function</span> ODBCQueryBroker<span class="br0">&#40;</span><span class="kw1">const</span> iODBC_DSN<span class="sy1">:</span><span class="kw4">string</span><span class="sy1">;</span> <span class="kw1">const</span> iTraceName<span class="sy1">:</span><span class="kw4">string</span><span class="br0">&#41;</span><span class="sy1">:</span>TQuery<span class="sy1">;</span></pre></div></div>
+<table class="wikitable">
+
+<tr>
+<td>iODBC_DSN
+</td>
+<td>string
+</td>
+<td>Chaîne d'identification ODBC de connexion
+</td></tr>
+<tr>
+<td>iTraceName
+</td>
+<td>string
+</td>
+<td>Identifiant de la requête dans la trace.
+</td></tr></table>
+<h3> <span class="mw-headline" id="Propri.C3.A9t.C3.A9s">Propriétés</span></h3>
+<h4> <span class="mw-headline" id="Propri.C3.A9t.C3.A9s_de_param.C3.A9trage_de_la_requ.C3.AAte">Propriétés de paramétrage de la requête</span></h4>
+<table class="wikitable">
+
+<tr>
+<td>ACLASSNAME
+</td>
+<td>string
+</td>
+<td>Nom de la classe métier sur laquelle est mappé la requête.
+</td></tr>
+<tr>
+<td>UPDATEQUERY
+</td>
+<td>Boolean
+</td>
+<td>Indique si cette requête est une requête de mise à jour.
+<p>Si cette propriété est positionnée une requête de mise à jour sera utilisé; sinon une requête de lecture sera utilisée.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Certains pilotes ne gèrent pas de la même façon les requêtes de mises à jour et les requêtes de lecture.
+</td></tr></table>
+</div>
+</td></tr>
+<tr>
+<td>SQL
+</td>
+<td>TStrings
+</td>
+<td>Ordre SQL de la requête
+</td></tr>
+<tr>
+<td>TRANSLATOR
+</td>
+<td><a href="Translateurs_SQL_(tech).html" title="Translateurs SQL (tech)">Translateur SQL</a>
+</td>
+<td>Objet technique permettant de formatter le code SQL en fonction du pilote de base de données
+</td></tr></table>
+<h4> <span class="mw-headline" id="Propri.C3.A9t.C3.A9s_.C3.A0_l.27ex.C3.A9cution">Propriétés à l'exécution</span></h4>
+<pre>la requête====
+</pre>
+<table class="wikitable">
+
+<tr>
+<td>INSTANCE
+</td>
+<td>Objet métier
+</td>
+<td>Instance en cours, n'est utilisable que si un nom de classe métier a été utilisée lors de l'appel à QueryBroker et que tous les attribut de la classe ont été retournés par la requête.
+</td></tr>
+<tr>
+<td>EOF
+</td>
+<td>Boolean
+</td>
+<td>Testez Eof pour déterminer si le curseur est positionné sur le dernier enregistrement d'un ensemble de données.
+</td></tr>
+<tr>
+<td>FIELDCOUNT
+</td>
+<td>Integer
+</td>
+<td>Consultez la propriété FieldCount pour déterminer le nombre de champs associés à l'ensemble de données.
+</td></tr>
+<tr>
+<td>FIELDS [ INDEX ]
+</td>
+<td>TField
+</td>
+<td>Utilisez Fields pour accéder aux composants champs en mode indexé.
+</td></tr></table>
+<h3> <span class="mw-headline" id="M.C3.A9thodes">Méthodes</span></h3>
+<table class="wikitable">
+
+<tr>
+<td>OPEN
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> Open<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Ouvre l'ensemble de données.
+</td></tr>
+<tr>
+<td>OPENNE
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> OpenNE<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Ouvre l’ensemble de données sans provoquer d’exception en cas d’erreur.
+</td></tr>
+<tr>
+<td>FIRST
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> First<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Appelez First pour placer le curseur sur le premier enregistrement de l'ensemble de données.
+</td></tr>
+<tr>
+<td>NEXT
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> Next<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Appelez Next pour placer le curseur sur l'enregistrement suivant de l'ensemble de données.
+</td></tr>
+<tr>
+<td>CLOSE
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> <span class="kw3">Close</span><span class="sy1">;</span></pre></div></div>
+</td>
+<td>Ferme un ensemble de données.
+</td></tr>
+<tr>
+<td>CANCEL
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> Cancel<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Termine la requête en interrompant l’exécution sur le serveur.
+</td></tr>
+<tr>
+<td>CLEAR
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> Clear<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Réinitialise le contenu SQL de la requête.
+</td></tr>
+<tr>
+<td>EXECSQL
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> ExecSQL<span class="sy1">;</span></pre></div></div>
+</td>
+<td>La méthode ExecSQL exécute l'instruction SQL affectée à la propriété SQL. ExecSQL est également utilisée pour exécuter les requêtes ne renvoyant pas de curseur aux données (telles que INSERT, UPDATE, DELETE).
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Pour les instructions SELECT, utilisez Open à la place de la méthode ExecSQL.
+</td></tr></table>
+</div>
+</td></tr>
+<tr>
+<td>FIELDBYNAME
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">function</span> FieldByName <span class="br0">&#40;</span><span class="kw1">const</span> iFieldName <span class="sy1">:</span> <span class="kw4">string</span><span class="br0">&#41;</span><span class="sy1">:</span>TField<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Appelez FieldByName pour obtenir les informations sur un champ lorsque vous en connaissez le nom. FieldName indique le nom d'un champ existant. FieldByName renvoie le composant TField du champ spécifié.
+</td></tr>
+<tr>
+<td>NEXTRESULTSET
+</td>
+<td><div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">procedure</span> NextResultSet<span class="sy1">;</span></pre></div></div>
+</td>
+<td>Passe à l'ensemble résultat suivant dans le cas d'une requête multi-résultat.
+</td></tr></table>
+<p>L'objet TFIELD représente un champ d'un ensemble de données. Il dispose des propriétés suivantes&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<td>FIELDNAME
+</td>
+<td>string
+</td>
+<td>Indique le nom de la colonne physique de l'ensemble de données.
+</td></tr>
+<tr>
+<td>NAME
+</td>
+<td>string
+</td>
+<td>Contient le nom du composant.
+</td></tr>
+<tr>
+<td>ASVARIANT
+</td>
+<td>Variant
+</td>
+<td>Représente la valeur du champ en type variant.
+</td></tr>
+<tr>
+<td>FIELDNO
+</td>
+<td>Integer
+</td>
+<td>Indique le numéro d'ordre de la colonne reliée au composant champ dans la table physique sous-jacente à un ensemble de données.
+</td></tr>
+<tr>
+<td>DATATYPE
+</td>
+<td>Enum
+</td>
+<td>Identifie le type de données du composant champ.
+</td></tr>
+<tr>
+<td>DATALEN
+</td>
+<td>Integer
+</td>
+<td>
+</td></tr>
+<tr>
+<td>SIZE
+</td>
+<td>Integer
+</td>
+<td>Indique la taille utilisée dans la définition du champ de la base de données physique pour les types de données gérant différentes tailles.
+</td></tr></table>
+<h3> <span class="mw-headline" id="Exemples">Exemples</span></h3>
+<h4> <span class="mw-headline" id="Utilisation_de_requ.C3.AAte_pour_r.C3.A9aliser_des_mises_.C3.A0_jour">Utilisation de requête pour réaliser des mises à jour</span></h4>
+<p>Les requêtes SQL peuvent être utilisées pour réaliser des mises à jour ensemblistes qui ne seraient pas performante si elles étaient réalisées en technologie objet.
+</p><p>Dans ce scénario il faut faire attention à&#160;:
+</p>
+<ul><li>Les requêtes SQL ne sont pas objets, elles ne peuvent pas être combinées avec une transaction objet.
+</li><li>Les requêtes SQL peuvent être incluses à l'intérieur d'une transaction longue; en effet une transaction longue démarre une transaction SQL sur son BeginLongTran et la termine sur son CommitLongTran, les ordres SQL exécutés à l'intérieur sont donc soumis à la transaction.
+</li><li>Si aucune transaction explicite n'est démarée la base de données est en mode AUTOCOMMIT, les ordres sont donc validés un par un et ne sont pas transactionnels.
+</li></ul>
+<p>Dans cette exemple le corps de l'exécution démarre une transaction longue et appel une série de mise à jour à l'intérieur de la transaction&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="co1">//Procedure doBigUpdate;</span>
+<span class="kw1">begin</span>
+  ClassManager<span class="sy1">.</span><span class="me1">BeginLongTran</span><span class="br0">&#40;</span><span class="nu0">1</span><span class="sy1">,</span><span class="st0">'TTiers'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  <span class="kw1">try</span>
+    _majService<span class="sy1">;</span>
+    _majContactEtablissement<span class="sy1">;</span>
+    _majSiteUnique<span class="sy1">;</span>
+    <span class="sy1">...</span>
+    <span class="me1">ClassManager</span><span class="sy1">.</span><span class="me1">CommitLongTran</span><span class="sy1">;</span>
+  <span class="kw1">except</span>
+    ClassManager<span class="sy1">.</span><span class="me1">RollBackLongTran</span><span class="sy1">;</span>
+    <span class="kw1">raise</span><span class="sy1">;</span>
+  <span class="kw1">end</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></div>
+<p>Notez que dans cette utilisation d'une transaction longue BatchLongTran est inutile car il ni a pas d'objet métiers participant à la transaction à moins que vous combiniez usage de requête SQL et mise à jour d'objets métiers.
+</p><p>Les procédures de mise à jour s'écrivent ainsi&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="co1">//Procedure _majService;</span>
+<span class="kw1">var</span>
+  vCursorUpdate<span class="sy1">:</span> TQuery<span class="sy1">;</span>
+  vSQL <span class="sy1">:</span> <span class="kw4">String</span><span class="sy1">;</span>
+  vTService <span class="sy1">:</span> <span class="kw4">String</span><span class="sy1">;</span>
+  vTSocieteOperateur <span class="sy1">:</span> <span class="kw4">String</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  ProgressMessage<span class="br0">&#40;</span>_TP<span class="br0">&#40;</span><span class="st0">'Mise à jour du service'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  vCursorUpdate <span class="sy1">:</span><span class="sy3">=</span> QueryBroker<span class="br0">&#40;</span><span class="st0">''</span><span class="sy1">,</span><span class="st0">'TSite'</span><span class="sy1">,</span><span class="st0">''</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  vTService <span class="sy1">:</span><span class="sy3">=</span> ClassManager<span class="sy1">.</span><span class="me1">FindClassTableName</span><span class="br0">&#40;</span><span class="st0">'TService'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  vTSocieteOperateur <span class="sy1">:</span><span class="sy3">=</span> ClassManager<span class="sy1">.</span><span class="me1">FindClassTableName</span><span class="br0">&#40;</span><span class="st0">'TSocieteOperateur'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  vSQL <span class="sy1">:</span><span class="sy3">=</span> <span class="st0">' UPDATE&#160;%s SET oidresponsable =
+             ( SELECT oidInterlocuteurSociete FROM&#160;%s
+               WHERE (oidContactEtablissement =&#160;%s.oidresponsable)
+             )
+            WHERE EXISTS
+             (  SELECT * FROM&#160;%s
+                WHERE (oidContactEtablissement =&#160;%s.oidresponsable)
+              )'</span><span class="sy1">;</span>
+  vSQL <span class="sy1">:</span><span class="sy3">=</span> <span class="kw3">Format</span><span class="br0">&#40;</span>vSQL<span class="sy1">,</span><span class="br0">&#91;</span>vTService<span class="sy1">,</span>
+                       vTSocieteOperateur<span class="sy1">,</span>
+                       vTService<span class="sy1">,</span>
+                       vTSocieteOperateur<span class="sy1">,</span>
+                       vTService<span class="br0">&#93;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+&#160;
+  vCursorUpdate<span class="sy1">.</span><span class="me1">Sql</span><span class="sy1">.</span><span class="me1">Add</span><span class="br0">&#40;</span>vSQL<span class="br0">&#41;</span><span class="sy1">;</span>
+  vCursorUpdate<span class="sy1">.</span><span class="me1">ExecSQL</span><span class="sy1">;</span>
+  vCursorUpdate<span class="sy1">.</span><span class="kw3">Close</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></div>
+<h4> <span class="mw-headline" id="Utilisation_de_requ.C3.AAte_pour_retrouver_la_valeur_d.27un_attribut">Utilisation de requête pour retrouver la valeur d'un attribut</span></h4>
+<p>Dans cet exemple une requête est utilisée pour retrouvé la valeur en base de données d'un objet chargé en mémoire&#160;:
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="delphi source-delphi" style="font-family:monospace;"><pre class="de1"><span class="kw1">var</span> vSumpDispo<span class="sy1">:</span>TQuery<span class="sy1">;</span> vSum<span class="sy1">:</span><span class="kw4">Double</span><span class="sy1">;</span>
+<span class="kw1">begin</span>
+  <span class="co1">//</span>
+  <span class="co1">// QUERYBROKER permet de recuperer la valeur de la BD au lieu de celle de l'instance</span>
+  <span class="co1">// en mémoire, nécessaire car on prends en compte les reservations.</span>
+  <span class="co1">//</span>
+  vSumDispo <span class="sy1">:</span><span class="sy3">=</span> QueryBroker<span class="br0">&#40;</span><span class="st0">''</span><span class="sy1">,</span><span class="st0">'TCAPACITEENTREESTOCK'</span><span class="sy1">,</span><span class="st0">''</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  vSumDispo<span class="sy1">.</span><span class="me1">SQL</span><span class="sy1">.</span><span class="me1">Add</span><span class="br0">&#40;</span><span class="st0">'SELECT quantiteSortie qte FROM '</span><span class="sy3">+</span>ClassManager<span class="sy1">.</span><span class="me1">FindClassTableName</span><span class="br0">&#40;</span><span class="st0">'TCAPACITEENTREESTOCK'</span><span class="br0">&#41;</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  vSumDispo<span class="sy1">.</span><span class="me1">SQL</span><span class="sy1">.</span><span class="me1">Add</span><span class="br0">&#40;</span><span class="st0">'WHERE (oid = '</span> <span class="sy3">+</span> vSumDispo<span class="sy1">.</span><span class="me1">Translator</span><span class="sy1">.</span><span class="me1">dbOutOid</span><span class="br0">&#40;</span>InstanceOid<span class="br0">&#41;</span> <span class="sy3">+</span> <span class="st0">')'</span><span class="br0">&#41;</span><span class="sy1">;</span>
+  vSumDispo<span class="sy1">.</span><span class="me1">Open</span><span class="sy1">;</span>
+  vSumDispo<span class="sy1">.</span><span class="me1">First</span><span class="sy1">;</span>
+  vSum <span class="sy1">:</span><span class="sy3">=</span> vSumDispo<span class="sy1">.</span><span class="me1">FieldByName</span><span class="br0">&#40;</span><span class="st0">'qte'</span><span class="br0">&#41;</span><span class="sy1">.</span><span class="me1">AsVariant</span><span class="sy1">;</span>
+  vSumDispo<span class="sy1">.</span><span class="kw3">Close</span><span class="sy1">;</span>
+<span class="kw1">end</span><span class="sy1">;</span></pre></div></div>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253AInfo-20px.png.html" class="image"><img alt="Info-20px.png" src="../images/b/b3/Info-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Note&#160;:</b> Cette utilisation est douteuse.
+</td></tr></table>
+</div>
+<center>
+<p>&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/Code_m%C3%83%C2%A9tier" title="Code métier">Code métier</a>
+&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM" title="Développement DSM">Développement DSM</a> &#8212; 
+</p>
+</center>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 220/1000000
+Post-expand include size: 1507/2097152 bytes
+Template argument size: 320/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:264-0!*!0!!fr!2!* and timestamp 20240729130233 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 0
+                        &nbsp; <b>Bots & Crawlers</b>  1
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;oldid=998">https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;oldid=998</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégorie</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Objets_techniques" title="Catégorie:Objets techniques">Objets techniques</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Curseurs_SQL_(tech).html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Curseurs_SQL_(tech)&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Curseurs+SQL+(tech)" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Curseurs_SQL_(tech)" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Curseurs_SQL_(tech)" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Curseurs_SQL_(tech)&amp;oldid=998" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Curseurs_SQL_(tech)">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 1 août 2009 à 09:26.<br /></li>
+		<li id="viewcount">Cette page a été consultée 4 099 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.244 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad4a576aa99527',t:'MTcyMjI1ODAxMS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

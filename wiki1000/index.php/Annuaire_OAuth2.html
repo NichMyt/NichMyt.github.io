@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Annuaire OAuth2 - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Annuaire_OAuth2", "wgTitle": "Annuaire OAuth2", "wgCurRevisionId": 12076, "wgArticleId": 3408, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Administration", "Annuaires", "OAuth2"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Annuaire_OAuth2 action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Annuaire OAuth2</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Annuaire_OAuth2.html#column-one">Navigation</a>, <a href="Annuaire_OAuth2.html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><table id="toc" class="toc"><tr><td><div id="toctitle"><h2>Sommaire</h2></div>
+<ul>
+<li class="toclevel-1 tocsection-1"><a href="Annuaire_OAuth2.html#Cas_d.27utilisation_standards"><span class="tocnumber">1</span> <span class="toctext">Cas d'utilisation standards</span></a></li>
+<li class="toclevel-1 tocsection-2"><a href="Annuaire_OAuth2.html#Pr.C3.A9-requis"><span class="tocnumber">2</span> <span class="toctext">Pré-requis</span></a></li>
+<li class="toclevel-1 tocsection-3"><a href="Annuaire_OAuth2.html#Mise_en_oeuvre"><span class="tocnumber">3</span> <span class="toctext">Mise en oeuvre</span></a>
+<ul>
+<li class="toclevel-2 tocsection-4"><a href="Annuaire_OAuth2.html#Cr.C3.A9er_une_application_oAuth2"><span class="tocnumber">3.1</span> <span class="toctext">Créer une application oAuth2</span></a></li>
+<li class="toclevel-2 tocsection-5"><a href="Annuaire_OAuth2.html#Param.C3.A9trer_l.27annuaire_dans_la_console_d.27administration"><span class="tocnumber">3.2</span> <span class="toctext">Paramétrer l'annuaire dans la console d'administration</span></a></li>
+<li class="toclevel-2 tocsection-6"><a href="Annuaire_OAuth2.html#Autoriser_les_utilisateurs"><span class="tocnumber">3.3</span> <span class="toctext">Autoriser les utilisateurs</span></a></li>
+</ul>
+</li>
+<li class="toclevel-1 tocsection-7"><a href="Annuaire_OAuth2.html#Diagramme_de_s.C3.A9quence"><span class="tocnumber">4</span> <span class="toctext">Diagramme de séquence</span></a></li>
+</ul>
+</td></tr></table>
+<p><br />
+Les annuaires <a rel="nofollow" class="external text" href="http://tools.ietf.org/html/draft-ietf-oauth-v2-22">OAuth2</a> sont des annuaires de gestion d'identités implémentant le protocole d'authentification <a rel="nofollow" class="external text" href="http://fr.wikipedia.org/wiki/OAuth">OAuth2</a>
+</p><p>De nombreux fournisseurs de service implémentent OAuth2 comme par exemple <a rel="nofollow" class="external text" href="https://developers.google.com/accounts/docs/OAuth2?hl=fr">Google</a> ou <a rel="nofollow" class="external text" href="http://msdn.microsoft.com/fr-fr/library/live/hh243647.aspx">Microsoft LiveID</a>
+</p><p>Les bénéfices de l'utilisation d'un annuaire OAuth2 sont les suivants&#160;:
+</p>
+<ul><li> Vous n'avez plus besoin de gérer les identités des utilisateurs.
+</li><li> Vos utilisateurs se connectent avec les identifiants du fournisseurs de l'annuaire.
+</li><li> Vos utilisateurs sont automatiquement connectés lorsqu'ils sont authentifiés sur le fournisseur de l'annuaire.
+</li></ul>
+<p>Vous devrez cependant déclarer explicitement les utilisateurs dans l'administration 1000 pour les autoriser.
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Les annuaires OAuth sont le pendant dans le monde Web des annuaires d'Entreprise de type LDAP ou AD, ils prennent en charge la fonction authentification mais pas la fonction autorisation.
+</td></tr></table>
+</div>
+<h3> <span class="mw-headline" id="Cas_d.27utilisation_standards">Cas d'utilisation standards</span></h3>
+<p>Par exemple si vous mettez en oeuvre l'annuaire Google&#160;:
+</p><p>Lors de la première connexion d'un utilisateur au Service 1000
+</p>
+<ul><li> Il est redirigé sur la page de connexion Google
+</li><li> Il doit alors autoriser le Service 1000 à accéder à ses informations d'identification.
+</li><li> Il est ensuite redirigé sur le Service 1000 
+</li><li> Il est connecté.
+</li></ul>
+<p>Lors des accès suivant au Service 1000:
+</p>
+<ul><li> Il est automatiquement connecté au Service 1000 sans passer par la page de connexion.
+</li></ul>
+<p>Si l'utilisateur révoque son autorisation dans la gestion de son compte Google&#160;:
+</p>
+<ul><li> Au prochain accès au Service 1000 il devra de nouveau se connecter et recommencer la phase d'autorisation.
+</li></ul>
+<p>Si l'administrateur du Service 1000 supprime ou désactive l'utilisateur&#160;:
+</p>
+<ul><li> Il ne pourra plus se connecter car bien que authentifié il ne sera pas autorisé.
+</li></ul>
+<h3> <span class="mw-headline" id="Pr.C3.A9-requis">Pré-requis</span></h3>
+<p>La mise en oeuvre d'un annuaire OAuth2 nécessite que vous enregistriez votre Service 1000 auprès de l'annuaire OAuth2. Les informations mises en oeuvre au cours de cette étapes sont généralement&#160;: 
+</p>
+<ul><li> Une URL de rappel pointant sur votre Service 1000 
+</li><li> Un identifiant ClientID 
+</li><li> Un secret client associé à cet identifiant 
+</li></ul>
+<p>L'URL de rappel que vous fournissez à l'annuaire est une URL pointant sur votre Service 1000, bien que cela ne soit pas indispensable au protocole, cette URL doit généralement être publique. Si votre Service 1000 n'est pas public, vous pouvez mettre en oeuvre un serveur intermédiaire public se chargeant de la redirection.
+</p>
+<h3> <span class="mw-headline" id="Mise_en_oeuvre">Mise en oeuvre</span></h3>
+<h4> <span class="mw-headline" id="Cr.C3.A9er_une_application_oAuth2">Créer une application oAuth2</span></h4>
+<p>La création d'une application oAuth2 permet d'obtenir le <i>clientId</i> et le <i>clientSecret</i> nécéssaires au fonctionnement de l'authentification.
+</p>
+<ul><li> Choisir comme type d'application "Application web"
+</li><li> Renseigner dans l'annuaire l'adresse de rappel qui doit être http://[hôte_public]/oauth2_success.l1000'}}
+</li><li> Exemple d'url de configuration
+</li></ul>
+<a rel="nofollow" class="external text" href="https://cloud.google.com/console">Google</a><div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramgoogle.png" class="image"><img alt="Paramgoogle.png" src="../images/thumb/d/d2/Paramgoogle.png/180px-Paramgoogle.png" width="180" height="109" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramgoogle.png" class="internal" title="Agrandir"><img src="../skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div></div></div></div>
+<p><br />
+</p>
+<a rel="nofollow" class="external text" href="https://account.live.com/developers/applications">LiveId</a><div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramliveid.png" class="image"><img alt="Paramliveid.png" src="../images/thumb/8/89/Paramliveid.png/180px-Paramliveid.png" width="180" height="158" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramliveid.png" class="internal" title="Agrandir"><img src="../skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div></div></div></div>
+<p><br />
+</p>
+<a rel="nofollow" class="external text" href="https://developers.facebook.com/apps">Facebook</a><div class="thumb tright"><div class="thumbinner" style="width:182px;"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramfacebook.png" class="image"><img alt="Paramfacebook.png" src="../images/thumb/9/97/Paramfacebook.png/180px-Paramfacebook.png" width="180" height="104" class="thumbimage" /></a>  <div class="thumbcaption"><div class="magnify"><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Paramfacebook.png" class="internal" title="Agrandir"><img src="../skins/common/images/magnify-clip.png" width="15" height="11" alt="" /></a></div></div></div></div>
+<h4> <span class="mw-headline" id="Param.C3.A9trer_l.27annuaire_dans_la_console_d.27administration">Paramétrer l'annuaire dans la console d'administration</span></h4>
+<ul><li> Le service 1000 dispose d'une adresse publique
+</li></ul>
+<p>Il suffit de renseigner 
+</p>
+<pre>* le "clientID" 
+* le "clientSecret".
+</pre>
+<p><br />
+</p>
+<ul><li> Le service 1000 ne dispose pas d'une adresse publique
+</li></ul>
+<p>Ce cas d'utilisation n'est pas recommandé.<a href="Annuaire_OAuth2_nonpublic.html" title="Annuaire OAuth2 nonpublic">un paramétrage supplémentaire est nécessaire</a>
+</p><p><br />
+<a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Annuaire_oauth2.png" class="image"><img alt="Annuaire oauth2.png" src="../images/9/90/Annuaire_oauth2.png" width="555" height="617" /></a>
+</p>
+<ul><li> Le fournisseur n'est pas encore paramétré
+</li></ul>
+<p>Il faut renseigner les paramètres annuaires afin de permettre à Sage 1000 de récupérer le nom prénom et courriel de l'utilisateur
+</p><p>Il faut ensuite modifier le fichier "/1000Site/csss/sage.css" pour renseigner l'image à afficher sur la fenêtre de connexion.
+</p><p>Le nom de la classe est&#160;: "login-" suivi du nom de l'annuaire.
+</p><p><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Param_css.png" class="image"><img alt="Param css.png" src="../images/0/03/Param_css.png" width="628" height="557" /></a>
+</p><p>La fenêtre de connexion affiche les annuaires oAuth2 actifs
+</p><p><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Login_form.png" class="image"><img alt="Login form.png" src="../images/6/6e/Login_form.png" width="489" height="403" /></a>
+</p><p><br />
+</p>
+<h4> <span class="mw-headline" id="Autoriser_les_utilisateurs">Autoriser les utilisateurs</span></h4>
+<ul><li>Autorisation préalable
+</li></ul>
+<p>Il est possible d'autoriser préalablement les utilisateurs.
+Il faut créer l'utilisateur le lier à l'annuaire et renseigner l'identifiant annuaire.
+L'identifiant annuaire correspond au paramétrage annuaire "UserIdPath"
+Par exemple si "UserIdPath" retourne l'adresse email de l'utilisateur, il faut renseigner l'adresse email dans l'identifiant annuaire.
+</p><p><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:Param_annuaire_oauth2.png" class="image"><img alt="Param annuaire oauth2.png" src="../images/2/2a/Param_annuaire_oauth2.png" width="555" height="617" /></a>
+</p>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#FBE19F;font-size:100%;">
+<table style="background-color:#FBE19F">
+<tr>
+<td><a href="Fichier%253AExclam-20px.png.html" class="image"><img alt="Exclam-20px.png" src="../images/e/e2/Exclam-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Attention&#160;:</b> UserIdPath doit correspondre à une information qui permet d'identifier l'utilisateur (ne pas mettre un prénom dans cette zone)
+</td></tr></table>
+</div>
+<ul><li>Autorisation à la demande
+</li></ul>
+<p>Si un utilisateur souhaite se connecter à l'application mais qu'il n'est pas reconnu, une demande d'autorisation est envoyée aux utilisateurs qui ont le rôle d'administration des utilisateurs et dossier.
+</p><p>Les rôles nécessaires pour recevoir le message&#160;:
+</p><p><a href="Fichier%253ARole_admin.png.html" class="image"><img alt="Role admin.png" src="../images/2/26/Role_admin.png" width="613" height="423" /></a>
+</p><p><br />
+Le traitement des demandes d'autorisation&#160;: 
+</p><p><a href="Fichier%253ADemande_autorisation.png.html" class="image"><img alt="Demande autorisation.png" src="../images/4/4e/Demande_autorisation.png" width="813" height="495" /></a>
+</p><p>Cet assistant crée l'utilisateur, le lie à l'annuaire, et l'ajoute aux utilisateurs autorisés du dossier choisi.
+</p><p><br />
+Une fois la demande acceptée un message est envoyé au demandeur.
+</p>
+<h3> <span class="mw-headline" id="Diagramme_de_s.C3.A9quence">Diagramme de séquence</span></h3>
+<p><a href="https://frp.sage.fr/wiki1000/index.php/Fichier:OAuth2_Sequence_Diagram.jpg" class="image"><img alt="OAuth2 Sequence Diagram.jpg" src="../images/9/99/OAuth2_Sequence_Diagram.jpg" width="809" height="636" /></a>
+</p><p>Voir aussi&#160;: <a href="Annuaire_OAuth2_AZD.html" title="Annuaire OAuth2 AZD">Paramétrer Azure Active Directory</a>
+</p>
+<!-- 
+NewPP limit report
+Preprocessor node count: 41/1000000
+Post-expand include size: 802/2097152 bytes
+Template argument size: 315/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:3408-0!*!0!!fr!2!* and timestamp 20240729132215 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 1
+                        &nbsp; <b>Bots & Crawlers</b>  0
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;oldid=12076">https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;oldid=12076</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégories</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration" title="Catégorie:Administration">Administration</a></li><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Annuaires" title="Catégorie:Annuaires">Annuaires</a></li><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:OAuth2" title="Catégorie:OAuth2">OAuth2</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Annuaire_OAuth2.html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Annuaire_OAuth2&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Annuaire+OAuth2" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Annuaire_OAuth2" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Annuaire_OAuth2" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Annuaire_OAuth2&amp;oldid=12076" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Annuaire_OAuth2">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 12 février 2018 à 11:20.<br /></li>
+		<li id="viewcount">Cette page a été consultée 26 835 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.110 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad6736de316433',t:'MTcyMjI1OTE5My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Interrogation des fournisseurs (API) - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Interrogation_des_fournisseurs_(API)", "wgTitle": "Interrogation des fournisseurs (API)", "wgCurRevisionId": 13868, "wgArticleId": 6175, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["SData"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+</head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Interrogation_des_fournisseurs_API action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Interrogation des fournisseurs (API)</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Interrogation_des_fournisseurs_(API).html#column-one">Navigation</a>, <a href="Interrogation_des_fournisseurs_(API).html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><p>Cet exemple montre comment récupérer les fournisseurs avec l'API SData.
+</p><p>L'objectif est de récupérer une liste des fournisseurs comportant&#160;:
+</p>
+<ul><li> Le code fournisseur
+</li><li> Le libellé du fournisseur
+</li><li> Le code tiers correspondant
+</li><li> L'adresse principale du fournisseur
+</li><li> l'IBAN principal du fournisseur
+</li></ul>
+<p>Les ressources SData correspondent aux classes persistantes du modèle de donnée.
+</p><p>Voici une vue du le modèle représentant les fournisseurs dans Sage FRP 1000&#160;:
+</p><p><a href="Fichier%253ADcFournisseur.png.html" class="image"><img alt="DcFournisseur.png" src="../images/3/32/DcFournisseur.png" width="993" height="464" /></a>
+</p><p>Les informations qui nous intéresse sont situées dans plusieurs classes en relation.
+</p><p>Plusieurs solutions sont possibles&#160;:
+</p>
+<ol><li> Récupérer les ressources TRoleTiers et filtrer sur la classe de la ressource
+</li><li> Récupérer les ressources TFournisseur
+</li><li> Récupérer les ressources de la vue TvueListeFournisseur
+</li><li> Récupérer les ressources TFournisseur en incluant des informations liées par le tiers, son site et son compte bancaire privilégié
+</li></ol>
+<p>Les deux premières solutions obligeraient a effectuer un ensemble d'interrogation car les informations liées ne sont pas directement retournées par les ressources de base, de toutes les solutions cela serait les moins performantes.
+</p><p>La solution basée sur la vue serait idéale, malheureusement la vue standard ne fourni pas toutes les informations nécessaires.
+</p><p>La meilleur solution reste l'interrogation de TFournisseur en incluant des informations liées, ce qui revient à utiliser une vue temporaire.
+</p><p>La ressource TFournisseur retourne&#160;:
+</p>
+<pre>
+http://localhost:8080/sdata/gentiers/tfournisseur?where=tiers.estTiersSociete=false&amp;count=1
+{
+    &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/gentiers/&quot;,
+    &quot;$title&quot;: &quot;TFournisseur - -&quot;,
+    &quot;$updated&quot;: &quot;2021-01-27T17:29:11.212Z&quot;,
+    &quot;$resources&quot;: [
+        {
+            &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;,
+            &quot;$title&quot;: &quot;F-DUCREDIT&quot;,
+            &quot;$updated&quot;: &quot;2009-12-23T15:03:15.000Z&quot;,
+            &quot;$etag&quot;: &quot;1B28EFFFF1C3000201030000000903C1-0000023A000004A0&quot;,
+            &quot;$shareId&quot;: &quot;1B28EFFFF1C300020002000000420002&quot;,
+            &quot;$shareInfo&quot;: &quot;Dossier&quot;,
+            &quot;$shareLevel&quot;: 0,
+            &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+            &quot;stamp&quot;: &quot;0000023A000004A0&quot;,
+            &quot;assujetiTaxe&quot;: false,
+            &quot;Caption&quot;: &quot;F-DUCREDIT&quot;,
+            &quot;CategorieComptaTiers&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C300020041000000380037&quot;,
+                &quot;$url&quot;: &quot;TCategorieComptaTiers('1B28EFFFF1C300020041000000380037')&quot;
+            },
+            &quot;commentaire&quot;: &quot;&quot;,
+            &quot;cumulQte&quot;: false,
+            &quot;dateCreation&quot;: &quot;2012-12-22T23:00:00.000Z&quot;,
+            &quot;dateFacturation&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Date du traitement&quot;
+            },
+            &quot;decouvertLimite&quot;: {
+                &quot;value&quot;: 0,
+                &quot;CodeDevise&quot;: &quot;EUR&quot;
+            },
+            &quot;devise&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C300020005000000700005&quot;,
+                &quot;$url&quot;: &quot;TdbfCurrency('1B28EFFFF1C300020005000000700005')&quot;
+            },
+            &quot;disabled&quot;: false,
+            &quot;enActivite&quot;: true,
+            &quot;escompte&quot;: {
+                &quot;value&quot;: 0,
+                &quot;Decimales&quot;: 4
+            },
+            &quot;estRoleTiersSociete&quot;: false,
+            &quot;montantFrancoDePort&quot;: {
+                &quot;value&quot;: 999999999,
+                &quot;CodeDevise&quot;: &quot;EUR&quot;
+            },
+            &quot;natureTiers&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Client&quot;
+            },
+            &quot;pourcentageAcompte&quot;: {
+                &quot;value&quot;: 0,
+                &quot;Decimales&quot;: 4
+            },
+            &quot;regroupFacture&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;1 facture par commande&quot;
+            },
+            &quot;RoleTiersPayeur&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                &quot;$url&quot;: &quot;TRoleTiers('1B28EFFFF1C3000201030000000903C1')&quot;
+            },
+            &quot;sensible&quot;: false,
+            &quot;siteFacturation&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+            },
+            &quot;siteLivraisonPrivilegie&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200FC00000067006F&quot;,
+                &quot;$url&quot;: &quot;TSiteCommerciale('1B28EFFFF1C3000200FC00000067006F')&quot;
+            },
+            &quot;sitePrivilegie&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+            },
+            &quot;Tiers&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200F60000000903B6&quot;,
+                &quot;$url&quot;: &quot;TTiers('1B28EFFFF1C3000200F60000000903B6')&quot;
+            },
+            &quot;typeFacturation&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;HT&quot;
+            },
+            &quot;CategorieCollectif&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000202010000000903C6&quot;,
+                &quot;$url&quot;: &quot;TCategorieCollectif('1B28EFFFF1C3000202010000000903C6')&quot;
+            },
+            &quot;comptePrivilegie&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C30002001E0000007F05FB&quot;,
+                &quot;$url&quot;: &quot;TCompteGeneral('1B28EFFFF1C30002001E0000007F05FB')&quot;
+            },
+            &quot;detailAnalyseReglements&quot;: &quot;obj://TDetailAnalyseReglements/&quot;,
+            &quot;nbJMReglement&quot;: 0,
+            &quot;nbJMRetFactNonReglees&quot;: 0,
+            &quot;nbJMRetFactReglees&quot;: 0,
+            &quot;nbJMRetToutesFact&quot;: 0,
+            &quot;retenueALaSource&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Non Soumis&quot;
+            },
+            &quot;retenueTVA&quot;: false,
+            &quot;tauxRetenueALaSource&quot;: {
+                &quot;value&quot;: 0,
+                &quot;Decimales&quot;: 2
+            },
+            &quot;tauxRetenueTVA&quot;: {
+                &quot;value&quot;: 0,
+                &quot;Decimales&quot;: 2
+            },
+            &quot;validationObligatoire&quot;: false,
+            &quot;existProduitTiers&quot;: false,
+            &quot;ChiffreAffaires&quot;: {
+                &quot;value&quot;: 0,
+                &quot;CodeDevise&quot;: &quot;&quot;
+            },
+            &quot;AccesAPayer&quot;: false,
+            &quot;fournisseurAPayer&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;
+            },
+            &quot;fournisseurFacturant&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;
+            },
+            &quot;ndxFournisseurFacturant&quot;: 0,
+            &quot;regimeFournisseur&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Général&quot;
+            },
+            &quot;RegroupFact&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Selon le paramétrage du tiers&quot;
+            }
+        }
+    ],
+    &quot;$nextUrl&quot;: &quot;http://localhost:8080/sdata/gentiers/tfournisseur?where=tiers.estTiersSociete=false&amp;count=1&amp;startKey='1B28EFFFF1C3000201030000000903C1'&amp;keyDirection=gt&quot;
+}
+</pre>
+<p>Et le tiers correspondant&#160;:
+</p>
+<pre>
+http://localhost:8080/sdata/gentiers/ttiers('1B28EFFFF1C3000200F60000000903B6')
+{
+    &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/gentiers/&quot;,
+    &quot;$title&quot;: &quot;TTiers - -&quot;,
+    &quot;$updated&quot;: &quot;2021-01-27T17:30:57.744Z&quot;,
+    &quot;$resources&quot;: [
+        {
+            &quot;$url&quot;: &quot;TTiers('1B28EFFFF1C3000200F60000000903B6')&quot;,
+            &quot;$title&quot;: &quot;DUCREDIT  Sa&quot;,
+            &quot;$updated&quot;: &quot;2010-03-19T12:42:13.000Z&quot;,
+            &quot;$etag&quot;: &quot;1B28EFFFF1C3000200F60000000903B6-000002B500004B64&quot;,
+            &quot;$shareId&quot;: &quot;1B28EFFFF1C300020002000000420002&quot;,
+            &quot;$shareInfo&quot;: &quot;Dossier&quot;,
+            &quot;$shareLevel&quot;: 0,
+            &quot;$key&quot;: &quot;1B28EFFFF1C3000200F60000000903B6&quot;,
+            &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/GenTiers/-/&quot;,
+            &quot;stamp&quot;: &quot;000002B500004B64&quot;,
+            &quot;Activite&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C30002000600000010003A&quot;,
+                &quot;$url&quot;: &quot;TActivite('1B28EFFFF1C30002000600000010003A')&quot;
+            },
+            &quot;assujettiTVA&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Taxable&quot;
+            },
+            &quot;BlocageReglement&quot;: false,
+            &quot;capital&quot;: {
+                &quot;value&quot;: 1000000,
+                &quot;CodeDevise&quot;: &quot;EUR&quot;
+            },
+            &quot;Caption&quot;: &quot;DUCREDIT  Sa&quot;,
+            &quot;chiffreAffaires&quot;: {
+                &quot;value&quot;: 0,
+                &quot;CodeDevise&quot;: &quot;EUR&quot;
+            },
+            &quot;code&quot;: &quot;DUCREDIT&quot;,
+            &quot;codeSIRET&quot;: &quot;101 001 010 10101&quot;,
+            &quot;CodificationAPE&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C30002000B00000010028C&quot;,
+                &quot;$url&quot;: &quot;TCodificationAPE('1B28EFFFF1C30002000B00000010028C')&quot;
+            },
+            &quot;commentaire&quot;: &quot;Société  financière  DUCREDITRole  de  FournisseurPartagé  pour  toutes  les  sociétés  du  Dossier&quot;,
+            &quot;Compensable&quot;: false,
+            &quot;CorrespondanceGroupe&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200F70000000903B9&quot;,
+                &quot;$url&quot;: &quot;TCorrespondanceGroupeTiers('1B28EFFFF1C3000200F70000000903B9')&quot;
+            },
+            &quot;dateCapital&quot;: &quot;2012-12-22T23:00:00.000Z&quot;,
+            &quot;dateCreation&quot;: &quot;2012-12-22T23:00:00.000Z&quot;,
+            &quot;disabled&quot;: false,
+            &quot;disabledDupli&quot;: false,
+            &quot;echeancementDecaissement&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C30002000F0000001A017E&quot;,
+                &quot;$url&quot;: &quot;TEcheancement('1B28EFFFF1C30002000F0000001A017E')&quot;
+            },
+            &quot;echeancementEncaissement&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C30002000F000000C30013&quot;,
+                &quot;$url&quot;: &quot;TEcheancement('1B28EFFFF1C30002000F000000C30013')&quot;
+            },
+            &quot;effectif&quot;: 0,
+            &quot;estClient&quot;: false,
+            &quot;estCodeSIRETRequis&quot;: false,
+            &quot;estCodeSIRETValide&quot;: false,
+            &quot;estContactVisible&quot;: false,
+            &quot;estFournisseur&quot;: false,
+            &quot;EstGroupe&quot;: false,
+            &quot;estIntraGroupe&quot;: false,
+            &quot;estMajInfoSolvabilite&quot;: false,
+            &quot;estSalarie&quot;: false,
+            &quot;estTiersConfiance&quot;: true,
+            &quot;estTiersDivers&quot;: false,
+            &quot;EstTiersSociete&quot;: false,
+            &quot;estTransporteur&quot;: false,
+            &quot;FlagModificationList&quot;: &quot;&quot;,
+            &quot;FormeJuridique&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200110000011E0001&quot;,
+                &quot;$url&quot;: &quot;TFormeJuridique('1B28EFFFF1C3000200110000011E0001')&quot;
+            },
+            &quot;garanties&quot;: false,
+            &quot;immatriculationRegistre&quot;: &quot;009918888888&quot;,
+            &quot;incidentPaiement&quot;: false,
+            &quot;invocableCreerClient&quot;: false,
+            &quot;invocableCreerDivers&quot;: false,
+            &quot;invocableCreerFourni&quot;: false,
+            &quot;invocableCreerSalarie&quot;: false,
+            &quot;invocableCreerTransporteur&quot;: false,
+            &quot;invocableModifClient&quot;: false,
+            &quot;invocableModifCompteBq&quot;: false,
+            &quot;invocableModifDivers&quot;: false,
+            &quot;invocableModifFourni&quot;: false,
+            &quot;invocableModifSalar&quot;: false,
+            &quot;invocableModifTransporteur&quot;: false,
+            &quot;modeReglementDecaissement&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C300020014000000710003&quot;,
+                &quot;$url&quot;: &quot;TModeReglement('1B28EFFFF1C300020014000000710003')&quot;
+            },
+            &quot;modeReglementEncaissement&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C300020014000000710000&quot;,
+                &quot;$url&quot;: &quot;TModeReglement('1B28EFFFF1C300020014000000710000')&quot;
+            },
+            &quot;Modifiable&quot;: false,
+            &quot;numeroTraitement&quot;: 0,
+            &quot;numeroTVACEE&quot;: &quot;FR 66516166666&quot;,
+            &quot;Pays&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200150000001700FD&quot;,
+                &quot;$url&quot;: &quot;TPays('1B28EFFFF1C3000200150000001700FD')&quot;
+            },
+            &quot;raisonSociale&quot;: &quot;DUCREDIT  Sa&quot;,
+            &quot;resultat&quot;: {
+                &quot;value&quot;: 0,
+                &quot;CodeDevise&quot;: &quot;EUR&quot;
+            },
+            &quot;RoleTiersList&quot;: [
+                {
+                    &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                    &quot;assujetiTaxe&quot;: false,
+                    &quot;Caption&quot;: &quot;F-DUCREDIT&quot;,
+                    &quot;CategorieComptaTiers&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C300020041000000380037&quot;,
+                        &quot;$url&quot;: &quot;TCategorieComptaTiers('1B28EFFFF1C300020041000000380037')&quot;
+                    },
+                    &quot;commentaire&quot;: &quot;&quot;,
+                    &quot;cumulQte&quot;: false,
+                    &quot;dateCreation&quot;: &quot;2012-12-22T23:00:00.000Z&quot;,
+                    &quot;dateFacturation&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Date du traitement&quot;
+                    },
+                    &quot;decouvertLimite&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;CodeDevise&quot;: &quot;EUR&quot;
+                    },
+                    &quot;devise&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C300020005000000700005&quot;,
+                        &quot;$url&quot;: &quot;TdbfCurrency('1B28EFFFF1C300020005000000700005')&quot;
+                    },
+                    &quot;disabled&quot;: false,
+                    &quot;enActivite&quot;: true,
+                    &quot;escompte&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;Decimales&quot;: 4
+                    },
+                    &quot;estRoleTiersSociete&quot;: false,
+                    &quot;montantFrancoDePort&quot;: {
+                        &quot;value&quot;: 999999999,
+                        &quot;CodeDevise&quot;: &quot;EUR&quot;
+                    },
+                    &quot;natureTiers&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Client&quot;
+                    },
+                    &quot;pourcentageAcompte&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;Decimales&quot;: 4
+                    },
+                    &quot;regroupFacture&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;1 facture par commande&quot;
+                    },
+                    &quot;RoleTiersPayeur&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                        &quot;$url&quot;: &quot;TRoleTiers('1B28EFFFF1C3000201030000000903C1')&quot;
+                    },
+                    &quot;sensible&quot;: false,
+                    &quot;siteFacturation&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                        &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+                    },
+                    &quot;siteLivraisonPrivilegie&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200FC00000067006F&quot;,
+                        &quot;$url&quot;: &quot;TSiteCommerciale('1B28EFFFF1C3000200FC00000067006F')&quot;
+                    },
+                    &quot;sitePrivilegie&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                        &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+                    },
+                    &quot;typeFacturation&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;HT&quot;
+                    },
+                    &quot;CategorieCollectif&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000202010000000903C6&quot;,
+                        &quot;$url&quot;: &quot;TCategorieCollectif('1B28EFFFF1C3000202010000000903C6')&quot;
+                    },
+                    &quot;comptePrivilegie&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C30002001E0000007F05FB&quot;,
+                        &quot;$url&quot;: &quot;TCompteGeneral('1B28EFFFF1C30002001E0000007F05FB')&quot;
+                    },
+                    &quot;detailAnalyseReglements&quot;: &quot;obj://TDetailAnalyseReglements/&quot;,
+                    &quot;nbJMReglement&quot;: 0,
+                    &quot;nbJMRetFactNonReglees&quot;: 0,
+                    &quot;nbJMRetFactReglees&quot;: 0,
+                    &quot;nbJMRetToutesFact&quot;: 0,
+                    &quot;retenueALaSource&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Non Soumis&quot;
+                    },
+                    &quot;retenueTVA&quot;: false,
+                    &quot;tauxRetenueALaSource&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;Decimales&quot;: 2
+                    },
+                    &quot;tauxRetenueTVA&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;Decimales&quot;: 2
+                    },
+                    &quot;validationObligatoire&quot;: false,
+                    &quot;existProduitTiers&quot;: false,
+                    &quot;ChiffreAffaires&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;CodeDevise&quot;: &quot;&quot;
+                    },
+                    &quot;AccesAPayer&quot;: false,
+                    &quot;fournisseurAPayer&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                        &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;
+                    },
+                    &quot;fournisseurFacturant&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+                        &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;
+                    },
+                    &quot;ndxFournisseurFacturant&quot;: 0,
+                    &quot;regimeFournisseur&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Général&quot;
+                    },
+                    &quot;RegroupFact&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Selon le paramétrage du tiers&quot;
+                    }
+                }
+            ],
+            &quot;SiteCommercialeList&quot;: [
+                {
+                    &quot;$key&quot;: &quot;1B28EFFFF1C3000200FC00000067006F&quot;,
+                    &quot;actif&quot;: true,
+                    &quot;Adresse&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200FB0000000903BC&quot;,
+                        &quot;$url&quot;: &quot;TAdresse('1B28EFFFF1C3000200FB0000000903BC')&quot;
+                    },
+                    &quot;Caption&quot;: &quot;SIEGE DUCREDIT SA&quot;,
+                    &quot;code&quot;: &quot;SITE01&quot;,
+                    &quot;conserverReliquat&quot;: true,
+                    &quot;livraisonPartielleAcceptee&quot;: true,
+                    &quot;livraisonPartielleReliquat&quot;: false,
+                    &quot;PourcentAccepteReliquat&quot;: 0,
+                    &quot;RegroupementLivraison&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Aucun&quot;
+                    },
+                    &quot;Site&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                        &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+                    }
+                }
+            ],
+            &quot;sitesList&quot;: [
+                {
+                    &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                    &quot;Adresse&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200FB0000000903BC&quot;,
+                        &quot;$url&quot;: &quot;TAdresse('1B28EFFFF1C3000200FB0000000903BC')&quot;,
+                        &quot;adresseNormalisee&quot;: &quot;&quot;,
+                        &quot;codePostal&quot;: &quot;920000&quot;,
+                        &quot;complementAdresse&quot;: &quot;La  Défense&quot;,
+                        &quot;estValide&quot;: true,
+                        &quot;geoloc&quot;: {
+                            &quot;value&quot;: &quot;&quot;,
+                            &quot;lat&quot;: 0,
+                            &quot;long&quot;: 0
+                        },
+                        &quot;nomRueVoie&quot;: &quot;Rue de la Finance&quot;,
+                        &quot;NPAI&quot;: false,
+                        &quot;Pays&quot;: {
+                            &quot;$key&quot;: &quot;1B28EFFFF1C3000200150000001700FD&quot;,
+                            &quot;$url&quot;: &quot;TPays('1B28EFFFF1C3000200150000001700FD')&quot;
+                        },
+                        &quot;siteInternet&quot;: &quot;www&quot;,
+                        &quot;telephone1&quot;: &quot;0178271717&quot;,
+                        &quot;typePersonne&quot;: {
+                            &quot;value&quot;: 0,
+                            &quot;title&quot;: &quot;Personne morale&quot;
+                        },
+                        &quot;varNoErreurGeoloc&quot;: false,
+                        &quot;ville&quot;: &quot;NANTERRE&quot;
+                    },
+                    &quot;assujettiTaxeSalaire&quot;: false,
+                    &quot;Caption&quot;: &quot;SIEGE DUCREDIT SA&quot;,
+                    &quot;code&quot;: &quot;SITE01&quot;,
+                    &quot;commentaire&quot;: &quot;&quot;,
+                    &quot;estAdministratif&quot;: true,
+                    &quot;estLivraison&quot;: true,
+                    &quot;estLocalisation&quot;: false,
+                    &quot;estSiteSociete&quot;: false,
+                    &quot;idxDepot&quot;: 0,
+                    &quot;interlocuteurPrivilegie&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C30002010F0000000903C9&quot;,
+                        &quot;$url&quot;: &quot;TInterlocuteur('1B28EFFFF1C30002010F0000000903C9')&quot;
+                    },
+                    &quot;interlocuteursList&quot;: [
+                        {
+                            &quot;$key&quot;: &quot;1B28EFFFF1C30002010F0000000903C9&quot;,
+                            &quot;actif&quot;: true,
+                            &quot;Caption&quot;: &quot;DUCREDIT Denis&quot;,
+                            &quot;Civilite&quot;: {
+                                &quot;$key&quot;: &quot;1B28EFFFF1C3000200D20000003628AB&quot;,
+                                &quot;$url&quot;: &quot;TCivilite('1B28EFFFF1C3000200D20000003628AB')&quot;
+                            },
+                            &quot;commentaire&quot;: &quot;&quot;,
+                            &quot;Fonction&quot;: {
+                                &quot;$key&quot;: &quot;1B28EFFFF1C3000200100000003A00F9&quot;,
+                                &quot;$url&quot;: &quot;TFonction('1B28EFFFF1C3000200100000003A00F9')&quot;
+                            },
+                            &quot;identiteNormalisee&quot;: &quot;&quot;,
+                            &quot;nom&quot;: &quot;DUCREDIT&quot;,
+                            &quot;prenom&quot;: &quot;Denis&quot;
+                        }
+                    ],
+                    &quot;Langue&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200130000003A024E&quot;,
+                        &quot;$url&quot;: &quot;TLangue('1B28EFFFF1C3000200130000003A024E')&quot;
+                    },
+                    &quot;SiteCommerciale&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200FC00000067006F&quot;,
+                        &quot;$url&quot;: &quot;TSiteCommerciale('1B28EFFFF1C3000200FC00000067006F')&quot;
+                    },
+                    &quot;TerritorialiteTaxe&quot;: {
+                        &quot;$key&quot;: &quot;1B28EFFFF1C3000200C0000000362816&quot;,
+                        &quot;$url&quot;: &quot;TTerritorialiteTaxe('1B28EFFFF1C3000200C0000000362816')&quot;
+                    },
+                    &quot;depotPrivilegieEtablissement&quot;: false,
+                    &quot;gestionBudgetaire&quot;: {
+                        &quot;value&quot;: 0,
+                        &quot;title&quot;: &quot;Aucune&quot;
+                    },
+                    &quot;complementLigne&quot;: false,
+                    &quot;complementPiece&quot;: false,
+                    &quot;invocableMajDemat&quot;: false
+                }
+            ],
+            &quot;SiteSociete&quot;: {
+                &quot;$key&quot;: &quot;1B28EFFFF1C3000200F80000000903BA&quot;,
+                &quot;$url&quot;: &quot;TSite('1B28EFFFF1C3000200F80000000903BA')&quot;
+            },
+            &quot;socialData&quot;: &quot;&quot;,
+            &quot;Supprimable&quot;: false,
+            &quot;surveillance&quot;: false,
+            &quot;typeAcceptation&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Accepté&quot;
+            },
+            &quot;typePersonne&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Personne morale&quot;
+            },
+            &quot;varModeConfirmation&quot;: false,
+            &quot;estMouvementeCpt&quot;: true,
+            &quot;invocableMiseAJour&quot;: false,
+            &quot;CodeImputationFrais&quot;: {
+                &quot;value&quot;: 1,
+                &quot;title&quot;: &quot;Partagé&quot;
+            },
+            &quot;modeReglement&quot;: {
+                &quot;value&quot;: 0,
+                &quot;title&quot;: &quot;Autre&quot;
+            }
+        }
+    ]
+}
+</pre>
+<p><b>Requête incluant des attributs liés</b>
+</p><p>Les informations que l'on souhaite retourner sont incluses dans le fournisseur, l'adresse de son site et le compte bancaire de son tiers.
+</p><p>Pour réaliser une requête incluant des attributs liés on utilise le paramètre "select" en indiquant la liste des attributs devant être retourné&#160;:
+</p>
+<pre>
+http://localhost:8080/sdata/gentiers/tfournisseur?select=code,tiers.code,tiers.raisonSociale,sitefacturation.adresse.nomRueVoie,tiers.CptBqPrivilegieDec.upperIBAN&amp;count=1
+{
+    &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/typedefpackage/&quot;,
+    &quot;$title&quot;: &quot;TFournisseur - -&quot;,
+    &quot;$updated&quot;: &quot;2021-01-27T16:54:34.486Z&quot;,
+    &quot;$resources&quot;: [
+        {
+            &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C300020103000000090507')&quot;,
+            &quot;$title&quot;: &quot;1B28EFFFF1C300020103000000090507&quot;,
+            &quot;$updated&quot;: &quot;2010-03-29T13:17:25.000Z&quot;,
+            &quot;$etag&quot;: &quot;1B28EFFFF1C300020103000000090507-000002FF000000A0&quot;,
+            &quot;$shareId&quot;: &quot;1B28EFFFF1C300020002000000420002&quot;,
+            &quot;$shareInfo&quot;: &quot;Dossier&quot;,
+            &quot;$shareLevel&quot;: 0,
+            &quot;$key&quot;: &quot;1B28EFFFF1C300020103000000090507&quot;,
+            &quot;stamp&quot;: &quot;000002FF000000A0&quot;,
+            &quot;code&quot;: &quot;S1&quot;,
+            &quot;nomRueVoie&quot;: &quot;18 RUE LECOURBE&quot;,
+            &quot;raisonSociale&quot;: &quot;Société S1&quot;,
+            &quot;upperIBAN&quot;: &quot;FR7630002026581326555985432&quot;
+        }
+    ],
+    &quot;$nextUrl&quot;: &quot;http://localhost:8080/sdata/typedefpackage/tfournisseur?select=code,tiers.code,tiers.raisonSociale,sitefacturation.adresse.nomRueVoie,tiers.CptBqPrivilegieDec.upperIBAN&amp;count=1&amp;startKey='1B28EFFFF1C300020103000000090507'&amp;keyDirection=gt&quot;
+}
+</pre>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> Lorsque la clause select contient des attributs liés l'exécution utilise une vue temporaire sur la classe de la ressource.
+</td></tr></table>
+</div>
+<p><b>Attributs liés non définis</b>
+</p><p>Lorsque vous utilisez des attributs liés vous devez vérifier que les références correspondantes sont bien définies.
+</p><p>A défaut les ressources contenant des références vides ne seront retournées.
+</p><p>Pour contourner ce problème, utilisez un spécificateur de référence incluant les références vides.
+</p><p>Par exemple dans notre exemple, le compte bancaire n'est pas obligatoire, pour certain tiers il peut pas être défini&#160;:
+</p>
+<pre>
+http://localhost:8080/sdata/gentiers/tfournisseur(1B28EFFFF1C3000201030000000903C1)?select=code,tiers.code,tiers.raisonSociale,sitefacturation.adresse.nomRueVoie,tiers.CptBqPrivilegieDec.upperIBAN&amp;count=1
+500: Internal error
+The resource doesn't exist.
+</pre>
+<p>Si vous remplacez tiers.CptBqPrivilegieDec.upperIBAN par tiers.CptBqPrivilegieDec.+upperIBAN&#160;:
+</p>
+<pre>
+http://localhost:8080/sdata/gentiers/tfournisseur(1B28EFFFF1C3000201030000000903C1)?select=code,tiers.code,tiers.raisonSociale,sitefacturation.adresse.nomRueVoie,tiers.CptBqPrivilegieDec.+upperIBAN&amp;count=1
+200&#160;: OK
+{
+    &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/gentiers/&quot;,
+    &quot;$title&quot;: &quot;TFournisseur - -&quot;,
+    &quot;$updated&quot;: &quot;2021-01-27T17:42:56.615Z&quot;,
+    &quot;$resources&quot;: [
+        {
+            &quot;$url&quot;: &quot;TFournisseur('1B28EFFFF1C3000201030000000903C1')&quot;,
+            &quot;$title&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+            &quot;$updated&quot;: &quot;2009-12-23T15:03:15.000Z&quot;,
+            &quot;$etag&quot;: &quot;1B28EFFFF1C3000201030000000903C1-0000023A000004A0&quot;,
+            &quot;$shareId&quot;: &quot;1B28EFFFF1C300020002000000420002&quot;,
+            &quot;$shareInfo&quot;: &quot;Dossier&quot;,
+            &quot;$shareLevel&quot;: 0,
+            &quot;$key&quot;: &quot;1B28EFFFF1C3000201030000000903C1&quot;,
+            &quot;$baseUrl&quot;: &quot;http://localhost:8080/sdata/GenTiers/-/&quot;,
+            &quot;stamp&quot;: &quot;0000023A000004A0&quot;,
+            &quot;code&quot;: &quot;DUCREDIT&quot;,
+            &quot;nomRueVoie&quot;: &quot;Rue de la Finance&quot;,
+            &quot;raisonSociale&quot;: &quot;DUCREDIT  Sa&quot;
+        }
+    ]
+}
+</pre>
+<div style="font-color:#535068; border:solid 1px #A8A8A8; padding:0.5em 1em 0.5em 0.7em; margin:0.5em 0em; background-color:#F9F9F9;font-size:100%;">
+<table style="background-color:#F9F9F9;">
+<tr>
+<td><a href="Fichier%253ATip-20px.png.html" class="image"><img alt="Tip-20px.png" src="../images/5/5e/Tip-20px.png" width="20" height="20" /></a>
+</td>
+<td><b>Tip&#160;:</b> En terme SQL la notation pointée est transcrite en jointures, si la jointure est exacte et que la valeur de la données de jointure est nulle la ligne n'est pas retournée
+</td></tr></table>
+</div>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 26/1000000
+Post-expand include size: 776/2097152 bytes
+Template argument size: 296/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:6175-0!*!*!*!*!2!* and timestamp 20240729130805 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 0
+                        &nbsp; <b>Bots & Crawlers</b>  1
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;oldid=13868">https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;oldid=13868</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégorie</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:SData" title="Catégorie:SData">SData</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Interrogation_des_fournisseurs_(API).html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Interrogation_des_fournisseurs_(API)&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Interrogation+des+fournisseurs+(API)" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Interrogation_des_fournisseurs_(API)" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Interrogation_des_fournisseurs_(API)" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Interrogation_des_fournisseurs_(API)&amp;oldid=13868" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Interrogation_des_fournisseurs_(API)">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 16 février 2021 à 12:31.<br /></li>
+		<li id="viewcount">Cette page a été consultée 1 995 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.093 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad5274cfb67774',t:'MTcyMjI1ODM0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>

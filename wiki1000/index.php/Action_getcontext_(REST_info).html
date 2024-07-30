@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="fr" dir="ltr" class="client-nojs">
+<head>
+<title>Action getcontext (REST info) - Wiki1000</title>
+<meta charset="UTF-8" />
+<meta name="generator" content="MediaWiki 1.18.6" />
+<link rel="shortcut icon" href="https://frp.sage.fr/favicon.ico" />
+<link rel="search" type="application/opensearchdescription+xml" href="../opensearch_desc.php" title="Wiki1000 (fr)" />
+<link rel="EditURI" type="application/rsd+xml" href="https://frp.sage.fr/wiki1000/api.php?action=rsd" />
+<link rel="alternate" type="application/atom+xml" title="Flux Atom de Wiki1000" href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes&amp;feed=atom" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=mediawiki.legacy.commonPrint,shared%257Cskins.monobook&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<!--[if lt IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE50Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 5.5000]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE55Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 6]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE60Fixes.css?303" media="screen" /><![endif]-->
+<!--[if IE 7]><link rel="stylesheet" href="/wiki1000/skins/monobook/IE70Fixes.css?303" media="screen" /><![endif]--><meta name="ResourceLoaderDynamicStyles" content="" />
+<link rel="stylesheet" href="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=styles&amp;skin=monobook&amp;%252A.css" />
+<style>a:lang(ar),a:lang(ckb),a:lang(fa),a:lang(kk-arab),a:lang(mzn),a:lang(ps),a:lang(ur){text-decoration:none}a.new,#quickbar a.new{color:#ba0000}
+
+/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-css:4:c88e2bcd56513749bec09a7e29cb3ffa */
+</style>
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=startup&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.config.set({"wgCanonicalNamespace": "", "wgCanonicalSpecialPageName": false, "wgNamespaceNumber": 0, "wgPageName": "Action_getcontext_(REST_info)", "wgTitle": "Action getcontext (REST info)", "wgCurRevisionId": 7613, "wgArticleId": 1175, "wgIsArticle": true, "wgAction": "view", "wgUserName": null, "wgUserGroups": ["*"], "wgCategories": ["Serveur", "Actions REST"], "wgBreakFrames": false, "wgRestrictionEdit": [], "wgRestrictionMove": []});
+}
+</script><script>if(window.mw){
+	mw.loader.load(["mediawiki.page.startup"]);
+}
+</script>
+<style type="text/css">/*<![CDATA[*/
+.source-xml {line-height: normal;}
+.source-xml li, .source-xml pre {
+	line-height: normal; border: 0px none white;
+}
+/**
+ * GeSHi Dynamically Generated Stylesheet
+ * --------------------------------------
+ * Dynamically generated stylesheet for xml
+ * CSS class: source-xml, CSS id: 
+ * GeSHi (C) 2004 - 2007 Nigel McNie, 2007 - 2008 Benny Baumann
+ * (http://qbnz.com/highlighter/ and http://geshi.org/)
+ * --------------------------------------
+ */
+.xml.source-xml .de1, .xml.source-xml .de2 {font: normal normal 1em/1.2em monospace; margin:0; padding:0; background:none; vertical-align:top;}
+.xml.source-xml  {font-family:monospace;}
+.xml.source-xml .imp {font-weight: bold; color: red;}
+.xml.source-xml li, .xml.source-xml .li1 {font-weight: normal; vertical-align:top;}
+.xml.source-xml .ln {width:1px;text-align:right;margin:0;padding:0 2px;vertical-align:top;}
+.xml.source-xml .li2 {font-weight: bold; vertical-align:top;}
+.xml.source-xml .es0 {color: #000099; font-weight: bold;}
+.xml.source-xml .br0 {color: #66cc66;}
+.xml.source-xml .sy0 {color: #66cc66;}
+.xml.source-xml .st0 {color: #ff0000;}
+.xml.source-xml .nu0 {color: #cc66cc;}
+.xml.source-xml .sc-1 {color: #808080; font-style: italic;}
+.xml.source-xml .sc0 {color: #00bbdd;}
+.xml.source-xml .sc1 {color: #ddbb00;}
+.xml.source-xml .sc2 {color: #339933;}
+.xml.source-xml .sc3 {color: #009900;}
+.xml.source-xml .re0 {color: #000066;}
+.xml.source-xml .re1 {color: #000000; font-weight: bold;}
+.xml.source-xml .re2 {color: #000000; font-weight: bold;}
+.xml.source-xml .ln-xtra, .xml.source-xml li.ln-xtra, .xml.source-xml div.ln-xtra {background-color: #ffc;}
+.xml.source-xml span.xtra { display:block; }
+
+/*]]>*/
+</style>
+<style type="text/css">/*<![CDATA[*/
+@import "https://frp.sage.fr/wiki1000/index.php?title=MediaWiki:Geshi.css&usemsgcache=yes&action=raw&ctype=text/css&smaxage=18000";
+/*]]>*/
+</style></head>
+<body class="mediawiki ltr sitedir-ltr ns-0 ns-subject page-Action_getcontext_REST_info action-view skin-monobook">
+<div id="globalWrapper">
+<div id="column-content"><div id="content">
+	<a id="top"></a>
+	
+	<h1 id="firstHeading" class="firstHeading">Action getcontext (REST info)</h1>
+	<div id="bodyContent">
+		<div id="siteSub">De Wiki1000</div>
+		<div id="contentSub"></div>
+		<div id="jump-to-nav">Aller à : <a href="Action_getcontext_(REST_info).html#column-one">Navigation</a>, <a href="Action_getcontext_(REST_info).html#searchInput">rechercher</a></div>
+		<!-- start content -->
+<div lang="fr" dir="ltr" class="mw-content-ltr"><p>Cette action (authentifié) retourne des informations sur le contextes de l'utilisateur.
+</p>
+<pre>http://hostname/servicename/server/rpc.l1000/rest/info.getcontext?SID=xxxx</pre>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Valeur
+</th></tr></table>
+<p><b>Informations retournées&#160;:</b>
+Informations sur le dossier
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>socname
+</td>
+<td>Dossier de la session.
+</td></tr>
+<tr>
+<td>appname
+</td>
+<td>Nom de l'application de la session
+</td></tr>
+<tr>
+<td>glbShareEnable
+</td>
+<td>Le contexte est en mode partage
+</td></tr></table>
+<p>Informations sur l'utilisateur
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>username
+</td>
+<td>Nom de l'utilisateur.
+</td></tr>
+<tr>
+<td>userfullname
+</td>
+<td>Nom complet de l'utilisateur.
+</td></tr>
+<tr>
+<td>userlanguage
+</td>
+<td>Langue de l'utilisateur.
+</td></tr>
+<tr>
+<td>useremail
+</td>
+<td>Email de l'utilisateur.
+</td></tr>
+<tr>
+<td>groupname
+</td>
+<td>Autorisé en tant que membre du groupe.
+</td></tr>
+<tr>
+<td>authdirname
+</td>
+<td>Intitulé de l'annuaire utilisé.
+</td></tr></table>
+<p>Si le dossier est multi-société les informations suivantes sont retournées&#160;:
+</p><p>Vue contexte&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Paramètre
+</th>
+<th>Usage
+</th></tr>
+<tr>
+<td>glbShareRestitution
+</td>
+<td>Le contexte est mode restitution
+</td></tr>
+<tr>
+<td>glbShareAllPerimeters
+</td>
+<td>Le contexte est en mode restitution sur toutes les sociétés
+</td></tr>
+<tr>
+<td>glbShareSocieties
+</td>
+<td>Liste des sociétés du contexte de restitution
+</td></tr>
+<tr>
+<td>glbShareGroupMode
+</td>
+<td>Le contexte est en mode groupe
+</td></tr>
+<tr>
+<td>glbShareGroupPerimeter
+</td>
+<td>Périmètre groupe du contexte.
+</td></tr>
+<tr>
+<td>glbShareSocietyPerimeter
+</td>
+<td>Périmètre sociétés du contexte
+</td></tr>
+<tr>
+<td>glbSharePerimeters
+</td>
+<td>Périmètres actifs du contexte
+</td></tr>
+<tr>
+<td>glbShareSocietyName
+</td>
+<td>Nom de la société du contexte
+</td></tr>
+<tr>
+<td>glbSharePerimeterNames
+</td>
+<td>Nom de tous les périmètres actifs du contexte
+</td></tr>
+<tr>
+<td>glbShareSocietyNames
+</td>
+<td>Nom de toutes les sociétés du dossier
+</td></tr>
+<tr>
+<td>GlbShareAutorizedReadSocieties
+</td>
+<td>Nom des sociétés sur lesquelles l'utilisateur à des droits de lecture
+</td></tr>
+<tr>
+<td>GlbShareAutorizedWriteSocieties
+</td>
+<td>Nom des sociétés sur lesquelles l'utilisateur à des droits d'écriture
+</td></tr></table>
+<p>Vue API&#160;:
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Information
+</th>
+<th>Type
+</th>
+<th>Valeur
+</th></tr>
+<tr>
+<td>ShareState
+</td>
+<td>string
+</td>
+<td>Une chaîne contenant la sérialisation de l'état du contexte de partage.
+</td></tr>
+<tr>
+<td>ShareSociety
+</td>
+<td>OID
+</td>
+<td>Le périmètre de la société active
+</td></tr>
+<tr>
+<td>ShareSocietyName
+</td>
+<td>string
+</td>
+<td>le nom de la société active.
+</td></tr>
+<tr>
+<td>ShareRestitution
+</td>
+<td>boolean
+</td>
+<td>Le contexte est en mode restitution.
+</td></tr>
+<tr>
+<td>ShareAllPerimeters
+</td>
+<td>boolean
+</td>
+<td>Le mode restitution est sur toutes les sociétés du dossier.
+</td></tr>
+<tr>
+<td>ShareRestitutionSocieties
+</td>
+<td>StringList
+</td>
+<td>Liste des noms de toutes les périmètres des sociétés actives
+</td></tr></table>
+<table class="wikitable">
+
+<tr>
+<th>Information
+</th>
+<th>Type
+</th>
+<th>Valeur
+</th></tr>
+<tr>
+<td>username
+</td>
+<td>string
+</td>
+<td>Nom de l'utilisateur
+</td></tr>
+<tr>
+<td>groupname
+</td>
+<td>string
+</td>
+<td>Nom du groupe ayant authentifié l'utilisateur
+</td></tr>
+<tr>
+<td>authdirname
+</td>
+<td>string
+</td>
+<td>Nom de l'annuaire
+</td></tr>
+<tr>
+<td>socname
+</td>
+<td>string
+</td>
+<td>Nom du dossier
+</td></tr>
+<tr>
+<td>appname
+</td>
+<td>string
+</td>
+<td>Nom de l'application
+</td></tr></table>
+<p><b>Informations multi-sociétés retournées (vue du contexte):</b>
+</p>
+<table class="wikitable">
+
+<tr>
+<th>Information
+</th>
+<th>Type
+</th>
+<th>Valeur
+</th></tr>
+<tr>
+<td>glbShareGroupMode
+</td>
+<td>boolean
+</td>
+<td>Le contexte est en mode groupe.
+</td></tr>
+<tr>
+<td>glbShareSocietyPerimeter
+</td>
+<td>OID
+</td>
+<td>OID du périmètre société.<br />
+<p>(Société active)
+</p>
+</td></tr>
+<tr>
+<td>glbShareGroupPerimeter
+</td>
+<td>OID
+</td>
+<td>OID du périmètre dossier.
+</td></tr>
+<tr>
+<td>glbShareSocieties
+</td>
+<td>OIDs
+</td>
+<td>Liste des périmètres sociétés actives
+</td></tr>
+<tr>
+<td>glbSharePerimeters
+</td>
+<td>OIDs
+</td>
+<td>Liste de tous les périmètres des sociétés actives<br />
+<p>Inclus les périmètres sociétés, les périmètres de partage et le périmètre dossier.
+</p>
+</td></tr>
+<tr>
+<td>glbShareRestitution
+</td>
+<td>boolean
+</td>
+<td>Le contexte est en mode restitution.
+</td></tr>
+<tr>
+<td>glbShareAllPerimeters
+</td>
+<td>boolean
+</td>
+<td>Le mode restitution est sur toutes les sociétés du dossier.
+</td></tr>
+<tr>
+<td>glbShareRestitutionName
+</td>
+<td>string
+</td>
+<td>Nom de la famille de restitution
+</td></tr></table>
+<p><b>Informations multi-sociétés retournées (vue API):</b>
+</p><p>Exemple de réponse&#160;: 
+</p>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="xml source-xml" style="font-family:monospace;"><pre class="de1"><span class="sc3"><span class="re1">&lt;result</span> <span class="re0">status</span>=<span class="st0">&quot;-1&quot;</span><span class="re2">&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;error<span class="re2">&gt;</span></span></span>
+  Le service &quot;info.getcontext&quot; requière une authentification.
+ <span class="sc3"><span class="re1">&lt;/error<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/result<span class="re2">&gt;</span></span></span></pre></div></div>
+<div dir="ltr" class="mw-geshi" style="text-align: left;"><div class="xml source-xml" style="font-family:monospace;"><pre class="de1"><span class="sc3"><span class="re1">&lt;methodResponse<span class="re2">&gt;</span></span></span>
+ <span class="sc3"><span class="re1">&lt;params<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;username<span class="re2">&gt;</span></span></span>syfre<span class="sc3"><span class="re1">&lt;/username<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;groupname<span class="re2">&gt;</span></span></span>GrpAdmin<span class="sc3"><span class="re1">&lt;/groupname<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;authdirname<span class="re2">&gt;</span></span></span>Annuaire entreprise<span class="sc3"><span class="re1">&lt;/authdirname<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;socname<span class="re2">&gt;</span></span></span>Test Multi-société<span class="sc3"><span class="re1">&lt;/socname<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;appname<span class="re2">&gt;</span></span></span>Test Multi-Société<span class="sc3"><span class="re1">&lt;/appname<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareState<span class="re2">&gt;</span></span></span>
+DA1B000000000008000A000000020002;0;0;DA1B000000000008000A0000001C0008;DA1B000000000008000A0000001C0008;DA1B000000000008000A000000020002,DA1B000000000008000A0000001C0008,DA1B000000000008000A0000001C0004,DA1B000000000008000A0000001C0007;
+  <span class="sc3"><span class="re1">&lt;/glbShareState<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareRestitution<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/glbShareRestitution<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareAllPerimeters<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/glbShareAllPerimeters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareRestitutionName</span><span class="re2">/&gt;</span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareSocieties<span class="re2">&gt;</span></span></span>DA1B000000000008000A0000001C0008<span class="sc3"><span class="re1">&lt;/glbShareSocieties<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbSharePerimeters<span class="re2">&gt;</span></span></span>
+DA1B000000000008000A000000020002,DA1B000000000008000A0000001C0008,DA1B000000000008000A0000001C0004,DA1B000000000008000A0000001C0007
+  <span class="sc3"><span class="re1">&lt;/glbSharePerimeters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareGroupMode<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/glbShareGroupMode<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareGroupPerimeter<span class="re2">&gt;</span></span></span>DA1B000000000008000A000000020002<span class="sc3"><span class="re1">&lt;/glbShareGroupPerimeter<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;glbShareSocietyPerimeter<span class="re2">&gt;</span></span></span>DA1B000000000008000A0000001C0008<span class="sc3"><span class="re1">&lt;/glbShareSocietyPerimeter<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ShareSociety<span class="re2">&gt;</span></span></span>DA1B000000000008000A0000001C0008<span class="sc3"><span class="re1">&lt;/ShareSociety<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ShareSocietyName<span class="re2">&gt;</span></span></span>S1<span class="sc3"><span class="re1">&lt;/ShareSocietyName<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ShareRestitution<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/ShareRestitution<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ShareAllPerimeters<span class="re2">&gt;</span></span></span>false<span class="sc3"><span class="re1">&lt;/ShareAllPerimeters<span class="re2">&gt;</span></span></span>
+  <span class="sc3"><span class="re1">&lt;ShareResitutionSocieties</span><span class="re2">/&gt;</span></span>
+ <span class="sc3"><span class="re1">&lt;/params<span class="re2">&gt;</span></span></span>
+<span class="sc3"><span class="re1">&lt;/methodResponse<span class="re2">&gt;</span></span></span></pre></div></div>
+<p>Voir aussi&#160;:
+</p>
+<ul><li><a href="Service_REST_de_session_(server).html" title="Service REST de session (server)" class="mw-redirect">Service REST de session</a>
+</li><li><a href="Action_setcontext_(REST_info).html" title="Action setcontext (REST info)">Action setcontext du service REST de session</a>
+</li></ul>
+<p><br />
+</p>
+<center>
+<p>&#8212; <a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM" title="Développement DSM">Développement DSM</a> &#8212; 
+</p>
+</center>
+
+<!-- 
+NewPP limit report
+Preprocessor node count: 22/1000000
+Post-expand include size: 2333/2097152 bytes
+Template argument size: 0/2097152 bytes
+Expensive parser function count: 0/100
+-->
+
+<!-- Saved in parser cache with key wiki1000dbtahoe-l1000_:pcache:idhash:1175-0!*!0!*!*!*!* and timestamp 20240729131507 -->
+<br /><br /><br /><br /><table class="whos_here" width="100%" cellpadding="0" cellspacing="0"><tr>
+                        <td width="100%" class="whos_here_header">
+                        <a href="Special%253AAWCforum/whoshere.html"><i>Whos here now:</i></a>  
+                        &nbsp; <b>Members</b> 0
+                        &nbsp; <b>Guests</b> 1
+                        &nbsp; <b>Bots & Crawlers</b>  0
+                        </td>
+         </tr><tr><td class="whos_here_row"> &nbsp;   </td></tr></table></div><div class="printfooter">
+Récupérée de « <a href="https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;oldid=7613">https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;oldid=7613</a> »</div>
+		<div id='catlinks' class='catlinks'><div id="mw-normal-catlinks"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Cat%C3%83%C2%A9gories" title="Spécial:Catégories">Catégories</a> : <ul><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Serveur" title="Catégorie:Serveur">Serveur</a></li><li><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Actions_REST" title="Catégorie:Actions REST">Actions REST</a></li></ul></div></div>		<!-- end content -->
+				<div class="visualClear"></div>
+	</div>
+</div></div>
+<div id="column-one">
+	<div id="p-cactions" class="portlet">
+		<h5>Affichages</h5>
+		<div class="pBody">
+			<ul>
+				<li id="ca-nstab-main" class="selected"><a href="Action_getcontext_(REST_info).html" title="Voir la page de contenu [c]" accesskey="c">Page</a></li>
+				<li id="ca-talk" class="new"><a href="https://frp.sage.fr/wiki1000/index.php?title=Discussion:Action_getcontext_(REST_info)&amp;action=edit&amp;redlink=1" title="Discussion au sujet de cette page de contenu [t]" accesskey="t">Discussion</a></li>
+				<li id="ca-viewsource"><a href="https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;action=edit" title="Cette page est protégée.&#10;Vous pouvez toutefois en visualiser la source. [e]" accesskey="e">Voir le texte source</a></li>
+				<li id="ca-history"><a href="https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;action=history" title="Les versions passées de cette page (avec leurs contributeurs) [h]" accesskey="h">Historique</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-personal">
+		<h5>Outils personnels</h5>
+		<div class="pBody">
+			<ul>
+				<li id="pt-login"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Connexion&amp;returnto=Action+getcontext+(REST+info)" title="Vous êtes encouragé(e) à vous identifier ; ce n'est cependant pas obligatoire. [o]" accesskey="o">Connexion</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="portlet" id="p-logo">
+		<a title="Page principale" style="background-image: url(../medias/images/stock/wiki-1000.png);" href="Main_Page.html"></a>
+	</div>
+	<script type="text/javascript"> if (window.isMSIE55) fixalpha(); </script>
+	<div class="generated-sidebar portlet" id="p-navigation">
+		<h5>Navigation</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-mainpage"><a href="Main_Page.html" title="Visiter la page d'accueil du site [z]" accesskey="z">Main Page</a></li>
+				<li id="n-recentchanges"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Modifications_r%C3%83%C2%A9centes" title="Liste des modifications récentes sur le wiki [r]" accesskey="r">Modifications récentes</a></li>
+				<li id="n-help"><a href="https://frp.sage.fr/wiki1000/index.php/Aide:Accueil" title="Aide">Aide</a></li>
+				<li id="n-Guide-de-r.C3.A9daction"><a href="https://frp.sage.fr/wiki1000/index.php/Guide_de_r%C3%83%C2%A9daction_(wiki)">Guide de rédaction</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="generated-sidebar portlet" id="p-Th.C3.A8mes">
+		<h5>Thèmes</h5>
+		<div class='pBody'>
+			<ul>
+				<li id="n-Administration"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Administration">Administration</a></li>
+				<li id="n-D.C3.A9veloppement"><a href="https://frp.sage.fr/wiki1000/index.php/D%C3%83%C2%A9veloppement_DSM">Développement</a></li>
+				<li id="n-Didactitiels"><a href="https://frp.sage.fr/wiki1000/index.php/Cat%C3%83%C2%A9gorie:Video">Didactitiels</a></li>
+			</ul>
+		</div>
+	</div>
+	<div id="p-search" class="portlet">
+		<h5><label for="searchInput">Rechercher</label></h5>
+		<div id="searchBody" class="pBody">
+			<form action="https://frp.sage.fr/wiki1000/index.php" id="searchform">
+				<input type='hidden' name="title" value="Spécial:Recherche"/>
+				<input type="search" name="search" title="Rechercher dans Wiki1000 [f]" accesskey="f" id="searchInput" />
+				<input type="submit" name="go" value="Lire" title="Aller vers une page portant exactement ce nom si elle existe." id="searchGoButton" class="searchButton" />&#160;
+				<input type="submit" name="fulltext" value="Rechercher" title="Rechercher les pages comportant ce texte." id="mw-searchButton" class="searchButton" />
+			</form>
+		</div>
+	</div>
+	<div class="portlet" id="p-tb">
+		<h5>Boîte à outils</h5>
+		<div class="pBody">
+			<ul>
+				<li id="t-whatlinkshere"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_li%C3%83%C2%A9es/Action_getcontext_(REST_info)" title="Liste des pages liées à celle-ci [j]" accesskey="j">Pages liées</a></li>
+				<li id="t-recentchangeslinked"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Suivi_des_liens/Action_getcontext_(REST_info)" title="Liste des modifications récentes des pages liées à celle-ci [k]" accesskey="k">Suivi des pages liées</a></li>
+				<li id="t-specialpages"><a href="https://frp.sage.fr/wiki1000/index.php/Sp%C3%83%C2%A9cial:Pages_sp%C3%83%C2%A9ciales" title="Liste de toutes les pages spéciales [q]" accesskey="q">Pages spéciales</a></li>
+				<li><a href="https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;printable=yes" rel="alternate">Version imprimable</a></li>
+				<li id="t-permalink"><a href="https://frp.sage.fr/wiki1000/index.php?title=Action_getcontext_(REST_info)&amp;oldid=7613" title="Lien permanent vers cette version de la page">Adresse de cette version</a></li>
+<li id="t-pdf"><a href="https://frp.sage.fr/wiki1000/index.php?title=Sp%C3%83%C2%A9cial:Pdfprint&amp;page=Action_getcontext_(REST_info)">Imprimer en PDF</a></li>			</ul>
+		</div>
+	</div>
+</div><!-- end of the left (by default at least) column -->
+<div class="visualClear"></div>
+<div id="footer">
+	<div id="f-poweredbyico">
+		<a href="http://www.mediawiki.org/"><img src="../skins/common/images/poweredby_mediawiki_88x31.png" alt="Powered by MediaWiki" width="88" height="31" /></a>
+	</div>
+	<ul id="f-list">
+		<li id="lastmod"> Dernière modification de cette page le 8 octobre 2013 à 17:19.<br /></li>
+		<li id="viewcount">Cette page a été consultée 3 403 fois.</li>
+		<li id="privacy"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Confidentialit%C3%83%C2%A9" title="Wiki1000:Confidentialité">Politique de confidentialité</a></li>
+		<li id="about"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:%C3%83%E2%82%AC_propos" title="Wiki1000:À propos">À propos de Wiki1000</a></li>
+		<li id="disclaimer"><a href="https://frp.sage.fr/wiki1000/index.php/Wiki1000:Avertissements_g%C3%83%C2%A9n%C3%83%C2%A9raux" title="Wiki1000:Avertissements généraux">Avertissements</a></li>
+	</ul>
+</div>
+</div>
+<script>if(window.mw){
+	mw.loader.load(["mediawiki.user", "mediawiki.util", "mediawiki.page.ready", "mediawiki.legacy.wikibits", "mediawiki.legacy.ajax"]);
+}
+</script>
+<style type="text/css">.poll_display_table {
+ 
+border: 1px solid #aaa;
+    
+    padding: 1px;
+ 
+} 
+.poll_displayheader {
+ 
+border-bottom: 1px dashed #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_row {
+ 
+border-bottom: 1px solid #aaa;
+    background-color: #f9f9f9;
+    padding: 2px;
+ 
+} 
+.poll_display_vote_total {
+ 
+border-top: 1px solid #aaa;
+    padding: 4px;
+    background-color: #DDDDDD;
+    font-family:"Courier New", Courier, mono;
+ 
+} 
+.poll_display_vote_numbers_header {
+ 
+border: 1px solid #aaa;
+border-bottom: 0;
+ 
+} 
+.poll_display_vote_percent_header {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option_header {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_numbers {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_percent {
+ 
+border-top: 1px solid #aaa;
+    padding: 1px;
+ 
+} 
+.poll_display_vote_option {
+ 
+border: 1px solid #aaa;
+    border-bottom: 0;
+    padding: 1px;
+ 
+} 
+.poll_percent_color_op10 {
+ background-color: #7FFF00; 
+} 
+.poll_percent_color_op1 {
+ background-color: #CD5555; 
+} 
+.poll_percent_color_op2 {
+ background-color: #5CACEE; 
+} 
+.poll_percent_color_op3 {
+ background-color: #FFCC11; 
+} 
+.poll_percent_color_op4 {
+ background-color: #668014; 
+} 
+.poll_percent_color_op5 {
+ background-color: #A0522D; 
+} 
+.poll_percent_color_op6 {
+ background-color: #9F79EE; 
+} 
+.poll_percent_color_op7 {
+ background-color: #EE00EE; 
+} 
+.poll_percent_color_op8 {
+ background-color: #DC143C; 
+} 
+.poll_percent_color_op9 {
+ background-color: #551011; 
+} 
+.whos_here_header {
+ 
+border-bottom: 1px dashed #aaa;
+            padding: 4px;
+            font-family:"Courier New", Courier, mono;
+ 
+} 
+.whos_here_row {
+ 
+border-bottom: 1px solid #aaa;
+            background-color: #f9f9f9;
+            padding: 2px;
+ 
+} 
+.whos_here {
+ 
+border: 1px solid #aaa;
+            border-bottom: 0;
+ 
+} 
+.pagejumps_PostOnForumPage {
+ 
+border: 1px solid #aaa;
+    margin-left: 3px;
+    font-size: 100%;
+    padding-left: 3px;
+    padding-right: 3px;
+    padding-bottom: 0px;
+ 
+} 
+
+ .nothing {font-size: 0%;
+                                margin: .0em;
+                                border: 0;
+                                margin: 0;
+                                padding: 0;
+                                width: 0;}
+</style>
+
+<script src="../load.php@debug=false&amp;lang=fr&amp;modules=site&amp;only=scripts&amp;skin=monobook&amp;%252A"></script>
+<script>if(window.mw){
+	mw.user.options.set({"ccmeonemails":0,"cols":80,"date":"default","diffonly":0,"disablemail":0,"disablesuggest":0,"editfont":"default","editondblclick":0,"editsection":1,"editsectiononrightclick":0,"enotifminoredits":0,"enotifrevealaddr":0,"enotifusertalkpages":1,"enotifwatchlistpages":0,"extendwatchlist":0,"externaldiff":0,"externaleditor":0,"fancysig":0,"forceeditsummary":0,"gender":"unknown","hideminor":0,"hidepatrolled":0,"highlightbroken":1,"imagesize":2,"justify":0,"math":1,"minordefault":0,"newpageshidepatrolled":0,"nocache":0,"noconvertlink":0,"norollbackdiff":0,"numberheadings":0,"previewonfirst":0,"previewontop":1,"quickbar":5,"rcdays":7,"rclimit":50,"rememberpassword":0,"rows":25,"searchlimit":20,"showhiddencats":0,"showjumplinks":1,"shownumberswatching":1,"showtoc":1,"showtoolbar":1,"skin":"monobook","stubthreshold":0,"thumbsize":2,"underline":2,"uselivepreview":0,"usenewrc":0,"watchcreations":0,"watchdefault":0,"watchdeletion":0,"watchlistdays":3,"watchlisthideanons":0,
+	"watchlisthidebots":0,"watchlisthideliu":0,"watchlisthideminor":0,"watchlisthideown":0,"watchlisthidepatrolled":0,"watchmoves":0,"wllimit":250,"searchNs121707":true,"variant":"fr","language":"fr","searchNs0":true,"searchNs1":false,"searchNs2":false,"searchNs3":false,"searchNs4":false,"searchNs5":false,"searchNs6":false,"searchNs7":false,"searchNs8":false,"searchNs9":false,"searchNs10":false,"searchNs11":false,"searchNs12":false,"searchNs13":false,"searchNs14":false,"searchNs15":false,"searchNs100":false,"searchNs101":false,"searchNs102":false,"searchNs103":false,"searchNs104":false,"searchNs105":false,"searchNs106":false,"searchNs107":false,"searchNs108":false,"searchNs109":false,"searchNs110":false,"searchNs111":false});;mw.user.tokens.set({"editToken":"+\\","watchToken":false});;mw.loader.state({"user.options":"ready","user.tokens":"ready"});
+	
+	/* cache key: wiki1000dbtahoe-l1000_:resourceloader:filter:minify-js:4:2d7b56d44af11e7e6a0c631677f449b0 */
+}
+</script><!-- Served in 0.091 secs. --><script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'8aad5cbfd97703b9',t:'MTcyMjI1ODc2NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body></html>
